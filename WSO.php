@@ -710,6 +710,7 @@ function actionStringTools() {
 			<input type='button' value='hashcrack.com' onclick=\"document.hf.action='http://www.hashcrack.com/index.php';document.hf.submit()\"><br>
 			<input type='button' value='tools4noobs.com' onclick=\"document.hf.action='http://www.tools4noobs.com/online_php_functions/';document.hf.submit()\"><br>
 			<input type='button' value='md5decrypter.com' onclick=\"document.hf.action='http://www.md5decrypter.com/';document.hf.submit()\"><br>
+			<input type='button' value='artlebedev.ru' onclick=\"document.hf.action='https://www.artlebedev.ru/tools/decoder/';document.hf.submit()\"><br>
 		</form></div>";
 	printFooter();
 }
