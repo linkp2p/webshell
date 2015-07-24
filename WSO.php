@@ -896,7 +896,7 @@ function actionStringTools() {
 		'String length' => 'strlen',
 	);
 	if(isset($_POST['ajax'])) {
-		printsetcookie(md5($_SERVER['HTTP_HOST']).'ajax', true);
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
 		ob_start();
 		if(in_array($_POST['p1'], $stringTools))
 			echo $_POST['p1']($_POST['p2']);
@@ -905,7 +905,7 @@ function actionStringTools() {
 		exit;
 	}
     if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		printsetcookie(md5($_SERVER['HTTP_HOST']).'ajax', 0);
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
 	printHeader();
 	echo '<h1>String conversions</h1><div class=content>';
 	echo "<form name='toolsForm' onSubmit='if(this.ajax.checked){a(null,null,this.selectTool.value,this.input.value);}else{g(null,null,this.selectTool.value,this.input.value);} return false;'><select name='selectTool'>";
